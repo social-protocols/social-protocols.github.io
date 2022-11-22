@@ -1,0 +1,59 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this Project",
+      "description": "TBD",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-11-22T23:49:48+01:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-11-22T23:49:48+01:00"
+    },
+    {
+      "path": "every-minute-of-hacker-news.html",
+      "title": "Every Minute of Hacker News",
+      "description": "A dataset of every minute of Hacker News over a period of several months.\n",
+      "author": [
+        {
+          "name": "Nora Jones",
+          "url": "https://example.com/norajones"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\n\n\n\n",
+      "last_modified": "2022-11-22T23:49:49+01:00"
+    },
+    {
+      "path": "hacker-news-simulation.html",
+      "title": "Hacker News Simulation",
+      "description": "A simulation of the Hacker News news aggregator, available as a web app to play around with.\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill for R Markdown at https://rstudio.github.io/distill.\n\n\n\n",
+      "last_modified": "2022-11-22T23:49:49+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Social Protocols",
+      "author": [],
+      "contents": "\nWe analyze and improve protocols of social software.\n\n\n\n",
+      "last_modified": "2022-11-22T23:49:50+01:00"
+    },
+    {
+      "path": "quality-news.html",
+      "title": "Quality News",
+      "description": "A Hacker News web frontend with a new and improved ranking algorithm.\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\nTBD\n\n\n\n",
+      "last_modified": "2022-11-22T23:49:50+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
