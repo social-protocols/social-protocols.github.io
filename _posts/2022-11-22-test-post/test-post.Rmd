@@ -13,5 +13,15 @@ output:
     self_contained: false
 ---
 
+```{setup}
+# add render options for rmarkdown
+```
 
 This is a test post.
+
+```{r}
+# find files anywhere in the repo: create absolute paths
+file.path(Sys.getenv('ROOTDIR'), "_posts", "welcome", "welcome.Rmd")
+```
+
+
