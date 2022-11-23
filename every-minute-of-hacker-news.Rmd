@@ -15,8 +15,68 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-TBD
+
+[DRAFT]
+
+[Hacker News](news.ycombinator.com) is a social news aggregator provided by the US startup accelerator YCombinator.
+In our view, a social news aggregator has two defining properties: 
+
+- Content is created by users. Users submit "stories" (links to content anywhere on the Internet) that is then curated ("aggregated") and presented to other users. Submitted stories are then evaluated by the community by means of a voting system
+- Stories are then ranked according to a ranking score, that is computed using the votes (the *social* component) and the age (the *news* component) of a story (and potentially more metrics).
+
+These conditions create a platform where stories "cycle through" one or more top lists that are ranked according to different criteria.
+On these top lists, the community can discover and vote on content.
+On Hacker News, there are six main top lists:
+(BRIEFLY DESCRIBE HOW EACH LIST RANKS STORIES)
+
+* top
+* new
+* best
+* ask
+* show
+* jobs
+
+Hacker News' focus is not just on news, but the community has formed under a loose [guidelines](https://news.ycombinator.com/newsguidelines.html).
+The following is considered on-topic on Hacker News:
+
+> Anything that good hackers would find interesting. That includes more than hacking and startups. If you had to reduce it to a sentence, the answer might be: anything that gratifies one's intellectual curiosity.
+
+YCombinator provides access to a [BigQuery database](https://console.cloud.google.com/marketplace/details/y-combinator/hacker-news) where all stories since the launch of Hacker News are available.
+This dataset contains all the *outcomes* of Hacker News, i.e., how each story ended up.
+Apart from that, Hacker News has an open [API](https://github.com/HackerNews/API) with end points to live views on all the top lists and all the items (stories, comments, etc.), and users on the site.
+
+We scraped this API for a period of over 4 months in intervals of 1 minute to obtain a time series of almost everything that goes on on Hacker News for an extended period of time.
+The scraper we used can be found and inspected [here](https://github.com/social-protocols/hn-scraper).
+
+We started the data collection on `2021-11-23 23:10:07` and ended it on `2022-04-03 14:07:24`.
+In total, we tracked 110556 stories, of which 103961 were tracked over their entire lifecycle (on Hacker News, stories cannot be voted or commented on after a period of time).
+
+The full dataset is stored in `tsv` format and compressed with 7zip.
+It is stored on the [open science framework](osf.io), the project URL is https://osf.io/bnysw/.
+You can download it from there, for example like this:
+
+```{bash}
+wget --no-verbose --show-progress https://osf.io/h9sjy/download -O hacker-news.7z
+```
 
 
+fields:
+
+* id
+* score
+* descendants
+* submissionTime
+* sampleTime
+* tick
+* topRank
+* newRank
+* bestRank
+* askRank
+* showRank
+* jobRank
+* gain
 
 
+our analyses are located [here](https://github.com/social-protocols/hacker-news-data)
+
+(ADD SOME EXPLORATORY INSIGHTS/PLOTS ETC.)
