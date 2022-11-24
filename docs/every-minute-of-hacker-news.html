@@ -94,8 +94,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-11-23"/>
-  <meta property="article:created" itemprop="dateCreated" content="2022-11-23"/>
+  <meta property="article:published" itemprop="datePublished" content="2022-11-24"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-11-24"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Social Protocols: Every Minute of Hacker News"/>
@@ -113,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Every Minute of Hacker News"]},{"type":"character","attributes":{},"value":["A dataset of every minute of Hacker News over a period of several months.\n"]},{"type":"character","attributes":{},"value":["2022-11-23"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Every Minute of Hacker News"]},{"type":"character","attributes":{},"value":["A dataset of every minute of Hacker News over a period of several months.\n"]},{"type":"character","attributes":{},"value":["2022-11-24"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2407,7 +2407,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Every Minute of Hacker News","description":"A dataset of every minute of Hacker News over a period of several months.","authors":[],"publishedDate":"2022-11-23T00:00:00.000+01:00"}
+{"title":"Every Minute of Hacker News","description":"A dataset of every minute of Hacker News over a period of several months.","authors":[],"publishedDate":"2022-11-24T00:00:00.000+01:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2457,8 +2457,69 @@ Projects
 
 
 <div class="d-article">
-<p>TBD</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p><a href="news.ycombinator.com">Hacker News</a> is a social news aggregator provided by the US startup accelerator <a href="ycombinator.com">Y Combinator</a>.
+On Hacker News (HN), users submit stories (links to content anywhere on the Internet) that are then voted on by the community.
+The main news aggregation happens on the <em>top</em> page of HN (or frontpage), where content is ranked according to the <a href="http://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html">following formula</a>:</p>
+<p><span class="math display">\[
+score = \frac{(votes - 1)^{0.8}}{(age_{hours} + 2)^{1.8}} \times penalties
+\]</span></p>
+<p>While <em>top</em> is the most prominent page on HN, there are other pages as well.
+Details on those pages can be viewed <a href="https://news.ycombinator.com/lists">here</a>.</p>
+<p>Hacker News’ focus is not just on news, but the community has formed under a loose <a href="https://news.ycombinator.com/newsguidelines.html">guideline</a>.
+The following is considered <em>on-topic</em> on Hacker News:</p>
+<blockquote>
+<p>Anything that good hackers would find interesting. That includes more than hacking and startups. If you had to reduce it to a sentence, the answer might be: anything that gratifies one’s intellectual curiosity.</p>
+</blockquote>
+<p>The user experience on HN is characterized by users browsing the different ranking lists.
+At the same time, due to the above mentioned guideline, users have some idea about what might be interesting to the HN community, so they post new stories on HN when the stumble upon them elsewhere.
+Lastly, each story has a discussion section with comment threads where users discuss the contents of the story posted.</p>
+<p>What differentiates HN from almost all other social computing platforms are, in our view, the following characteristics:</p>
+<ul>
+<li>The rules of the social protocol are reasonably simple.</li>
+<li>The amount of data created is manageable.</li>
+<li>It works quite well and the community, overall, seems to be happy with it.</li>
+</ul>
+<p>These characteristics make HN a perfect object of study when it comes to creating new ranking algorithms.
+Our interest in the topic started with <a href="https://felx.me/2021/08/29/improving-the-hacker-news-ranking-algorithm.html">an investigation</a> into effects present in the current ranking scheme, where stories that are picked up by a positive feedback loop of attention and votes spiral upwards in the ranking while many “hidden gems” go unnoticed.
+In order to test our ideas for new ranking algorithms that counter this feedback loop, we first tried to recreate HN as close as possible in a <a href="https://github.com/social-protocols/news-aggregator-simulation">simulation</a> that is <a href="https://social-protocols.github.io/news-aggregator-simulation/">still available</a> for experimentation in the browser.
+We soon realized that we need data to verify and benchmark how far off we were with our simulation.</p>
+<p>Y Combinator provides access to a <a href="https://console.cloud.google.com/marketplace/details/y-combinator/hacker-news">BigQuery database</a> where all stories since the launch of Hacker News are available.
+This database contains all the <em>outcomes</em> of Hacker News stories, but not how stories developed towards those outcomes.
+Apart from that, Hacker News has an open <a href="https://github.com/HackerNews/API">API</a> with end points to live views on all the the items (stories, comments, etc.) and users on the site.
+Furthermore, the ranking lists (top, new, best, etc.) can be obtained as lists of IDs.</p>
+<p>We scraped this API for a period of over 4 months in 1 minute intervals to obtain a time series of almost everything that goes on on Hacker News for an extended period of time.
+The scraper we used can be found and inspected <a href="https://github.com/social-protocols/hn-scraper">on Github</a>.</p>
+<p>We started the data collection on <code>2021-11-23 23:10:07</code> and ended it on <code>2022-04-03 14:07:24</code>.
+In total, we tracked 110556 stories, of which 103961 were tracked over their entire lifecycle<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>The full dataset is stored in <code>tsv</code> format and compressed with 7z.
+It is stored on the <a href="osf.io">open science framework</a>, the project URL is <a href="https://osf.io/bnysw/" class="uri">https://osf.io/bnysw/</a>.
+You can download it from there, for example like this:</p>
+<pre><code>$ wget --no-verbose --show-progress https://osf.io/h9sjy/download -O hacker-news.7z</code></pre>
+<p>fields:</p>
+<ul>
+<li>id: The item ID assigned by HN. Almost everything on HN is an item, e.g., stories, comments, jobs, … However, the dataset only contains <em>stories</em> as we only scraped the top lists.</li>
+<li>score: This name is slightly misleading: <code>score</code> designate the raw <em>vote count</em> of the item, not the score obtained from the above mentioned formula. We left the name as is because the HN API delivers it with this name.</li>
+<li>descendants: The number of comments (including comments of comments of comment…).</li>
+<li>submissionTime: A timestamp of the time the story was submitted in Unix epoch format.</li>
+<li>sampleTime: The time when the scraper collected the data point (also as a Unix epoch timestamp).</li>
+<li>tick: A running number of the <code>sampleTime</code>s.</li>
+<li>topRank: The current rank on the <code>top</code> page (up to rank 90, otherwise <code>\N</code>; this is true for all other collected ranks too).</li>
+<li>newRank: The current rank on the <code>new</code> page.</li>
+<li>bestRank: The current rank on the <code>best</code> page.</li>
+<li>askRank: The current rank on the <code>ask</code> page.</li>
+<li>showRank: The current rank on the <code>show</code> page.</li>
+<li>jobRank: The current rank on the <code>jobs</code> page.</li>
+<li>gain: Votes gained since the last <code>sampleTime</code>.</li>
+</ul>
+<p>You can view many of our analyses on this dataset <a href="https://github.com/social-protocols/hacker-news-data">on Github</a>, but we would be happy to see what new insights you can draw from the data.</p>
+<p>(ADD SOME EXPLORATORY INSIGHTS/PLOTS ETC.)</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>on Hacker News, stories cannot be voted or commented on after a period of time<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2466,6 +2527,15 @@ Projects
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
