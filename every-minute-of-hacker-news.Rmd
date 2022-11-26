@@ -52,19 +52,19 @@ This database contains all the *outcomes* of Hacker News stories, but **not** ho
 Apart from the BigQuery database, Hacker News has an open [API](https://github.com/HackerNews/API) with end points to live views on all the items (stories, comments, etc.) and users on the site.
 Furthermore, the ranking lists (top, new, best, etc.) can be obtained from the API as lists of IDs.
 
+### Data Collection
+
 We queried the API for a period of over 4 months in 1 minute intervals to obtain a time series of almost everything that goes on on Hacker News for an extended period of time.
 The scraper we used can be found and inspected on [Github](https://github.com/social-protocols/hn-scraper).
 
 We started the data collection on `2021-11-23 23:10:07` and ended it on `2022-04-03 14:07:24`.
 In total, we tracked 110556 stories, of which 103961 were tracked over their entire lifecycle^[On Hacker News, stories cannot be voted or commented on after a period of time.].
 
-The full dataset is stored in `tsv` format and compressed as a `7z` archive.
-It is available on the [open science framework](https://osf.io/bnysw/).
-You can download it from there, for example like this:
+(SECTION ON METHODOLOGY)
 
-```
-$ wget --no-verbose --show-progress https://osf.io/h9sjy/download -O hacker-news.7z
-```
+
+### The Dataset
+
 
 Fields:
 
@@ -82,6 +82,20 @@ Fields:
 - `jobRank`: The current rank on the `jobs` page.
 - `gain`: Votes gained since the last `sampleTime`.
 
+
+
+The full dataset is stored in `tsv` format and compressed as a `7z` archive.
+It is available on the [open science framework](https://osf.io/bnysw/).
+You can download it from there, for example like this:
+
+
+```
+$ wget --no-verbose --show-progress https://osf.io/h9sjy/download -O hacker-news.7z
+```
+
+
+
+### Exploratory Analysis
 
 You can view many of our analyses on this dataset [on Github](https://github.com/social-protocols/hacker-news-data), but we would be happy to see what new insights you can draw from the data.
 
