@@ -1,0 +1,54 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this Project",
+      "description": "TBD",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-11-28T23:23:50+01:00"
+    },
+    {
+      "path": "blog.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2022-11-28T23:23:51+01:00"
+    },
+    {
+      "path": "every-minute-of-hacker-news.html",
+      "title": "Every Minute of Hacker News",
+      "description": "A dataset of every minute of Hacker News over a period of several months.\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\nHacker News is a social news aggregator provided by the US startup accelerator Y Combinator.\nOn Hacker News, users submit stories1 that are then subject to voting by the community.\nThe main news aggregation happens on the top page (or frontpage) of HN, where content is scored and ranked according to the following formula:\n\\[\nscore = \\frac{(votes - 1)^{0.8}}{(age_{hours} + 2)^{1.8}} \\times penalties\n\\]\nWhile top is the most prominent page on HN, there are other ranked pages as well.\nThe kind of content posted on HN as well as the ranking on the top page is determined by the preferences of the community because all content as well as the voting is user-generated.\nThere is a loose guideline for what is considered on-topic:\n\nAnything that good hackers would find interesting. That includes more than hacking and startups. If you had to reduce it to a sentence, the answer might be: anything that gratifies one’s intellectual curiosity.\n\nApart from posting stories, voting, and browsing the top lists, users can have discussions in comment threads under each story.\nOur motivation for collecting a dataset on Hacker News was an investigation into feedback loops in the current ranking scheme.\nIn short, our argument was that stories that are picked up by a positive feedback loop of attention and votes spiral upwards in the ranking while many “hidden gems” go unnoticed.\nIn order to test our ideas for new ranking algorithms that counter this feedback loop, we first tried to recreate Hacker News as close as possible in a simulation that is still available for experimentation in the browser.\nWe soon realized that we need data to verify and benchmark how far off we were with our simulation.\nData Collection\nY Combinator provides access to a BigQuery database where all stories since the launch of Hacker News are available.\nThis database contains all the outcomes of Hacker News stories, but not how stories developed towards those outcomes.\nIn order to attain a timeseries of snapshots of the most popular ranking lists on Hacker News, we queried the Hacker News API in 1 minute intervals over a period of over 4 months.\nWe started the data collection on 2021-11-23 23:10:07 and ended it on 2022-04-03 14:07:24.\nIn total, we tracked 110556 stories, of which 103961 were tracked over their entire lifecycle2.\nThe scraper we used is available on Github.\nIt collected data in the following way:\nGet the first 90 ranks of the top, new, best, ask, show, and job page as ordered lists of IDs.\nGet additional data on each story that appears on any of the above lists.\nCreate an entry for each story in the dataset, containing its rank on each list3 as well as the additional information.\nThe Dataset\nOverall, the dataset has 67,266,751 rows with an entry for each of the following fields:\nid: The item ID assigned by HN. Almost everything on HN is an item, e.g., stories, comments, jobs, … However, the dataset only contains stories as we only scraped the top lists.\nscore: This name is slightly misleading: score designate the raw vote count of the item, not the score obtained from the above mentioned formula. We left the name as is because the HN API delivers it with this name.\ndescendants: The number of comments (including comments of comments of comment…).\nsubmissionTime: A timestamp of the time the story was submitted in Unix epoch format.\nsampleTime: The time when the scraper collected the data point (also as a Unix epoch timestamp).\ntick: A running number of the sampleTimes.\ntopRank: The current rank on the top page (up to rank 90, otherwise \\N; this is true for all other collected ranks too).\nnewRank: The current rank on the new page.\nbestRank: The current rank on the best page.\naskRank: The current rank on the ask page.\nshowRank: The current rank on the show page.\njobRank: The current rank on the jobs page.\ngain: Votes gained since the last sampleTime.\nThe full dataset is stored in tsv format and compressed as a 7z archive.\nIt is available on the open science framework.\nYou can download it from there, for example like this:\n$ wget --no-verbose --show-progress https://osf.io/h9sjy/download -O hacker-news.7z\nExploratory Analysis\nYou can view many of our analyses on this dataset on Github, but we would be happy to see what new insights you can draw from the data.\n(ADD SOME EXPLORATORY INSIGHTS/PLOTS ETC.)\n\nlinks to content anywhere on the Internet↩︎\nFor our definition of a story’s full lifecycle, refer to this SQL query↩︎\n\\N if it does not appear on the list in question.↩︎\n",
+      "last_modified": "2022-11-28T23:23:51+01:00"
+    },
+    {
+      "path": "hacker-news-simulation.html",
+      "title": "Hacker News Simulation",
+      "description": "A simulation of the Hacker News news aggregator, available as a web app to play around with.\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\nTBD\n\n\n\n",
+      "last_modified": "2022-11-28T23:23:52+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Social Protocols",
+      "author": [],
+      "contents": "\nWe analyze and improve protocols of social software.\n\n\n\n",
+      "last_modified": "2022-11-28T23:23:52+01:00"
+    },
+    {
+      "path": "quality-news.html",
+      "title": "Quality News",
+      "description": "A Hacker News web frontend with a new and improved ranking algorithm.\n",
+      "author": [],
+      "date": "`r Sys.Date()`",
+      "contents": "\nTBD\n\n\n\n",
+      "last_modified": "2022-11-28T23:23:53+01:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
