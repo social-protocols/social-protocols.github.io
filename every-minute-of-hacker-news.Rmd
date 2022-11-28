@@ -17,56 +17,47 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 [Hacker News](news.ycombinator.com) is a social news aggregator provided by the US startup accelerator [Y Combinator](ycombinator.com).
-On Hacker News (HN), users submit stories (links to content anywhere on the Internet) that are then voted on by the community.
+On Hacker News, users submit stories^[links to content anywhere on the Internet] that are then subject to voting by the community.
 The main news aggregation happens on the *top* page (or frontpage) of HN, where content is scored and ranked according to the [following formula](http://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html):
-
 
 $$
 score = \frac{(votes - 1)^{0.8}}{(age_{hours} + 2)^{1.8}} \times penalties
 $$
 
-While *top* is the most prominent page on HN, there are other pages as well.
-Details on those pages can be viewed [here](https://news.ycombinator.com/lists).
+While *top* is the most prominent page on HN, there are [other ranked pages](https://news.ycombinator.com/lists) as well.
 
-The kind of content that is posted on HN is contingent on the preferences of the community which has formed under a loose [guideline](https://news.ycombinator.com/newsguidelines.html) of what is considered *on-topic* on Hacker News:
+The kind of content posted on HN as well as the ranking on the top page is determined by the preferences of the community because all content as well as the voting is user-generated.
+There is a loose [guideline](https://news.ycombinator.com/newsguidelines.html) for what is considered *on-topic*:
 
 > Anything that good hackers would find interesting. That includes more than hacking and startups. If you had to reduce it to a sentence, the answer might be: anything that gratifies one's intellectual curiosity.
 
-The user experience on HN is characterized by users browsing the different ranking lists.
-At the same time, due to the above mentioned guideline and their impressions on the site, users have some idea about what might be interesting to the HN community, so they post new stories on HN when the stumble upon them elsewhere.
-Lastly, each story has a discussion section with comment threads.
+Apart from posting stories, voting, and browsing the top lists, users can have discussions in comment threads under each story.
 
-What differentiates HN from almost all other social computing platforms are, in our view, the following characteristics:
-
-- The rules of the social protocol are reasonably simple.
-- The amount of data created is manageable.
-- It works quite well and the community, overall, seems to be happy with it.
-
-These characteristics make HN a perfect object of study when it comes to creating new ranking algorithms.
-Our interest in the topic started with [an investigation](https://felx.me/2021/08/29/improving-the-hacker-news-ranking-algorithm.html) into effects present in the current ranking scheme, where stories that are picked up by a positive feedback loop of attention and votes spiral upwards in the ranking while many "hidden gems" go unnoticed.
-In order to test our ideas for new ranking algorithms that counter this feedback loop, we first tried to recreate HN as close as possible in a [simulation](https://github.com/social-protocols/news-aggregator-simulation) that is [still available](https://social-protocols.github.io/news-aggregator-simulation/) for experimentation in the browser.
+Our motivation for collecting a dataset on Hacker News was [an investigation](https://felx.me/2021/08/29/improving-the-hacker-news-ranking-algorithm.html) into feedback loops in the current ranking scheme.
+In short, our argument was that stories that are picked up by a positive feedback loop of attention and votes spiral upwards in the ranking while many "hidden gems" go unnoticed.
+In order to test our ideas for new ranking algorithms that counter this feedback loop, we first tried to recreate Hacker News as close as possible in a [simulation](https://github.com/social-protocols/news-aggregator-simulation) that is [still available](https://social-protocols.github.io/news-aggregator-simulation/) for experimentation in the browser.
 We soon realized that we need data to verify and benchmark how far off we were with our simulation.
 
-Y Combinator provides access to a [BigQuery database](https://console.cloud.google.com/marketplace/details/y-combinator/hacker-news) where all stories since the launch of Hacker News are available.
-This database contains all the *outcomes* of Hacker News stories, but **not** how stories developed **towards those outcomes.
-Apart from the BigQuery database, Hacker News has an open [API](https://github.com/HackerNews/API) with end points to live views on all the items (stories, comments, etc.) and users on the site.
-Furthermore, the ranking lists (top, new, best, etc.) can be obtained from the API as lists of IDs.
 
 ### Data Collection
 
-We queried the API for a period of over 4 months in 1 minute intervals to obtain a time series of almost everything that goes on on Hacker News for an extended period of time.
-The scraper we used can be found and inspected on [Github](https://github.com/social-protocols/hn-scraper).
+Y Combinator provides access to a [BigQuery database](https://console.cloud.google.com/marketplace/details/y-combinator/hacker-news) where all stories since the launch of Hacker News are available.
+This database contains all the *outcomes* of Hacker News stories, but **not** how stories developed **towards** those outcomes.
 
+In order to attain a timeseries of snapshots of the most popular ranking lists on Hacker News, we queried the [Hacker News API](https://github.com/HackerNews/API) in 1 minute intervals over a period of over 4 months.
 We started the data collection on `2021-11-23 23:10:07` and ended it on `2022-04-03 14:07:24`.
-In total, we tracked 110556 stories, of which 103961 were tracked over their entire lifecycle^[On Hacker News, stories cannot be voted or commented on after a period of time.].
+In total, we tracked 110556 stories, of which 103961 were tracked over their entire lifecycle^[For our definition of a story's full lifecycle, refer to [this SQL query](https://github.com/social-protocols/hacker-news-data/blob/f24c8ff6438921ee628a7b9f069c622830e2e5eb/import-dataset.sql#L60)].
+The scraper we used is available on [Github](https://github.com/social-protocols/hn-scraper).
+It collected data in the following way:
 
-(SECTION ON METHODOLOGY)
+- Get the first 90 ranks of the `top`, `new`, `best`, `ask`, `show`, and `job` page as ordered lists of IDs.
+- Get additional data on each story that appears on any of the above lists.
+- Create an entry for each story in the dataset, containing its rank on each list^[`\N` if it does not appear on the list in question.] as well as the additional information.
 
 
 ### The Dataset
 
-
-Fields:
+Overall, the dataset has `67,266,751` rows with an entry for each of the following fields:
 
 - `id`: The item ID assigned by HN. Almost everything on HN is an item, e.g., stories, comments, jobs, ... However, the dataset only contains *stories* as we only scraped the top lists.
 - `score`: This name is slightly misleading: `score` designate the raw *vote count* of the item, not the score obtained from the above mentioned formula. We left the name as is because the HN API delivers it with this name.
@@ -82,17 +73,13 @@ Fields:
 - `jobRank`: The current rank on the `jobs` page.
 - `gain`: Votes gained since the last `sampleTime`.
 
-
-
 The full dataset is stored in `tsv` format and compressed as a `7z` archive.
 It is available on the [open science framework](https://osf.io/bnysw/).
 You can download it from there, for example like this:
 
-
 ```
 $ wget --no-verbose --show-progress https://osf.io/h9sjy/download -O hacker-news.7z
 ```
-
 
 
 ### Exploratory Analysis
