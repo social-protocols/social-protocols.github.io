@@ -1,5 +1,7 @@
 # Social Protocols Website
 
+This website is built using [Distill for R Markdown](https://rstudio.github.io/distill/).
+
 ## Workflows
 
 Execute the following to have a `ROOTDIR` environment variable available when you want to create paths:
