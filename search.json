@@ -5,14 +5,14 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2023-02-11T21:40:56+00:00"
+      "last_modified": "2023-02-11T21:50:31+00:00"
     },
     {
       "path": "index.html",
       "title": "Social Protocols",
       "author": [],
       "contents": "\nThe Goal of the Social Protocols project is collective intelligence. We are working on algorithms that better allocate the attention of online communities in order to drive more intelligent conversations.\nQuality News is a Hacker News clone provides additional charts and metrics for each submission. We have chosen Hacker News as a starting point for experimenting with social protocols because of the existing community, open API, and proven ranking algorithm. Our hope is to draw enough users to begin experimenting with methods for improving the quality of stories and discussions on Hacker News.\n\n\n\n",
-      "last_modified": "2023-02-11T21:40:56+00:00"
+      "last_modified": "2023-02-11T21:50:32+00:00"
     }
   ],
   "collections": ["posts/posts.json"]
