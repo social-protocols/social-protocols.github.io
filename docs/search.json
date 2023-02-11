@@ -6,14 +6,14 @@
       "description": "TBD",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-11-23T19:27:48+01:00"
+      "last_modified": "2023-02-11T16:39:03+01:00"
     },
     {
       "path": "blog.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2022-11-23T19:27:49+01:00"
+      "last_modified": "2023-02-11T16:39:04+01:00"
     },
     {
       "path": "every-minute-of-hacker-news.html",
@@ -22,7 +22,7 @@
       "author": [],
       "date": "`r Sys.Date()`",
       "contents": "\nTBD\n\n\n\n",
-      "last_modified": "2022-11-23T19:27:49+01:00"
+      "last_modified": "2023-02-11T16:39:04+01:00"
     },
     {
       "path": "hacker-news-simulation.html",
@@ -31,14 +31,14 @@
       "author": [],
       "date": "`r Sys.Date()`",
       "contents": "\nTBD\n\n\n\n",
-      "last_modified": "2022-11-23T19:27:50+01:00"
+      "last_modified": "2023-02-11T16:39:04+01:00"
     },
     {
       "path": "index.html",
       "title": "Social Protocols",
       "author": [],
-      "contents": "\nWe analyze and improve protocols of social software.\n\n\n\n",
-      "last_modified": "2022-11-23T19:27:50+01:00"
+      "contents": "\nThe Goal of the Social Protocols project is collective intelligence. We are working on algorithms that better allocate the attention of online communities in order to drive more intelligent conversations.\nQuality News is a Hacker News clone provides additional charts and metrics for each submission. We have chosen Hacker News as a starting point for experimenting with social protocols because of the existing community, open API, and proven ranking algorithm. Our hope is to draw enough users to begin experimenting with methods for improving the quality of stories and discussions on Hacker News.\n\n\n\n",
+      "last_modified": "2023-02-11T16:39:04+01:00"
     },
     {
       "path": "quality-news.html",
@@ -47,7 +47,7 @@
       "author": [],
       "date": "`r Sys.Date()`",
       "contents": "\nTBD\n\n\n\n",
-      "last_modified": "2022-11-23T19:27:51+01:00"
+      "last_modified": "2023-02-11T16:39:05+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
