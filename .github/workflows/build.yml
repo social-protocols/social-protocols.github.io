@@ -21,11 +21,6 @@ jobs:
 
       - uses: actions/checkout@v3
 
-      - uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: gdebi-core qpdf devscripts ghostscript # required by setup-r
-          version: 1.0
-
       - uses: r-lib/actions/setup-r@v2
       - uses: r-lib/actions/setup-pandoc@v1
 
