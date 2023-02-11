@@ -3,7 +3,7 @@ title: Social Protocols
 site: distill::distill_website
 ---
 
-The goal of the Social Protocols project is collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.
+The goal of *Social Protocols* is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.
 
 Our first experiment, [Quality News](https://news.social-protocols.org), is about helping communities to collectively allocate their attention. We propose a news-aggregator ranking formula which reflects the intent revealed by the voting behavior of the community. It should help the community to focus and drive more intelligent conversations.
 
