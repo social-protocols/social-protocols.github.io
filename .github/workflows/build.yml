@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  pull_request:
+
+name: Build & Publish
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install rmarkdown
+        run: Rscript -e 'install.packages("rmarkdown")'
+      - name: Render README
+        run: Rscript -e 'rmarkdown::render("index.Rmd", output_format = "md_document")'
+      # - name: Commit results
+      #   run: |
+      #     git commit README.md -m 'Re-build README.Rmd' || echo "No changes to commit"
+      #     git push origin || echo "No changes to commit"
