@@ -10,16 +10,6 @@ navbar:
       href: index.html
     # - text: "Blog"
     #   href: blog.html
-    - text: "Projects"
-      menu:
-        - text: "Every Minute of Hacker News"
-          href: every-minute-of-hacker-news.html
-        - text: "Hacker News Simulation"
-          href: hacker-news-simulation.html
-        - text: "Quality News"
-          href: quality-news.html
-    - text: "About"
-      href: about.html
     - icon: fab fa-github
       href: https://github.com/social-protocols
     - icon: fa fa-rss
