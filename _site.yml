@@ -4,6 +4,7 @@ theme: style.css
 description: |
   We analyze and improve protocols for social software.
 output_dir: "docs"
+base_url: "https://social-protocols.org"
 navbar:
   right:
     - text: "Home"
