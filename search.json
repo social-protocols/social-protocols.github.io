@@ -5,14 +5,23 @@
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2023-02-14T08:54:55+00:00"
+      "last_modified": "2023-05-06T21:32:33+00:00"
     },
     {
       "path": "index.html",
       "title": "Social Protocols",
       "author": [],
       "contents": "\nThe goal of Social Protocols is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.\nOur first experiment, Quality News, is about helping communities to collectively allocate their attention. We propose a news-aggregator ranking formula which reflects the intent revealed by the voting behavior of the community. It should help the community to focus and drive more intelligent conversations.\nWe have chosen Hacker News as a starting point for experimenting with social protocols because of the existing community, open API, and proven ranking algorithm. Our hope is to draw enough users to run bigger, open experiments in the future.\nFollow us on Mastodon or Twitter, or send a mail.\n\n\n\n",
-      "last_modified": "2023-02-14T08:54:55+00:00"
+      "last_modified": "2023-05-06T21:32:33+00:00"
+    },
+    {
+      "path": "test-article.html",
+      "title": "Test Article",
+      "description": "A test article.\n",
+      "author": [],
+      "date": "11-22-2022",
+      "contents": "\nThis is a test article.\n\n\n\n",
+      "last_modified": "2023-05-06T21:32:34+00:00"
     }
   ],
   "collections": ["posts/posts.json"]

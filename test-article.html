@@ -88,26 +88,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Social Protocols</title>
+  <title>Social Protocols: Test Article</title>
+  
+  <meta property="description" itemprop="description" content="A test article."/>
   
   
-  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-11-22"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-11-22"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Social Protocols"/>
+  <meta property="og:title" content="Social Protocols: Test Article"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A test article."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Social Protocols"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Social Protocols"/>
+  <meta property="twitter:title" content="Social Protocols: Test Article"/>
+  <meta property="twitter:description" content="A test article."/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Social Protocols"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Test Article"]},{"type":"character","attributes":{},"value":["A test article.\n"]},{"type":"character","attributes":{},"value":["11-22-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2400,7 +2406,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Social Protocols","authors":[]}
+{"title":"Test Article","description":"A test article.","authors":[],"publishedDate":"2022-11-22T00:00:00.000+00:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2428,18 +2434,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Social Protocols</h1>
+<h1>Test Article</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>A test article.</p></p>
 </div>
 
 
 <div class="d-article">
-<p>The goal of <em>Social Protocols</em> is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.</p>
-<p>Our first experiment, <a href="https://news.social-protocols.org">Quality News</a>, is about helping communities to collectively allocate their attention. We propose a news-aggregator ranking formula which reflects the intent revealed by the voting behavior of the community. It should help the community to focus and drive more intelligent conversations.</p>
-<p>We have chosen Hacker News as a starting point for experimenting with social protocols because of the existing community, open API, and proven ranking algorithm. Our hope is to draw enough users to run bigger, open experiments in the future.</p>
-<p>Follow us on <a rel="me" href="https://mas.to/@SocialProtocols">Mastodon</a> or <a href="https://twitter.com/socialprotocols">Twitter</a>, or send a <a href="mailto:mail@social-protocols.org">mail<a>.</p>
+<p>This is a test article.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
