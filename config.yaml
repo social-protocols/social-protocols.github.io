@@ -43,6 +43,12 @@ params:
   #   height: 50
   #   url: logo.png
   #   width: 50
+
+outputFormats:
+  RSS:
+    mediatype: "application/rss"
+    baseName: "rss"
+
 markup:
   defaultMarkdownHandler: goldmark
   goldmark:
