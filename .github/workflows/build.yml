@@ -34,7 +34,10 @@ jobs:
       - name: Install blogdown
         run: Rscript -e 'install.packages("blogdown")'
 
-      - name: build website
+      - name: Install Hugo
+        run: Rscript -e 'blogdown::install_hugo()'
+
+      - name: Blogdown build
         run: Rscript -e 'blogdown::build_site(build_rmd = "newfile")'
 
       - name: Deploy to Github Pages
