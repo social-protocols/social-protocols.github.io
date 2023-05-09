@@ -6,6 +6,9 @@ in
       R
       # rPackages.rmarkdown
       # rPackages.knitr
-      rPackages.distill
+      # rPackages.distill
+      # # rPackages.rcpp
+      # rPackages.servr
+      rPackages.blogdown
     ];
   }

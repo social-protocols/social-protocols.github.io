@@ -22,13 +22,19 @@ file.path(ROOTDIR, "path", "to", "file")
 ### Running Locally through nix
 
 ```
-	just build
+	just serve
 ```
 
-Or
+### Bugs
+
+For some reason, changes to .Rmd files don't get picked up automatically when running 'just serve', but changes to .md files to.
+
+If however if you do the following,
 
 ```
-	just watch
+   > nix-shell
+   > R
+   > source("serve.R") 
 ```
 
-These commands run the distill build process (`rmarkdown::render_site()` in R), which will generate HTML files under docs/, which you can browse locally. The deploy workflow triggered automatically by git commit does the same thing.
+You get some warning messages, but changes to .Rmd files to get picked up. However, it produces some Permission Denied warning messages that seem to be ignorable.

@@ -1,7 +1,10 @@
 ---
-title: Social Protocols
+title: About Social Protocols
 site: distill::distill_website
+date:   2023-05-01
+weight: 1 # pin to top
 ---
+
 
 The goal of *Social Protocols* is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.
 
