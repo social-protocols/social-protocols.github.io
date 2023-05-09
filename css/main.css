@@ -209,6 +209,13 @@ img {
   border-bottom-color: #222;
 }
 
+.archive-item-author {
+  color: #555;
+  font-size: .8em;
+  padding: 0px 0;
+  margin: 0px;
+}
+
 .footer {
   padding: 25px 0;
   text-align: center;
@@ -309,21 +316,21 @@ img {
     float: right;
   }
 
-  a.archive-summary {
+  a.archive-item-summary {
     color: #333;
     text-decoration: none;
-    font-size: .8em;
+    font-size: .9em;
     text-align: left;
     display: block;
   }
 
-  a.archive-summary:visited {
+  a.archive-item-summary:visited {
     color: #333;
     text-decoration: none;
 
   }
 
-  .archive-summary .read-more {
+  .archive-item-summary .read-more {
     text-decoration: underline;
   }
 
