@@ -31,7 +31,7 @@ jobs:
           key: ${{ hashFiles('.github/R-version') }}-${{ hashFiles('.github/pkg-versions.Rds') }}-${{ hashFiles('.github/pkg-deps.Rds') }}
           restore-keys: ${{ hashFiles('.github/R-version') }}-
 
-      - name: Install distill
+      - name: Install blogdown
         run: Rscript -e 'install.packages("blogdown")'
 
       - name: build website
