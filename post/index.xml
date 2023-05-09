@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Social Protocols</title>
+    <link>https://social-protocols.org/post/</link>
+    <description>Recent content in Posts on Social Protocols</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://social-protocols.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Deserves Our Attention?</title>
+      <link>https://social-protocols.org/2023/05/01/what-deserves-our-attention/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://social-protocols.org/2023/05/01/what-deserves-our-attention/</guid>
+      <description>Every online community has rules that determine how the attention of the community is directed. For example in an online forum, the most up-voted posts may be shown on at the top of the page.</description>
+    </item>
+    
+  </channel>
+</rss>
