@@ -20,6 +20,8 @@ jobs:
       # https://github.com/rstudio/ai-blog/blob/c07dff9c18859ba682ee112ed45c7c3115c86e71/.github/workflows/main.yml
 
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive 
 
       - uses: r-lib/actions/setup-r@v2
       - uses: r-lib/actions/setup-pandoc@v1
