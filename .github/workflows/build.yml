@@ -35,7 +35,7 @@ jobs:
         run: Rscript -e 'install.packages("blogdown")'
 
       - name: build website
-        run: Rscript -e 'blogdown::build_site(build_rmd = 'newfile')'
+        run: Rscript -e 'blogdown::build_site(build_rmd = "newfile")'
 
       - name: Deploy to Github Pages
         if: github.ref == 'refs/heads/main'
