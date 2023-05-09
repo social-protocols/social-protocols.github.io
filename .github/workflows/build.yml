@@ -36,7 +36,7 @@ jobs:
         run: Rscript -e 'install.packages("blogdown")'
 
       - name: Install Hugo
-        run: Rscript -e 'blogdown::install_hugo()'
+        run: Rscript -e 'blogdown::install_hugo(extended = TRUE, version = "0.111.3")'
 
       - name: Blogdown build
         run: Rscript -e 'blogdown::build_site(build_rmd = "newfile")'
