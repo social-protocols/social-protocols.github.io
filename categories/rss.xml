@@ -5,6 +5,6 @@
     <link>https://social-protocols.org/categories/</link>
     <description>Recent content in Categories on Social Protocols</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://social-protocols.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://social-protocols.org/categories/rss.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

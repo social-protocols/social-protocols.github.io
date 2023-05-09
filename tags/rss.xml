@@ -5,6 +5,6 @@
     <link>https://social-protocols.org/tags/</link>
     <description>Recent content in Tags on Social Protocols</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://social-protocols.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://social-protocols.org/tags/rss.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
