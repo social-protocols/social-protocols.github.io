@@ -9,8 +9,6 @@ in
       # rPackages.distill
       # # rPackages.rcpp
       # rPackages.servr
-      # rPackages.renv
-      rPackages.yaml
       rPackages.blogdown
     ];
   }
