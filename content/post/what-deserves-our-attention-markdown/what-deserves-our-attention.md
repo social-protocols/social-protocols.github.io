@@ -24,7 +24,7 @@ Every online community has rules that determine how the attention of the communi
 
 But this is a terrible rule. It creates perverse incentives for people to share content that people will reflexively upvote based on first impressions. It encourages shallow conversation on lowbrow topics. 
 
-Engagement-based ranking, use by many social networks, is even worse. It concentrates attention on controversy, outrage, and out-group animosity. Three decades of Internet toxicity and countless academic studies unequivocally condemn these algorithms. <!--(TODO: references)-->
+Engagement-based ranking, used by many social networks, is even worse. It concentrates attention on controversy, outrage, and out-group animosity. Three decades of Internet toxicity and countless academic studies unequivocally condemn these algorithms. <!--(TODO: references)-->
 
 So how should content be ranked? What content deserves our collective attention, and how should this be determined? 
 
@@ -35,8 +35,3 @@ But our collective attention should not just be a commodity to be exploited. It 
 Social networks and online forums, as the public square where public discourse takes place, are public goods that should be independent of the whims of politics. They should be governed by transparent, democratic protocols that direct society's collective attention towards production of common knowledge, narratives, values, and culture. They should direct our attention towards constructive, civilized public discourse and a collective, cooperative pursuit of truth. Towards the realization of our collective will, and manifestation of our collective intelligence.
 
 Designing such rules is the goal of *Social Protocols*.
-
-<!-- ## Next Article
-
-- What Is a Social Protocol
- -->
