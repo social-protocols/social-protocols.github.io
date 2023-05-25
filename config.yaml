@@ -25,6 +25,8 @@ menu:
       url: https://github.com/social-protocols
     - name: Twitter
       url: https://twitter.com/socialprotocols
+    - name: Mastodon
+      url: https://mas.to/@SocialProtocols
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
