@@ -383,3 +383,11 @@ a.archive-item-summary:visited {
     box-shadow: none;
   }
 }
+
+.featured-image {
+    margin-top: 20px;
+    height: 300px;
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+  }
