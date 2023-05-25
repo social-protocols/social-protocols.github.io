@@ -6,8 +6,8 @@ weight: 2 # Pin to top
 author: Jonathan Warden
 
 # toc_sticky: true
-image: images/what-deserves-our-attention.png
-
+image: /images/what-deserves-our-attention.png
+canonical_url: https://deliberati.io/what-deserves-our-attention/
 
 # menu:
 #     main:
