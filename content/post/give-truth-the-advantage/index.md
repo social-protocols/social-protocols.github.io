@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 weight: 20 # Pin to top
 tags: ['Social Protocols']
-image: daniele-d-andreti-i2zKYlnFnCU-unsplash-wide-1920.jpg
+image: truth-as-woman.png
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"
