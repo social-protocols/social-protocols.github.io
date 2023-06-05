@@ -11,7 +11,7 @@ canonical_url: https://social-protocols.org/the-deliberative-poll
 
 ---
 
-A [deliberative poll](https://en.wikipedia.org/wiki/Deliberative_opinion_poll) measures the **informed opinion** of a group of people who have participated in a discussion about the topic of the poll. This essay introduces a method for integrating deliberative polling into online discussions in social platforms, in order to discover the informed opinion of a group. 
+A deliberative poll measures the **informed opinion** of a group of people who have participated in a discussion about the topic of the poll. This essay introduces a method for integrating deliberative polling into online discussions in social platforms, in order to discover the informed opinion of a group. 
 
 <!--more-->
 
