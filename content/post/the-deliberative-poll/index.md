@@ -7,6 +7,7 @@ weight: 30
 toc: true
 # toc_sticky: true
 image: dylan-gillis-KdeqA3aTnBY-unsplash-wide-1920.jpg
+canonical_url: https://social-protocols.org/the-deliberative-poll
 
 ---
 

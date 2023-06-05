@@ -8,6 +8,8 @@ weight: 1 # Pin to top
 image: what-deserves-our-attention.png
 aliases:
 - /2023/05/01/what-deserves-our-attention/
+canonical_url: https://social-protocols.org/what-deserves-our-attention/
+
 # menu:
 #     main:
 #         - identifier: home
