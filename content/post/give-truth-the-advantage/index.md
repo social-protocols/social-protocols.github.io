@@ -83,14 +83,13 @@ A combination of a Truthtelling Game and a Deliberative Poll can result in a vir
 > 
 > -- Barack Obama, 2020
 
-A combination of a Truthtelling Game and an Argument Game can result in a virtuous feedback loop where people win attention by promoting **honest and informed opinions**.
-
 The honest and informed opinion of a group of people on the Internet is not guaranteed to be the truth. But I think it can bring us closer to the ideal of a free marketplace of ideas, where for an idea to succeed, its supporters must defend it with reasons that people honestly believe are good ones.
 
 Today, the marketplace of ideas is held in public forums on the Internet, but the rules that govern the marketplace are broken. But we don't have to throw up our hands and accept this as an inevitable consequence of technology, or of human nature.
 
 If the platforms were designed differently, they could fulfill the original promise of the Internet: to democratize knowledge. To provide society with a tool for collectively discovering information, making sense of that information, and realizing humanity's potential for collective intelligence.
 
+Read about our ideas for improving conversations on the internet at [social-protocols.org](https://social-protocols.org/).
 
 [^1]: https://www.nature.com/articles/s41599-020-00550-7
 
