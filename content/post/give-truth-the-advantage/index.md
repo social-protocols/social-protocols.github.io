@@ -73,12 +73,11 @@ But what other types of feedback loops can be created? What kind of behaviors ca
 >
 > -- Harlan Ellison
 
-In [Truthtelling Games](/truthtelling-games), I show how game theory can be used to establish an **equilibrium** at honest behavior: a situation where rational individuals are better off revealing what they **honestly think is true**, because other people are doing the same.
+In [Truthtelling Games](/truthtelling-games), I show how game theory can be used to establish an **equilibrium** at honest behavior: a situation where rational individuals are better off revealing what they **honestly think is true**, because other people are doing the same. In [The Deliberative Poll](/the-deliberative-poll), I propose a method for encouraging productive discussion and identifying the most **informed opinions**.
 
-Platforms such as Twitter essentially turns argument into a game that is won by making arguments that are popular within some echo chamber. But it is possible to change the rules of the game so that it is won by posting and upvoting the most **informed** content. In [The Deliberative Poll](/the-deliberative-poll), I propose a method for encouraging productive discussion and identifying the most **informed opinions**.
+A combination of a Truthtelling Game and a Deliberative Poll can result in a virtuous feedback loop where people win attention by promoting **honest and informed opinions**.
 
 ## The Marketplace of Ideas
-
 
 > "If we do not have the capacity to distinguish what’s true from what’s false, then by definition the marketplace of ideas doesn’t work. And by definition our democracy doesn’t work."
 > 
