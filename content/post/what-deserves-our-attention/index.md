@@ -9,16 +9,6 @@ image: what-deserves-our-attention.png
 aliases:
 - /2023/05/01/what-deserves-our-attention/
 canonical_url: https://social-protocols.org/what-deserves-our-attention/
-
-# menu:
-#     main:
-#         - identifier: home
-#           name: Home
-#           url: /
-#           weight: -100
-#           params:
-#             icon: home
-#             newTab: true
 ---
 
 Every online community has rules that determine how the attention of the community is directed. For example in an online forum, the most up-voted posts may be shown on at the top of the page. This rule concentrates attention on popular content. 
