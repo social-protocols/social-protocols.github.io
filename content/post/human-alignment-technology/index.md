@@ -6,8 +6,6 @@ date:   2023-06-02 00:00:00 +0200
 tags: ['Social Protocols']
 weight: 2 # Place at top after pinned pages (about, projects)
 image: collective.png
-aliases:
-- /2023/06/02/human-alignment-technology
 canonical_url: https://social-protocols.org/human-alignment-technology/
 summary: Human alignment, the process of establishing shared understanding among individuals, is crucial for effective collaboration and organization. It is essential for civilizations to flourish.
 ---
