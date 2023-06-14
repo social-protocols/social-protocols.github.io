@@ -4,7 +4,7 @@ title:  "Human Alignment Technology"
 toc: false 
 date:   2023-06-02 00:00:00 +0200
 tags: ['Social Protocols']
-weight: 1 # Pin to top
+weight: 2 # Place at top after pinned pages (about, projects)
 image: collective.png
 aliases:
 - /2023/06/02/human-alignment-technology
