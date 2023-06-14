@@ -14,6 +14,7 @@ sidebar:
 series: ['Game Theory in Social Media']
 series_weight: 2
 canonical_url: https://social-protocols.org/the-law-of-attention/
+author: Jonathan Warden
 
 ---
 

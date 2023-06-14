@@ -18,6 +18,7 @@ series: ['Game Theory in Social Media']
 series_weight: 3
 summary: "In this article, I will use game theory to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions."
 canonical_url: https://social-protocols.org/truthtelling-games/
+author: Jonathan Warden
 
 ---
 

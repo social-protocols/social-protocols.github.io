@@ -9,6 +9,7 @@ image: collective.png
 image_alt: AI generated image of a group of people sitting and collectively imagining a distant city made of colors and light.
 canonical_url: https://social-protocols.org/human-alignment-technology/
 summary: Human alignment, the process of establishing shared understanding among individuals, is crucial for effective collaboration and organization. It is essential for civilizations to flourish.
+author: Felix Dietze
 ---
 
 ## Human Alignment
