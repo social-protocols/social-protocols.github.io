@@ -6,7 +6,7 @@
     <description>Recent content on Social Protocols</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 May 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://social-protocols.org/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://social-protocols.org/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Social Protocols</title>
       <link>https://social-protocols.org/about/</link>
@@ -24,6 +24,16 @@ Follow us on Mastodon or Twitter, or send a mail.</description>
       
       <guid>https://social-protocols.org/projects/</guid>
       <description>Here are some of our projects.</description>
+    </item>
+    
+    <item>
+      <title>Human Alignment Technology</title>
+      <link>https://social-protocols.org/human-alignment-technology/</link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0200</pubDate>
+      
+      <guid>https://social-protocols.org/human-alignment-technology/</guid>
+      <description>Human Alignment Human alignment, the process of establishing shared understanding among individuals, is crucial for effective collaboration and organization. It is essential for civilizations to flourish.
+Alignment establishes shared knowledge, values, and goals.</description>
     </item>
     
     <item>
