@@ -32,7 +32,7 @@ In this article, I will use [game theory](https://en.wikipedia.org/wiki/Game_the
 
 A striking example of where this has actually been done is blockchain. If you directly own cryptocurrency, the balance of your cryptocurrency wallet is stored in a ledger maintained by a group of anonymous people on the Internet. These people are not necessarily by nature very honest, and yet they always tell the truth about your wallet balance. Game theory can explain why they don't just take all your cryptocurrency for themselves.
 
-Recent advances in game theory have gone even further, and have shown how to induce people to [truthfully reveal **subjective** information](/information-elicitation-mechanisms): that is, to reveal things that **only they know**, such as their favorite color, who they are going to vote for, etc.
+Recent advances in game theory have gone even further, and have shown how to induce people to [truthfully reveal **subjective** information](https://deliberati.io/information-elicitation-mechanisms): that is, to reveal things that **only they know**, such as their favorite color, who they are going to vote for, etc.
 
 In [The Law of Attention](/the-law-of-attention), I argue that game theory can actually be applied to the design of social media algorithms. This is tremendously significant, because game-theorists have proved that it is possible to get random people on the internet to tell the truth.  
 
