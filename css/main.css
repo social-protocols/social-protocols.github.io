@@ -46,7 +46,7 @@ img {
 }
 
 .nav {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 15px;
   text-align: right;
@@ -82,7 +82,7 @@ img {
 }
 
 .nav-title {
-  margin: 0 0 0 50px;
+  margin: 0;
   font-size: 1em;
   float: left;
   text-decoration: none;
@@ -192,7 +192,7 @@ img {
 }
 
 .archive-item {
-  margin: 5px 0 15px;
+  margin: 5px 0 30px;
   padding: 0;
 }
 
@@ -306,7 +306,7 @@ a.archive-item-summary:visited {
   }
 
   .nav-title {
-    margin: 0 0 0 50px;
+    margin: 0;
     font-size: 1.2em;
     float: left;
     text-decoration: none;
@@ -351,6 +351,12 @@ a.archive-item-summary:visited {
     text-decoration: none;
   }
 
+  .archive-item-summary p {
+    /* remove margin of potentially nested paragraphs */
+    margin: 0;
+    padding: 0;
+  }
+
   .archive-item-summary .read-more {
     text-decoration: underline;
   }
@@ -386,8 +392,9 @@ a.archive-item-summary:visited {
 
 .featured-image {
     margin-top: 20px;
-    height: 300px;
+    height: 400px;
     width: 100%;
     max-height: 50vh;
     object-fit: cover;
+    border-radius: 12px;
   }
