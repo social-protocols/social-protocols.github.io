@@ -3,7 +3,6 @@ layout: single
 title:  "Human Alignment Technology"
 toc: false 
 date:   2023-06-02 00:00:00 +0200
-tags: ['Social Protocols']
 weight: 2 # Place at top after pinned pages (about, projects)
 image: collective.png
 image_alt: AI generated image of a group of people sitting and collectively imagining a distant city made of colors and light.

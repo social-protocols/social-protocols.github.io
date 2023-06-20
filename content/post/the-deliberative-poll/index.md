@@ -2,7 +2,6 @@
 layout: single
 title:  "The Deliberative Poll"
 date:   2020-11-08 13:40:43 -0700
-tags: ['Social Protocols']
 weight: 30
 toc: true
 # toc_sticky: true

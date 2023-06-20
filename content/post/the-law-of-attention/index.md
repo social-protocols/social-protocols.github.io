@@ -4,7 +4,7 @@ title:  "The Law of Attention"
 date:   2021-09-13 00:00:00 +0200
 toc: true
 toc_sticky: true
-tags: ['Social Protocols', 'Game Theory']
+tags: ['Game Theory']
 weight: 60
 sidebar:
   - title: "In This Series"

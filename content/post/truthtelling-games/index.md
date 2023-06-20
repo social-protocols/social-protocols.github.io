@@ -5,7 +5,7 @@ date:   2021-09-12 00:00:00 +0200
 toc: true
 weight: 90
 toc_sticky: true
-tags: ['Social Protocols','Game Theory']
+tags: ['Game Theory']
 sidebar:
   - title: "In This Series"
     nav: "give-truth-the-advantage"

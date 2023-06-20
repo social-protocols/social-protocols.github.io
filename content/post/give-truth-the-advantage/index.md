@@ -5,7 +5,7 @@ title:  "Give Truth the Advantage"
 toc: true
 toc_sticky: true
 weight: 2 # Place at top after pinned pages (about, projects)
-tags: ['Social Protocols', 'Game Theory']
+tags: ['Game Theory']
 image: truth-as-woman.png
 sidebar:
   - title: "In This Series"
