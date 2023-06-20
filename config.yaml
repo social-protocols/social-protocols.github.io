@@ -28,6 +28,10 @@ menu:
       url: https://twitter.com/socialprotocols
     - name: Mastodon
       url: https://mas.to/@SocialProtocols
+    - name: Substack
+      url: https://socialprotocols.substack.com
+    - name: Medium
+      url: https://medium.com/@socialprotocols
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
