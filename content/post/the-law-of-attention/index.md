@@ -15,7 +15,7 @@ series: ['Game Theory in Social Media']
 series_weight: 2
 canonical_url: https://social-protocols.org/the-law-of-attention/
 author: Jonathan Warden
-
+image: law-of-attention.png
 ---
 
 In this article, I argue that we can apply [game theory](https://en.wikipedia.org/wiki/Game_theory) to explain and control the behaviors that dominate in an online community. Not only can game theory explain why misinformation and abuse are so common in social platforms, it can be used to design social platforms that will be filled with honest, informed, civil, and behavior.
