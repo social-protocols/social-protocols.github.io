@@ -22,8 +22,11 @@ A deliberative poll measures the **informed opinion** of a group of people who h
 - The deliberative poll addresses this by:
     1. **[Directing attention to comments](#directing-attention)** that warrant follow-through
     2. [Displaying the **deliberative consensus**](#the-deliberative-consensus) instead of the initial poll results
+<!--
 - The process focuses the conversation on a **[critical thread](#the-critical-thread)** of comments and their replies.
 - The aggregate judgment is calculated to reflect a [**consistent and informed judgment**](#judgment-aggregation) of the group.
+-->
+
 - This process can be invisibly [integrated into social platforms](#integration-into-social-platforms) where people vote on and discuss content.
 - This method should not only produce better judgments: it is also [more fair and democratic](#conclusion). 
 
@@ -31,11 +34,22 @@ A deliberative poll measures the **informed opinion** of a group of people who h
 
 The Deliberative Poll is inspired by a very important principle: **discussion helps groups make better judgments**. Discussion is how the knowledge and ideas spread among a diverse group of individuals is aggregated into collective intelligence.  
 
-But online discussions are often less effective than in-person conversations. If we are all in the same room, I can look each person in the eye and see who is listening and engaged, and expect immediate responses to what I say (even if the response is overt silence). But in an online group discussion, I don't even know who is "listening", let alone when or if they will respond. As a result , and **important comments sometimes get ignored**.
+
+But online discussions are often less effective than in-person conversations. This is because in-person conversations are **synchronous** -- people take turns talking while others listen -- whereas online conversations are **asynchronous** -- everyone posts on their own time, and they don't know if anybody else will read their posts, let alone respond, let alone anytime soon.
+
+<!--
+
+
+But online discussions are often less effective than in-person conversations, because online discussions are **asynchronous**, where as person-to-person discussions are syncronous.
+
+In a synchronous, person-to-person conversation people take turns talking while others listen. In an asynchronous, online conversations, everyone posts on their own time and they don't know if anybody is listening, let alone whether they will respond.
+-->
+
+As a result, in online conversations **important comments sometimes get ignored**.
 
 For example, suppose a group of coworkers votes on where to go to lunch. Six people vote for Dino's, but Alice votes for Taco Tavern and says "Dino's is closed today."
 
-In person, that comment would settle the matter: everybody who voted for Dino's would change their vote. 
+In a synchronous, in-person conversation, that comment would settle the matter: everybody who voted for Dino's would change their vote. 
 
 <img src="synchronous-conversation.png"
      alt="A Synchronous Conversation"
@@ -43,7 +57,7 @@ In person, that comment would settle the matter: everybody who voted for Dino's 
 
 <!-- ![](images/synchronous-conversation.png) -->
 
-Online, however, this kind of comment is often overlooked, buried in a comment thread that nobody reads.
+However in an online, asynchronous conversation, this kind of comment is often overlooked, buried in a comment thread that nobody reads.
 
 <img src="alice-comment-buried.png"
      alt="Alice's Comment Buried"
@@ -66,13 +80,13 @@ In our example, the system will place a prompt in the feed or the notifications 
      style="display: block; margin-left: auto; margin-right: auto; width: 480px" />
 
 
-Like a good facilitator, the system recognizes that Alice's comment represents a **reason** not to vote with the majority for Dino's. It notices that **nobody in the majority read her comment**, and it reasons that a **coherent judgment** probably requires that somebody do so, and so it notifies them to make sure they do.
+Like a good facilitator, the system recognizes that Alice's comment represents a **reason** not to vote with the majority for Dino's. It notices that **nobody in the majority read her comment**, and it reasons that a coherent judgment probably requires that somebody do so, and so it notifies them to make sure they do.
 
 Suppose that two people respond and change their vote to Taco Tavern. Where does the group go to lunch? 
 
 ## The Deliberative Consensus 
 
-The Deliberative Poll will display the **deliberative consensus** next to the overall poll results. In our example, the deliberative consensus will be 3:0 in favor of Taco Tavern (Alice plus the two others who changed their vote) -- even though the overall poll results are still 4:3 for Dino's.
+The Deliberative Poll will display the **deliberative consensus** next to the overall poll results. In our example, the deliberative consensus will be 3:0 in favor of Taco Tavern (Alice plus the two others who changed their vote) -- even though the overall poll results were 4:3 for Dino's.
 
 <img src="deliberative-consensus.png"
      alt="Deliberative Consensus"
@@ -81,15 +95,16 @@ The Deliberative Poll will display the **deliberative consensus** next to the ov
 
 This is because there was a **unanimous consensus for Taco Tavern among the people who saw Alice's comment** -- that is, those who participated in the critical discussion thread and were informed on all the points that were raised.
 
-Suppose the group has adopted a norm of making decisions based on the deliberative consensus. Then they will all happily head over to Taco Tavern at lunch-time. The four who didn't change their vote may not even know *why* they are going to Taco Tavern notwithstanding the overall vote -- but if they have confidence in the deliberative poll process they will know that there was a reason for the change of plan and trust the group decision. 
+Suppose the group has adopted a norm of making decisions based on the deliberative consensus. Then they will all happily head over to Taco Tavern at lunch-time. The four who didn't change their vote may not even know *why* they are going to Taco Tavern notwithstanding the overall vote -- but if they have confidence in the deliberative poll process they will know that there was a reason for the change of plan.
 
 <img src="taco-tavern.png"
      alt="Taco Tacern"
      style="display: block; margin-left: auto; margin-right: auto; width: 100%" />
 
-
-
 Suppose on the other hand that Bob didn't trust the result, and really wanted to go to Dino's. He could have clicked on the thread and read Alice's comment: **his vote would then have been counted in the deliberative consensus**. If he agreed with Alice, he might have changed his vote. If he disagreed with Alice, he could have responded with his reason, and the system would have continued the conversation and asked Alice and others who agree with her to respond.
+
+
+<!--
 
 ## The Critical Thread
 
@@ -113,6 +128,8 @@ The system will then call this counter-argument to the attention of Alice and ot
 
 As the conversation proceeds, the deliberative consensus may flip back and forth, with the result being determined by a smaller and smaller group of more and more informed participants.
 
+-->
+
 ## Resolution of Discussions
 
 But the discussion won't go on for ever; it will end when new arguments are no longer changing the deliberative consensus. This will happen for one of two reasons:
@@ -120,6 +137,8 @@ But the discussion won't go on for ever; it will end when new arguments are no l
 1. People stop arguing. For example, if Dino's really did re-open yesterday, Alice may just accept the decision to go to Dino's, and the conversation will end there.
 
 1. The latest argument does not change the deliberative consensus. For example, if Alice responds "But I don't *like* Dino's", but nobody is convinced by this argument, there is no need for them to respond. As long as members of the pro-Dino's majority have *seen* Alice's argument, but have not changed their minds, the informed opinion is still in favor of Dino's. Unless somebody comes up with a more convincing argument, the argument is over.
+
+<!--
 
 ## Logically Consistent Group Judgments
 
@@ -143,7 +162,9 @@ So to aggregate the judgment of a group, instead of tabulating majority opinions
 
 It should be clear that the answer to this question is a **probability**. And a proper probability estimate requires more than a simple ratio of fully-formed users that agree, because the number of votes might be quite small. In our example, only two people saw Alice's comment and changed their vote. This is evidence that the majority would also change their vote if they also saw Alice's comment, but how strong is this evidence?
 
-Properly answering this question requires us to have prior beliefs about voters' opinions and to update those beliefs after obtaining votes using the rules of Bayesian belief revision. In [Distributed Bayesian Reasoning](/distributed-bayesian-reasoning-introduction), we expand on this principle and develop a formula for evaluating arbitrarily large and complex discussions with many branches, allowing us to estimate the probability that participants would agree with a proposition if everyone shared the same information, even if no individual actually participates in any more than a very small part of the discussion.
+Properly answering this question requires us to have prior beliefs about voters' opinions and to update those beliefs after obtaining votes using the rules of Bayesian belief revision. In [Distributed Bayesian Reasoning](https://jonathanwarden.com/distributed-bayesian-reasoning-introduction), we expand on this principle and develop a formula for evaluating arbitrarily large and complex discussions with many branches, allowing us to estimate the probability that participants would agree with a proposition if everyone shared the same information, even if no individual actually participates in any more than a very small part of the discussion.
+
+-->
 
 ## Integration into Social Platforms
 
@@ -157,7 +178,11 @@ A deliberative poll doesn't just produce more informed and logically consistent 
 
 Almost everybody has experienced the frustration of dysfunctional online group discussions and decision-making. This is why good facilitators are so essential to well-functioning groups: they help prevent the sense of frustration, arbitrariness and irrationality that comes from logically inconsistent decisions and lack of follow-through on important points that have been raised.
 
+<!--
+
 The deliberative poll process is designed not just to facilitate fair and informed judgments, but also *efficient* conversations, **sparing the limited attention of users by keeping conversation focused** on the critical thread and prompting people to respond just enough to determine the deliberative consensus.
+-->
+
 
 The process is like **a cross between a ticket system and a good human facilitator**. It has a simple, even-handed idea of what follow-through has to happen to ensure fair and logical results, and it tracks status and gently reminds people to respond until key points have been adequately addressed.
 
