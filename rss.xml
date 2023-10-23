@@ -80,5 +80,14 @@ Follow us on Mastodon or Twitter, or send a mail.</description>
       <description>In this article, I will use game theory to explain why, under certain conditions, otherwise dishonest Internet people will behave with scrupulous honesty, and how social platforms can be intentionally engineered to create these conditions.</description>
     </item>
     
+    <item>
+      <title>We&#39;re Building the Social Network of the Future</title>
+      <link>https://social-protocols.org/social-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://social-protocols.org/social-network/</guid>
+      <description>We are in the process of creating a social network based on what we&amp;rsquo;ve learned from our experiments during the past years. The core of our concepts is a suite of novel algorithms that distribute attention over content.</description>
+    </item>
+    
   </channel>
 </rss>
