@@ -31,5 +31,5 @@ If you want to be among the first to join, subscribe to our newsletter.
 We won't bother you with regular marketing mails.
 Instead, we will send out a notification whenever we've reached an important milestone.
 
-<script async src="https://eocampaign1.com/form/ba97c486-71b0-11ee-9b8e-fb71e8851d44.js" data-form="ba97c486-71b0-11ee-9b8e-fb71e8851d44"></script>
+<script async src="https://eocampaign1.com/form/f47f2128-8ee6-11ee-ba9b-95c483a0d02d.js" data-form="f47f2128-8ee6-11ee-ba9b-95c483a0d02d"></script>
 
