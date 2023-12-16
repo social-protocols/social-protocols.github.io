@@ -8,7 +8,7 @@ weight: 1 # pin to top
 
 ## The Social Network of the Future
 
-We are in the process of creating a social network based on what we've learned from our experiments during the past years: [The Social Network of the Future](https://github.com/social-protocols/social-network)
+We are in the process of creating a social network based on what we've learned from our experiments during the past years: [The Social Network of the Future](https://social-protocols.org/social-network/) ([Github](https://github.com/social-protocols/social-network))
 The core of our concepts is the [Global Brain Algorithm](https://social-protocols.org/global-brain), which converts a social network into a distributed brain, resulting in a whole that is more intelligent than the individual human parts.
 
 
