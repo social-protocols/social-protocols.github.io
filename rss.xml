@@ -8,22 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://social-protocols.org/rss.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About Social Protocols</title>
-      <link>https://social-protocols.org/about/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      <title>We&#39;re Building the Social Network of the Future</title>
+      <link>https://social-protocols.org/social-network/</link>
+      <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://social-protocols.org/about/</guid>
-      <description>The goal of Social Protocols is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.
-Follow us on Mastodon or Twitter, or send a mail.</description>
-    </item>
-    
-    <item>
-      <title>Our Projects</title>
-      <link>https://social-protocols.org/projects/</link>
-      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://social-protocols.org/projects/</guid>
-      <description>Our Projects The Social Network of the Future We are in the process of creating a social network based on what we&amp;rsquo;ve learned from our experiments during the past years: The Social Network of the Future (Github) The core of our concepts is the Global Brain Algorithm, which converts a social network into a distributed brain, resulting in a whole that is more intelligent than the individual human parts.</description>
+      <guid>https://social-protocols.org/social-network/</guid>
+      <description>We are in the process of creating a social network based on what we&amp;rsquo;ve learned from our experiments during the past years. The core of our concepts is a suite of novel algorithms that distribute attention over content.</description>
     </item>
     
     <item>
@@ -36,30 +26,32 @@ Follow us on Mastodon or Twitter, or send a mail.</description>
     </item>
     
     <item>
+      <title>About Social Protocols</title>
+      <link>https://social-protocols.org/about/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://social-protocols.org/about/</guid>
+      <description>The goal of Social Protocols is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.
+Check out our Projects.
+Follow us on Mastodon or Twitter, or send a mail.</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://social-protocols.org/projects/</link>
+      <pubDate>Mon, 01 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://social-protocols.org/projects/</guid>
+      <description>The Social Network of the Future We are in the process of creating a social network based on what we&amp;rsquo;ve learned from our experiments during the past years: The Social Network of the Future (Github) The core of our concepts is the Global Brain Algorithm, which converts a social network into a distributed brain, resulting in a whole that is more intelligent than the individual human parts.</description>
+    </item>
+    
+    <item>
       <title>What Deserves Our Attention?</title>
       <link>https://social-protocols.org/what-deserves-our-attention/</link>
       <pubDate>Mon, 01 May 2023 00:00:00 +0200</pubDate>
       
       <guid>https://social-protocols.org/what-deserves-our-attention/</guid>
       <description>Every online community has rules that determine how the attention of the community is directed. For example in an online forum, the most up-voted posts may be shown on at the top of the page.</description>
-    </item>
-    
-    <item>
-      <title>Give Truth the Advantage</title>
-      <link>https://social-protocols.org/give-truth-the-advantage/</link>
-      <pubDate>Wed, 08 Sep 2021 00:00:00 +0200</pubDate>
-      
-      <guid>https://social-protocols.org/give-truth-the-advantage/</guid>
-      <description>Everyone knows that the infamous social media algorithms promote the spread of false and misleading information on the Internet. But could they be engineered to do the opposite?</description>
-    </item>
-    
-    <item>
-      <title>The Deliberative Poll</title>
-      <link>https://social-protocols.org/the-deliberative-poll/</link>
-      <pubDate>Sun, 08 Nov 2020 13:40:43 -0700</pubDate>
-      
-      <guid>https://social-protocols.org/the-deliberative-poll/</guid>
-      <description>&lt;p&gt;A deliberative poll measures the &lt;strong&gt;informed opinion&lt;/strong&gt; of a group of people who have participated in a discussion about the topic of the poll. This essay introduces a method for integrating deliberative polling into online discussions in social platforms, in order to discover the informed opinion of a group.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,12 +73,21 @@ Follow us on Mastodon or Twitter, or send a mail.</description>
     </item>
     
     <item>
-      <title>We&#39;re Building the Social Network of the Future</title>
-      <link>https://social-protocols.org/social-network/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Give Truth the Advantage</title>
+      <link>https://social-protocols.org/give-truth-the-advantage/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0200</pubDate>
       
-      <guid>https://social-protocols.org/social-network/</guid>
-      <description>We are in the process of creating a social network based on what we&amp;rsquo;ve learned from our experiments during the past years. The core of our concepts is a suite of novel algorithms that distribute attention over content.</description>
+      <guid>https://social-protocols.org/give-truth-the-advantage/</guid>
+      <description>Everyone knows that the infamous social media algorithms promote the spread of false and misleading information on the Internet. But could they be engineered to do the opposite?</description>
+    </item>
+    
+    <item>
+      <title>The Deliberative Poll</title>
+      <link>https://social-protocols.org/the-deliberative-poll/</link>
+      <pubDate>Sun, 08 Nov 2020 13:40:43 -0700</pubDate>
+      
+      <guid>https://social-protocols.org/the-deliberative-poll/</guid>
+      <description>&lt;p&gt;A deliberative poll measures the &lt;strong&gt;informed opinion&lt;/strong&gt; of a group of people who have participated in a discussion about the topic of the poll. This essay introduces a method for integrating deliberative polling into online discussions in social platforms, in order to discover the informed opinion of a group.&lt;/p&gt;</description>
     </item>
     
   </channel>

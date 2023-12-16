@@ -2,29 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://social-protocols.org/about/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/projects/</loc>
-    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
+    <loc>https://social-protocols.org/social-network/</loc>
+    <lastmod>2023-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://social-protocols.org/human-alignment-technology/</loc>
     <lastmod>2023-06-02T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/what-deserves-our-attention/</loc>
-    <lastmod>2023-05-01T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/give-truth-the-advantage/</loc>
-    <lastmod>2021-09-08T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/the-deliberative-poll/</loc>
-    <lastmod>2020-11-08T13:40:43-07:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/the-law-of-attention/</loc>
-    <lastmod>2021-09-13T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/truthtelling-games/</loc>
-    <lastmod>2021-09-12T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://social-protocols.org/post/</loc>
     <lastmod>2023-06-02T00:00:00+02:00</lastmod>
@@ -32,14 +14,33 @@
     <loc>https://social-protocols.org/</loc>
     <lastmod>2023-06-02T00:00:00+02:00</lastmod>
   </url><url>
+    <loc>https://social-protocols.org/about/</loc>
+    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/projects/</loc>
+    <lastmod>2023-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/what-deserves-our-attention/</loc>
+    <lastmod>2023-05-01T00:00:00+02:00</lastmod>
+  </url><url>
     <loc>https://social-protocols.org/tags/game-theory/</loc>
     <lastmod>2021-09-13T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://social-protocols.org/tags/</loc>
     <lastmod>2021-09-13T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://social-protocols.org/categories/</loc>
+    <loc>https://social-protocols.org/the-law-of-attention/</loc>
+    <lastmod>2021-09-13T00:00:00+02:00</lastmod>
   </url><url>
-    <loc>https://social-protocols.org/social-network/</loc>
+    <loc>https://social-protocols.org/truthtelling-games/</loc>
+    <lastmod>2021-09-12T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/give-truth-the-advantage/</loc>
+    <lastmod>2021-09-08T00:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/the-deliberative-poll/</loc>
+    <lastmod>2020-11-08T13:40:43-07:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/categories/</loc>
   </url>
 </urlset>
