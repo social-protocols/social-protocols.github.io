@@ -3,7 +3,6 @@ layout: single
 title:  "What Deserves Our Attention?"
 toc: false 
 date:   2023-05-01 00:00:00 +0200
-weight: 2
 image: what-deserves-our-attention.png
 aliases:
 - /2023/05/01/what-deserves-our-attention/

@@ -4,7 +4,6 @@ date:   2021-09-08 00:00:00 +0200
 title:  "Give Truth the Advantage"
 toc: true
 toc_sticky: true
-weight: 2 # Place at top after pinned pages (about, projects)
 tags: ['Game Theory']
 image: truth-as-woman.png
 sidebar:
