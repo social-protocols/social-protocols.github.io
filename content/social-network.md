@@ -13,11 +13,11 @@ Instead, we aim to distribute attention in such a way that we enable large-scale
 
 As of right now, we haven't launched the platform yet.
 However, we are developing in the open.
-You can follow our progress on [Github](https://github.com/social-protocols/Y).
+You can follow our progress on [Github](https://github.com/social-protocols/social-network).
 
 We are also trying to document our ideas in a comprehensive way.
-If you are interested in the concepts behind our algorithms, visit [our documentation](https://social-protocols.org/y-docs/).
-Be aware, though, that this document changes all the time and is (and will be for a while) incomplete.
+If you are interested in the concepts behind our algorithms, visit [our documentation](https://github.com/social-protocols/global-brain).
+Be aware, though, that this document changes all the time and is incomplete (and will be for a while).
 
 Our code is free and open source and our ideas are in the public domain.
 If you want to use any of our code or ideas in your project, we encourage you to do so.
