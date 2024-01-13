@@ -23,3 +23,13 @@ the **upvoteRate** metric. The **upvoteRate** is designed to better reflect the
 intent of the community as revealed by their upvote behavior. We believe this
 calculation can be a key component in the design of social protocols. See the
 [readme on GitHub](https://github.com/social-protocols/news#readme) for details.
+
+---
+
+# Archived Projects
+
+## Propolis
+
+[**Propolis**](https://github.com/social-protocols/propolis), inspired by
+[Polis](https://pol.is), is an attemt to create a scaling collective
+intelligence system based on asking and answering yes-no questions.
