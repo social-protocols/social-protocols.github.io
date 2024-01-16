@@ -4,7 +4,7 @@ date:  2023-05-01
 hide:  true
 ---
 
-## The Social Network of the Future
+## The Social Network of the Future (2023)
 
 We are in the process of creating a social network based on what we've learned
 from our experiments during the past years:
@@ -15,7 +15,7 @@ concepts is the
 converts a social network into a distributed brain, resulting in a whole that is
 more intelligent than the individual human parts.
 
-## Quality News
+## Quality News (2021)
 
 [**Quality News**](https://news.social-protocols.org/) is a Hacker News client
 that provides additional data and insights on Hacker News submissions, notably,
@@ -28,8 +28,9 @@ calculation can be a key component in the design of social protocols. See the
 
 # Archived Projects
 
-## Propolis
+## Propolis (2023)
 
 [**Propolis**](https://github.com/social-protocols/propolis), inspired by
 [Polis](https://pol.is), is an attempt to create a scaling collective
 intelligence system based on asking and answering yes-no questions.
+Propolis was archived because it was superseded by **The Social Network of the Future**.
