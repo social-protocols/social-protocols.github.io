@@ -31,5 +31,5 @@ calculation can be a key component in the design of social protocols. See the
 ## Propolis
 
 [**Propolis**](https://github.com/social-protocols/propolis), inspired by
-[Polis](https://pol.is), is an attemt to create a scaling collective
+[Polis](https://pol.is), is an attempt to create a scaling collective
 intelligence system based on asking and answering yes-no questions.
