@@ -1,3 +1,12 @@
+---
+title: "What We Are Building and Why"
+author: "Johannes Nakayama"
+date: 2024-01-16
+categories: ["social-network"]
+tags: ["social-network"]
+draft: true
+---
+
 # What We Are Building and Why
 
 Social media and social networking platforms have created a global stage for discussion.
