@@ -18,7 +18,7 @@ Most social media companies optimize for *user engagement* and their business mo
 At the global scale that these platforms achieve, the dynamics created by such a system can lead to emergent effects that deeply affect the world.
 
 The problem is that what engages users the most is not *random*.
-Humans seem to have a natural proclivities to
+Humans seem to have natural proclivities to
 
 a) align themselves with their peers and
 b) direct attention towards (perceived) threats.
@@ -30,7 +30,7 @@ If this principle and the proclivity to pay special attention to threats meet at
 For almost any topic today, especially political ones, you can find two irreconcilable ideological groups that are on opposite sides of the argument.
 The flow of information between them is severely impaired because the algorithms that govern their interactions do not provide any mechanism to resolve the conflict.
 In fact, they are designed to achieve the opposite:
-If the groups perceive each other as threats, they will pay more attention to one another on social media, and the algorithms will learn that this is the content to optimize for, leaving the users in perpetual fight.
+If the groups perceive each other as threats, they will pay more attention to one another on social media, and the algorithms will learn that this is the content to optimize for, leaving the users in a perpetual fight.
 From the perspective of an ad-space provider who stands to profit from the attention spent on its platform, this is a huge win.
 This is a big problem because resolving large-scale conflicts and exchanging information between groups with ideological differences - in our estimation - is exactly what is required to achieve progress on any particular issue.
 
