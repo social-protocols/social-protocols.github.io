@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://social-protocols.org/rss.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Resources</title>
+      <link>https://social-protocols.org/resources/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://social-protocols.org/resources/</guid>
+      <description>This is a curated list of links to resources on the Internet we found helpful along the way.
+Education and Theory Entropy (for data science) Clearly Explained!!! (StatQuest) Youtube video explaining surprisal and entropy.</description>
+    </item>
+    
+    <item>
       <title>We&#39;re Building the Social Network of the Future</title>
       <link>https://social-protocols.org/social-network/</link>
       <pubDate>Mon, 23 Oct 2023 00:00:00 +0000</pubDate>
