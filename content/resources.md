@@ -4,7 +4,7 @@ date:  2024-01-26
 hide:  true
 ---
 
-*This is a curated list of resources we found helpful along the way. (Links to commercial websites are not affiliate links.)*
+*This is a curated list of resources we found helpful along the way. Links to commercial websites are **not** affiliate links. If you spot any errors (e.g., if we have done a poor job summarizing your article or project), feel free to [raise an issue](https://github.com/social-protocols/social-protocols.github.io/issues). If you have something you think we should read, raise an issue as well and use the provided template "Suggested Reading".*
 
 ## Education and Theory
 
