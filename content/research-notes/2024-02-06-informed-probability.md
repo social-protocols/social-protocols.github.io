@@ -64,8 +64,10 @@ Once we know S(U,C), then we can estimate how showing the note affects upvotes o
 
 If we define relevance as we do in my article on [Relevance and Corelevance](https://jonathanwarden.com/relevance-and-corelevance/):
 
-	R(U,C) = P(U|C) - P(U|not C)
-	R(U,T) = P(U|T) - P(U|not T)
+$$
+	R(U,C) = P(U\vertC) - P(U\vertnot C)
+	R(U,T) = P(U\vertT) - P(U\vertnot T)
+$$
 
 And given the conditional independencies implied in the causal graph:
 
@@ -105,13 +107,11 @@ Assumptions:
 
 And the model:
 
-$$
 	p_j ~ beta(globalPriorVoteRate)
 	u_i,j ~ bern(p_j * c_i,j)
 	v_i,j ~ bern(r * c_i,j)
-$$
 
-Now, suppose for some post/note combination, we want to estimate $ p_j = P(U_j=1|C_j=1) $ but we have sparse data. We only have a handful of users that voted on the post: some that voted on the note, a few were shown the note but didn't vote, and none were both shown the note and voted on it.
+Now, suppose for some post/note combination, we want to estimate $$ p_j = P(U_j=1|C_j=1) $$ but we have sparse data. We only have a handful of users that voted on the post: some that voted on the note, a few were shown the note but didn't vote, and none were both shown the note and voted on it.
 
 Can we derive a formula for estimating p_j, without reverting to methods like MCMC? If it were a simple beta-bernoulli model, it would be easy.
 
