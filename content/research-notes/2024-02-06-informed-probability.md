@@ -62,7 +62,7 @@ P(U|C) ≈ P(U|T=1,V=1)
 
 Once we know S(U,C), then we can estimate how showing the note affects upvotes on the post.
 
-If we define relevance as we do in my article on (Relevance and Corelevance](https://jonathanwarden.com/relevance-and-corelevance/):
+If we define relevance as we do in my article on [Relevance and Corelevance](https://jonathanwarden.com/relevance-and-corelevance/):
 
 	R(U,C) = P(U|C) - P(U|not C)
 	R(U,T) = P(U|T) - P(U|not T)
@@ -77,11 +77,11 @@ Then
 	R(U,T) = P(U|T) - P(U|not T) = P(U|C)*P(C|T) - P(U|C)*P(C|not T)
            = P(U|C) * R(C,T)
 
-So we can derive the effect of T on A as a general rule for posts by observing, for the average post.
+So we can derive the effect of T on C as a general rule for posts by observing, for the average post.
 
 	R(C,T) = R(U,T) / P(U|C)
 
-We can generalize this to estimating the effect of other interventions (e.g. showing the note in notifications) on A.
+We can generalize this to estimating the effect of other interventions (e.g. showing the note in notifications) on C.
 
 
 ## Hierarchical Model
@@ -105,14 +105,18 @@ Assumptions:
 
 And the model:
 
+$$
 	p_j ~ beta(globalPriorVoteRate)
 	u_i,j ~ bern(p_j * c_i,j)
 	v_i,j ~ bern(r * c_i,j)
+$$
 
+Now, suppose for some post/note combination, we want to estimate $ p_j = P(U_j=1|C_j=1) $ but we have sparse data. We only have a handful of users that voted on the post: some that voted on the note, a few were shown the note but didn't vote, and none were both shown the note and voted on it.
 
-Now, suppose for some post/note combination, we want to estimate p_j P(U_j=1|C_j=1) but we have sparse data. We only have a handful of users that voted on the post: some that voted on the note, a few were shown the note but didn't vote, and none were both shown the note and voted on it.
+Can we derive a formula for estimating p_j, without reverting to methods like MCMC? If it were a simple beta-bernoulli model, it would be easy.
 
-According to ChatGPT, the answer is no:
+According to ChatGPT, the answer is no, and I haven't been able to figure it out. The latent variable c_i,j is what adds complexity, even given that we can use V as a proxy for C.
+
 - https://chat.openai.com/share/04bbe82c-7db1-4eda-baa6-0a09e651755b
 
 
@@ -121,7 +125,6 @@ According to ChatGPT, the answer is no:
 This is a difficult problem. I am not convinced that there is not a way to create an estimator for the informed probability given sparse data that includes some user that were shown the note and note voted, and some that voted but not shown, and some both.
 
 However, it's complex. I will be easier to *only* consider users that voted.
-
 
 Here are some updates of some other chats with ChatGPT discussing this approach
 
