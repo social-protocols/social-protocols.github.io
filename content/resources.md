@@ -108,6 +108,7 @@ hide:  true
 
 **Design thoughts for building a better kind of social space with many webs of trust** Discussion of the unrealized potential of webs of trust as a decentralized institution for appointing moderators and curators (abstract provided in the article). [[Link]](https://www.lesswrong.com/posts/ZdtFBCtixqay5aoWF/design-thoughts-for-building-a-better-kind-of-social-space)
 
+**Kasparov versus the World** *(Wikipedia)* A correspondence chess game between then world champion Garry Kasparov and "the world", a large open forum coordinated by a few chess prodigies. It's a fascinating experiment in collective coordination. Kasparov also wrote a book about it. [[Link]](https://en.wikipedia.org/wiki/Kasparov_versus_the_World) [[Hacker News discussion]](https://news.ycombinator.com/item?id=16947440)
 
 
 ## Talks and Podcasts
