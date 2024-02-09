@@ -80,6 +80,13 @@ hide:  true
 
 **Improving the Hacker News Ranking Algorithm** *(Felix Dietze and Johannes Nakayama)* Identifies a feedback loop in the Hacker News ranking algorithm which leads to many great submissions being overlooked. Proposes a modified formula that solves the problem. Lead to creation of [this demonstrator](https://news.social-protocols.org/). [[Link]](https://felx.me/2021/08/29/improving-the-hacker-news-ranking-algorithm.html) [[Hacker News discussion]](https://news.ycombinator.com/item?id=28391659)
 
+**Truthtelling Games** *(Jonathan Warden)* How to get people to tell the truth on the Internet using game theory. [[Link]](https://jonathanwarden.com/truthtelling-games/)
+
+**Information Elicitation Mechanisms: Paying for Truth** *(Jonathan Warden)* How to pay people to tell the truth, even if you can't verify their answers. [[Link]](https://jonathanwarden.com/information-elicitation-mechanisms/)
+
+**Quality Assurance in a Structured Collaborative Discussion System** *(Felix Dietze)* Master thesis on a hypergraph-based discussion system. [[Link]](https://github.com/fdietze/website/blob/master/felix_dietze_master_thesis_2015.pdf)
+
+
 
 ## Articles
 
