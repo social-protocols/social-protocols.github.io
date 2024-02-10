@@ -73,9 +73,6 @@ Tricky Scenarios:
 What if the user votes on the post **then** votes on the note? If the user doesn't then subsequently change their vote on the post, then the end result is the same whether the vote on the note happened before or after the vote on the post. So we should insert or update a record with eventType 2 both when the user votes on a post having already voted on a note, or vice versa.
 
 
-
-
-
 ## Open Questions 
 
 ### Adjusting for Selection Bias in Votes on Note
@@ -87,17 +84,14 @@ When we calculate P(upvote post|voted on note), we introduce a voter bias. The c
 
 ### Further TODOS
 
-See notes on 2024-02-06-informed-probability.md for further thoughts here.
+- See notes on 2024-02-06-informed-probability.md for further thoughts here.
 
-The approach proposed there requires a global estimate for P(C|not T) and P(C|T). We can estimate these if we know the slope R(C,U) for a few posts. This requires calculating P(U|not C) for some posts based on upvotes before the not was created. This would require adding a new event type to the uninformed tallies table for "note created". An entry is added to this table at the moment a note is created, containing the value of the user's vote on the post at that time.
+- The approach proposed there requires a global estimate for P(C|not T) and P(C|T). We can estimate these if we know the slope R(C,U) for a few posts. This requires calculating P(U|not C) for some posts based on upvotes before the not was created. This would require adding a new event type to the uninformed tallies table for "note created". An entry is added to this table at the moment a note is created, containing the value of the user's vote on the post at that time.
 
-TODO: Also, we should modify the "shown note" event to be "shown note and not voted on note".
+- Also, we should modify the "shown note" event to be "shown note and not voted on note".
 
-TODO:  Also, we expect the magnitude of the vote change to be different depending on whether 
+- Also, we expect the magnitude of the vote change to be different depending on whether 
 user has already voted on post.
 
-TODO: Count Replies as Votes
+- Count Replies as anotehr event type events. If the user replied, they definitely considered. This should perhaps be as strong a signal as a vote!
 
-In a sense, a reply is an implicit upvote? Or e different type of signal. But
-definitely if a user has replied it indicates they have paid attention to the
-post.

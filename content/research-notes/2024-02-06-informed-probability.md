@@ -12,12 +12,15 @@ We can also assume that the proportion of users who consider the note when it is
 
 So that gives us a causal model that looks like this, and some assumptions:
 
-- $T$ is the probability of showing the note
-- $C$ is the probability of considering the note
-- $U$ is the probability of upvoting the post
-- $V$ is the probability of voting on the note
+- $N$: note is created
+- $T$: user is shown the note
+- $C$: user considers the note
+- $V$: user votes on the note
+- $U$: user upvotes the post
 
 ```
+          N
+          ↓
           T
           ↓   
           C
@@ -37,20 +40,20 @@ So what do we want to ask of this model? Well, what we really want is to estimat
 Let's define the Informed Upvote Probability as:
 
 $$
-     S(U,C) = P(U=1|do(C=1))
+     P(U=1|do(C=1))
 $$
 
-Since the only arrow into $U$ is from $C$:
+Since the only arrow into $U$ is from $C$, this is equal to:
 
 $$
-    S(U,C) = P(U=1|C=1)
+    P(U=1|C=1)
 $$
 
 The informed probability is the *maximum* possible effect of the information. Any intervention we do to bring the note to the user's attention can't have an effect beyond the user properly considering the information.
 
 ## V as a proxy for C
 
-Given our assumptions above, we can treat $V$ as a proxy for the unobserved variable $C$. Since $P(V=1|C=1)$ is a constant and $P(V=1|C=0)=0$, the users who vote on the note are a representative sample of those who attend to it. So we can estimate:
+Given our assumptions above, we can treat $V$ as a proxy for the unobserved variable $C$. Since $P(V=1|C=1)$ is a constant and $P(V=1|C=0)=0$, the users who vote on the note are a representative sample of those who consider it. So we can estimate:
 
 $$
 P(U|C=1) \approx P(U|V=1) = 
@@ -59,7 +62,7 @@ $$
 
 ## Shown vs Voted on Note
 
-When a user votes on the note, we know they paid attention. If they were shown the note, but did not upvote, there is less of a chance they paid attention. Thus, the effect of showing the note should be less than the full effect of considering the note, but in the same direction.
+When a user votes on the note, we know they considered it. If they were shown the note, but did not upvote, there is less of a chance they considered it. Thus, the effect of showing the note should be less than the full effect of considering the note, but in the same direction.
 
 So the events $T$ and $V$ increase the probability of $U$ in proportion to the amount they increase the probability of $C$. This relationship is illustrated in the chart below.
 
@@ -199,10 +202,17 @@ So we get a posterior $θ \sim \text{beta}(\alpha + Z, \beta + n - Z)$.
 
 ### Linear Regression 
 
-Another approach would be a linear regression. Doing a Bayesian linear regression would give us a probability distribution for the
+Another approach would be a linear regression. Doing a Bayesian linear regression would give us a probability distribution for the slope and intercept. From this, we can compute the probability distribution for $θ$, $θ[1]$, or $θ[2]$ values.
 
- slope and intercept. From this, we can compute the probability distribution for $θ$, $θ[1]$, or $θ[2]$ values.
+
+## Further Thoughts
+
+We are glossing over some assumptions. We should rewrite the above based on the idea of different events. N -> T -> V. Probability of considering note increases with each event. The event T should be shown note *but not voted on it*. And the state V should be voted, whether or not it was shown.
+
+The probability of C increases as each event happens. P(C|V)=1. P(C|N) and P(C|T) should be global constants. We can estimate these by finding the slope R(C,U). If we know the slope and the vertical coordinate of a point on the line (P(U|N) or P(U|T)), we can find the horizontal.
 
 ## Conclusions/Summary
 
-I think that it's best to simplify the model and only look at users who voted on the note. This lets us calculate $θ=P(U|C=1)=P(U|V)$ more directly using a simple beta-bernoulli model. 
+I think that it's best to simplify the model and only look at users who voted on the note. This lets us calculate $θ=P(U|C=1)=P(U|V)$ more directly using a simple beta-bernoulli model.
+
+
