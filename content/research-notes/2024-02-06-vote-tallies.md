@@ -74,6 +74,8 @@ What if the user votes on the post **then** votes on the note? If the user doesn
 
 
 
+
+
 ## Open Questions 
 
 ### Adjusting for Selection Bias in Votes on Note
@@ -83,29 +85,18 @@ When we calculate P(upvote post|voted on note), we introduce a voter bias. The c
 
 ### Combining "Shown Note" and "Voted on Note" Signals
 
-If we have both signals (vote while shown note, vote on post with vote on
-note), we can combine them in some way to calculate the probability of an
-upvote on the post given user has/has not been exposed to the note. I have
-thought that this should be a Bayesian average with one being the prior to
-the other, but now that I think of it I'm not sure this is justified by our
-causal assumptions. How should these signals be combined? What are we trying
-to measure? The potential effect of the information on the vote. But the
-effect of this information theoretically depends on how much the
-user has paid attention to it. Presumably, if the user has voted on the note,
-it indicates they have paid more attention to it than if they have only been
-shown it (because they may not even have read it). So the magnitude of the
-effect on votes (the diff between p and q) should be higher in one case than
-the other. Using one as the prior for the other doesn't seem right. If a user
-is shown the note AND vote on the note it indicates even more attention paid.
-And then generalizing, just showing the note in the feed (as an attachment to
-the post or directly) gives us an expectation that the user has paid some
-amount of attention. 
+### Further TODOS
 
-Also, we expect the magnitude of the vote change to be different depending on whether 
+See notes on 2024-02-06-informed-probability.md for further thoughts here.
+
+The approach proposed there requires a global estimate for P(C|not T) and P(C|T). We can estimate these if we know the slope R(C,U) for a few posts. This requires calculating P(U|not C) for some posts based on upvotes before the not was created. This would require adding a new event type to the uninformed tallies table for "note created". An entry is added to this table at the moment a note is created, containing the value of the user's vote on the post at that time.
+
+TODO: Also, we should modify the "shown note" event to be "shown note and not voted on note".
+
+TODO:  Also, we expect the magnitude of the vote change to be different depending on whether 
 user has already voted on post.
 
-
-### Count Replies as Votes
+TODO: Count Replies as Votes
 
 In a sense, a reply is an implicit upvote? Or e different type of signal. But
 definitely if a user has replied it indicates they have paid attention to the
