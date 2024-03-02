@@ -110,8 +110,10 @@ We can extend this method to other events that bring the note to the attention o
 Say we observe $P(U|V)=P(U|C=1)$, and $P(U|T=1,V=0)$. We want to extrapolate $P(U|C=0)$:
 
 $$
-        P(U|T=1)  = P(U|C=0,T=1) + P(U|C=1,T=1)  
+\begin{aligned}
+        P(U|T=1)  = P(U|C=0,T=1) + P(U|C=1,T=1) \\
                   = P(U|C=0) \cdot P(C=0|T=1) + P(U|C=1) \cdot P(C|T=1)
+\end{aligned}
 $$
 
 $$
