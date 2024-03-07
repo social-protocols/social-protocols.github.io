@@ -59,7 +59,7 @@ To work this out, let's walk step by step through what we think happens as users
 
 Some of these variables we can measure. Specifically, a1 and a2 (probability of upvoting A before/after considering B), and b1 and b2 (probability of upvoting B before/after considering C). 
 
-Now, the relationships between all these variables is linear. Specifically, any increase in Z causes a proportional change in both B and Y. I discuss this linear relationship in my [previous note](2024-03-01-support-formula) and my post on [Bayesian Argumentation](https://jonathanwarden.com/bayesian-argumentation/).
+Now, the relationships between all these variables is linear. Specifically, any increase in one variable causes a proportional change to all downstream variables. I discuss this linear relationship in my [previous note](2024-03-01-support-formula.md) and my post on [Bayesian Argumentation](https://jonathanwarden.com/bayesian-argumentation/).
 
 So when Y moves from y0 to y1, increasing by $`y1-y0`$, A will increase by the same amount times some constant $q$. So $`(a1-a0) = q*(y1-y0)`$. Likewise, when Z increases by $`z2 - z1`$, B will increase by $`(b1-b0)=r*(z2-z1)$`, and Y will increase by $`(y2-y1) =λr*(z2-z1)`$.
 
@@ -104,64 +104,46 @@ For that matter, what is b0? It is the probability of a user upvoting B before t
 
 Unfortunately, I don't think it's so simple. B is a function of Z, and the probability of a user believing Z before seeing B is not zero.
 
-I think that assuming B=0 is a *conservative* estimate, in that it assumes the smallest possible effect of C on A. For example, if C changes B from 99% to 1%, then no matter how what the effect of B is on A, C will "erase" that effect. That is if B moves A from a1 to a2, C will move it almost back to a1, because. 
+I think that assuming B=0 is a *conservative* estimate, in that it assumes the smallest possible effect of C on A. For example, if C changes B from 99% to 1%, then no matter what the effect of B is on A, C will "erase" that effect. That is if B moves A from a1 to a2, C will move it almost back to a1, because. 
 
 $$
 \begin{aligned}
   a3  &= a1 + (a2 - a1)×\frac{b2 - b0}{b1 - b0} \\
       &= a1 + (a2 - a1)×\frac{b2}{b1} \\
-      &= a1 + (a2 - a1)×\frac{1\%}{99\%} \\
+      &= a1 + (a2 - a1)×\frac{.01}{.99} \\
       & ≈ a1
 \end{aligned}
 $$
 
-However, let's say that b0=50%. Now instead of erasing the effect of B, C *reverse* the effect.
+However, let's say that b0=.5. Now instead of erasing the effect of B, C *reverse* the effect.
 
 $$
 \begin{aligned}
   a3  &= a1 + (a2 - a1)×\frac{b2 - b0}{b1 - b0} \\
-      &= a1 + (a2 - a1)×\frac{1\% - 50\%}{99\% - 50\%} \\
+      &= a1 + (a2 - a1)×\frac{.01 - .5}{.99 - .5} \\
       &≈ a1 + (a2 - a1)×-1 \\
 \end{aligned}
 $$
 
 Plugging in the number from the first example in the first scenario from the previous note, where a1=.46, a2=.9, b1=.99, and b2=.5. 
 
-If we assume $`z0=0 ⟹ b0=0`$, then 
-
 $$
 \begin{aligned}
   a3  &= a1 + (a2 - a1)×\frac{b2}{b1} \\
-      &= .46 + (.9 - .46)×\frac{b.5}{b.99} \\
-      &= 68.2%
+      &= .46 + (.9 - .46)×\frac{.01 - .50}{.99 - .50} \\
+      &= .46 + (.9 - .46)×-1 \\
+      &= 22%
 \end{aligned}
 $$
 
-If we assume b0 is, say, 45%, then 
 
-$$
-\begin{aligned}
-    a3 ≈ .46 + (.90 - .46)×\frac{50\% - 45\%}{99\% - 45\%} \\
-       ≈ 50.4%
-\end{aligned}
-$$
-
-Keeping the assumption that b0=45%, if C reducedupvotes on B all the way to b2=1%, then
-
-$$
-\begin{aligned}
-    a3 ≈ .46 + (.90 - .46)×\frac{1\% - 45\%}{99\% - 45\%} \\
-       ≈ 7.2%
-\end{aligned}
-$$
-
-Intuitively, this makes sense to me. According to our causal graph, when W (seeing post B) causes a user to change their mind about A, it must also change their mind about Z, since W only effects A through Z. So these users most have believed, a priori, that Z was false, and then changed their belief given the content of B, and thus changed their vote on A.
+Intuitively, this makes sense to me. According to our causal graph, when W (seeing post B) causes a user to change their mind about A, it must also change their mind about Z, since W only effects A through Z. So users that changed their votes users most have believed, a priori, that Z was false, and then changed their belief given the content of B, and thus changed their vote on A.
 
 But what about people who upvoted A *before* considering B. What did they believe about Z! We don't know. 
 
 If we assume that z=0 -- nobody believed Z before considering B, whether or not they upvoted A, it follows that b=0 (because of the assumption that users only upvote things that they think are true, informative, and relevant). In this case, we arrive at the support formula from the [previous note](2024-03-01-support-formula.md).
 
-But say we we assume most users who upvoted A (before considering B) also believed Z a priori. So the ones that changed their votes are the ones that didn't already know Z. This implies that $`P(A \vert Z=1)`$ is close to 100%, and $`P(A \vert Z=0)`$ is close to 0%. 
+But say we we assume most users who upvoted A (before considering B) also believed Z a priori. So the ones that changed their votes are the ones that didn't already know Z. This implies that Z is relevant to A: $`P(A \vert Z=1)`$ is close to 100%, and $`P(A \vert Z=0)`$ is close to 0%. 
 
 Therefore if C convinces most people to reject Z, they would also reject A. That is, both groups of people would reject A after rejecting Z: both the people who upvoted A after considering B because they thought Z was true, and those who already thought Z was true.
 
