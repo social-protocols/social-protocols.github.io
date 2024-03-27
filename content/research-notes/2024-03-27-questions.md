@@ -1,6 +1,3 @@
-I keep coming back to the benefits of adding questions to our model. We've discussed this many times, but I wanted to review the idea. I don't think it needs to be part of the MVP but I think it probably one of the highest priority features. I added a research note with my thoughts.
-
-
 # Question Model
 
 Here's a review of an idea we have had for adding questions to our model and the possible benefits.
@@ -15,7 +12,7 @@ People can then upvote or downvote the question itself, and then they can separa
 
 ### Formal Claims
 
-A question implies a claim (is X true? => X is true). So with this little bit of formality, we can evaluate **claims**. 
+A question implies a claim (*is X true?* => *X is true*). So with this little bit of formality, we can evaluate **claims**. 
 
 But more than that, it lets us quantity the level of agreement with the claim. In the current algorithm, an upvote/downvote only tells us "I do(don't) want this to have attention", but we don't know if that reflects agreement, relevance, or informativeness of any claims made in the post. The question model lets us separate agreement on the claim from relevance/informativeness of the claim.
 
@@ -35,8 +32,8 @@ This gives users an alternative to posting some definite claim in the case they 
 
 ### Scaling Conversations
 
-- We can possibly use it to make the conversations scale better. For example, suppose the informed agreementProbability on the question is 90%. People who see the post also see the question as a note along with the agreement probability (90% agree the official CPI is lower...). Many people won't personally go check the CPI data and will assume that the answer is correct, and based on this the informed upvote probability of the post is also 90%. Then suppose somebody responds to the question with an actual link to official government CPI data showing CPI has increased, and the informed agreementProbability for the question falls to 10%. Now when people see the post, they see the question and the fact that only 10% agree that the official CPI is lower, and as a consequence the informed upvote probability also falls to 10%.
+We can possibly use it to make the conversations scale better. For example, suppose the informed agreementProbability on the question is 90%. People who see the post also see the question as a note along with the agreement probability (90% agree the official CPI is lower...). Many people won't personally go check the CPI data and will assume that the answer is correct, and based on this the informed upvote probability of the post is also 90%. Then suppose somebody responds to the question with an actual link to official government CPI data showing CPI has increased, and the informed agreementProbability for the question falls to 10%. Now when people see the post, they see the question and the fact that only 10% agree that the official CPI is lower, and as a consequence the informed upvote probability also falls to 10%.
 
-With this data, we can derive a full Bayesian model of users' joint beliefs about the post and the claim in the question. In this particular example, it's easy to extrapolate the $`P(upvote A|disagree B) ≈ 0%`$, and $`P(upvote A|agree B) ≈ 100%`$. If new information changes the informed probability $`P(B)`$`, we can use this (using Jeffrey's rule) to update the informed probability of $`P(A)`$`. 
+With this data, we can derive a full Bayesian model of users' joint beliefs about the post and the claim in the question. In this particular example, it's easy to extrapolate the $`P(upvote A|disagree B) ≈ 0%`$, and $`P(upvote A|agree B) ≈ 100%`$. If new information changes the informed probability $`P(B)`$`, we can use this (using Jeffrey's rule) to update the informed probability of $`P(A)`$. 
 
 This completely decouples the conversation about B from the conversation about A. We don't need *anyone* who was in the discussion about B to also vote on A!
