@@ -12,9 +12,7 @@ People can then upvote or downvote the question itself, and then they can separa
 
 ### Formal Claims
 
-A question implies a claim (*is X true?* => *X is true*). So with this little bit of formality, we can evaluate **claims**. 
-
-But more than that, it lets us quantity the level of agreement with the claim. In the current algorithm, an upvote/downvote only tells us "I do(don't) want this to have attention", but we don't know if that reflects agreement, relevance, or informativeness of any claims made in the post. The question model lets us separate agreement on the claim from relevance/informativeness of the claim.
+A question implies a claim (*is X true?* => *X is true*). So with this little bit of formality, we can quantity the level of agreement with claims. In the current algorithm, an upvote/downvote only tells us "I do(don't) want this to have attention", but we don't know if that reflects agreement, relevance, or informativeness of any claims made in the post. The question model lets us separate agreement on the claim from relevance/informativeness of the claim.
 
 ### Fact Checking
 
