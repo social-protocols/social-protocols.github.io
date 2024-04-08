@@ -3,6 +3,7 @@ layout: single
 title:  "Deliberative Consensus Protocols"
 date:   2024-04-05
 toc: true
+weight: 1 
 toc_sticky: true
 image: deliberative-consensus-protocol.png
 canonical_url: https://social-protocols.org/a-deliberative-consensus-protocol
