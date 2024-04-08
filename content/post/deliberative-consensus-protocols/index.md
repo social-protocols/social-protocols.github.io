@@ -43,7 +43,7 @@ What constitutes a fair decision? Well, let's consider some examples of unfair d
 
 So I would propose that a *fair* trail would be one that discovers the 1) **honest** and 2) **fully-informed** opinion of an 3) **unbiased** jury.
 
-This is what a deliberative consensus protocol is designed to do. It uses a deliberative process to discover what an **unbiased** (e.g. representative) sample of the group would **honestly** believe after they have considered all the most **informative** comments made by other users.
+This is what a deliberative consensus protocol is designed to do. It uses a deliberative process to discover what an **unbiased** (e.g. representative) sample of the group would **honestly** believe after they have considered all the most **informative** -- or convincing -- comments made by other users.
 
 To accomplish this, the protocol uses three different technologies, that correct in turn for **dishonesty**, **ignorance**, and **bias**.
 
@@ -51,11 +51,11 @@ To accomplish this, the protocol uses three different technologies, that correct
 
 First, to address the problem of **dishonesty** and coordinated manipulation, a deliberative consensus protocol can use game-theoretical mechanisms such as the [**Bayesian truth serum**](https://nel.mit.edu/bayesian-truth-serum/). BTS is an extraordinary mechanism that rewards users for giving honest answers *even if users believe that most people disagree with them*.
 
-To make these game-theoretical mechanisms work, there must be some sort of *payout*. If a deliberative consensus protocol is not a blockchain protocol, and the payout is not cryptocurrency, then what is the payout?
+To make these game-theoretical mechanisms work, there must be some sort of *reward*. If a deliberative consensus protocol is not a blockchain protocol, and the reward is not cryptocurrency, then what is the reward?
 
-In the deliberative consensus protocol, the payout currency can be **attention**. As I argue in [The Law Of Attention](/the-law-of-attention), if nobody pays any attention to your posts in an online platform, you will stop posting. If your votes have no effect on other posts, you will stop voting.
+In the deliberative consensus protocol, the reward currency can be **attention**. As I argue in [The Law Of Attention](/the-law-of-attention), if nobody pays any attention to your posts in an online platform, you will stop posting. If your votes have no effect on other posts, you will stop voting.
 
-So using a reputation system where reputation translates to the ability to influence the attention of other users, an increase or decrease in reputation serves as the payout currency. This allows a deliberative consensus protocol to fully employ the tools of game theory and mechanism design.
+So using a reputation system where reputation translates to the ability to influence the attention of other users, we can use an increase or decrease in reputation as the reward currency. This allows a deliberative consensus protocol to fully employ the tools of game theory and mechanism design.
 
 ## Correcting for Ignorance using Deliberation
 
@@ -65,21 +65,19 @@ The global brain algorithm works by analyzing a threaded conversation tree and c
 
 The integration of a truthtelling protocol such as the Bayesian Truth Serum with a deliberative protocol such as the Global Brain Algorithm can produce an equilibrium at **informed honesty**, where users maximize their influence on the platform by voting according to their *honest opinion given the information that has been shown to them*.
 
-This is the opposite of the effect of many social media algorithms, which create an equilibrium on **dishonest conformity**: where users intentionally ignore reason and nuance in favor of posts that are rewarded because they are easily recognize as conforming to the biases and dogmas of the group.
+This is the opposite of the effect of many social media algorithms, which create an equilibrium on **dishonest conformity**: where users intentionally ignore reason and nuance in favor of posts that are rewarded because they are easily recognized as conforming to the biases and dogmas of the group.
 
 
 ## Correcting for Bias using Machine Learning
 
-However, even if all members of a group are honest and fully-informed, the result will still depend on who you ask, because people have different core values, belief systems, and subjective preferences. A fair decision most therefore be representative of the honest and informed opinion of the group.
+However, even if all members of a group are honest and informed of the most convincing information and arguments posted by other users, the result will still depend on who you ask, because people have different core values, belief systems, and preferences. And because participation in online discussions is necessarily optional, votes will often be a biased sample of the opinions of the group.
 
-But participation in online discussions is necessarily optional: participants self-select. Votes are often therefore a biased sample of any group.
-
-To address the problem of **self-selection bias**, an unsupervised machine-learning algorithm can be used discover latent factors that predictably affect users' votes, and adjust for these biases so that the results are representative of the overall opinions of the group. A similar algorithm is used by X's Community Notes to correct for political bias.
+To address this problem of **self-selection bias**, an unsupervised machine-learning algorithm can be used discover latent factors that predictably affect users' votes, and adjust for these biases so that the results are representative of the overall opinions of the group. A similar algorithm is used by X's [Community Notes](https://communitynotes.x.com/guide/en/about/introduction) to correct for political bias.
 
 
 ## Summary
 
-A deliberative consensus protocol does not solve all the problems of group decision-making. The dilemmas addressed by social choice theory still exist when there are conflicting goals and preferences. But a deliberative consensus protocol can enhanced online group decision-making processes with improved conversations that more effectively distribute information and aggregate the intelligence of the group.
+A deliberative consensus protocol does not solve all the problems of group decision-making. The dilemmas addressed by social choice theory still exist when there are conflicting goals and preferences. But a deliberative consensus protocol can enhanced online group decision-making processes by more effectively distributing information and producing a fair decision that represents the collective intelligence of the group.
 
-But the greatest potential of this platform may simply be the improvement in discourse. In a sense, the most important decision for any group to make is [*how to allocate their attention*](/what-deserves-our-attention). In any online discussion platform, the global brain algorithm can be used to focus attention on the most informative conversation threads and on comments that stand up to scrutiny. This can help to filter misinformation, curb abusive behavior (that people cannot honestly endorse), and promote deep and intelligent conversations.
+But the greatest potential of these protocols may simply be the improvement in discourse. In a sense, the most important decision for any group to make is [*how to allocate their attention*](/what-deserves-our-attention). In any online discussion platform, the global brain algorithm can be used to focus attention on the most informative conversation threads and on comments that stand up to scrutiny. This can help to filter misinformation, curb abusive behavior (that people cannot honestly endorse), and promote more deep and intelligent conversations.
 

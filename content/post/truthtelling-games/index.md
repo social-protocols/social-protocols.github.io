@@ -50,7 +50,7 @@ In 2014 [Vitalik Buterin](https://en.wikipedia.org/wiki/Vitalik_Buterin) propose
 
 The principle is one of the most basic ideas of game theory: there are situations where it is rational for people to do something just because other people are doing it. It is for example why you use your local currency and language, drive on the right (or left) side of the road, use standard weights and measures, etc. In game theory, such situations are called [**coordination games**](https://en.wikipedia.org/wiki/Coordination_game).
 
-The trick to getting people to tell the truth is to create a coordination game where everybody wins if they all give the same answer, and everybody tells the truth because they expect everybody else to tell the truth.
+The trick that blockchains use to get people to tell the truth is to create a coordination game where everybody wins if they all give the same answer, and everybody tells the truth because they expect everybody else to tell the truth.
 
 A blockchain is essentially a decentralized bank based on a coordination game, where people report on each other's cryptocurrency balances, and every everybody wins if they report the same balances. But there are clearly defined rules for determining the balances, and so everyone knows what the "true" balances are. So everyone reports the true balances because they expect everyone else to report the true balances, and the rules reward people (with cryptocurrency) for doing what everybody else does.
 
@@ -85,16 +85,17 @@ In a truthtelling game, everyone must know that everyone else is going to tell t
 > 
 > -- Vitalik Buterin, [SchellingCoin: A Minimal-Trust Universal Data Feed](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/)
 
+> We have reached the third degree where we devote our intelligences to anticipating what average opinion expects the average opinion to be. And there are some, I believe, who practice the fourth, fifth and higher degrees.
+> 
+> --  Keynes, General Theory of Employment, Interest and Money, 1936
+
+
 
 
 This is why blockchain consensus protocols are limited to situations where there are **unambiguous** rules[^1]. They also work for sufficiently objective facts, which is why the idea behind Buterin's Minimal-Trust Universal Data Feed is now the basis for many trustless blockchain [**oracles**](https://en.wikipedia.org/wiki/Blockchain_oracle#:~:text=A%20blockchain%20oracle%20is%20a,that%20decentralised%20knowledge%20is%20obtained.) which can be used to include facts about the "real world" into the state of the blockchain, such as [who won a sports game](https://www.coindesk.com/tech/2021/05/24/augur-adds-sports-betting-with-launch-of-polygon-based-augur-turbo/). As long as the fact is sufficiently uncontroversial and verifiable, people have no doubt how everyone expects everyone else to answer (the truth in this case is said to be a [focal point](https://en.wikipedia.org/wiki/Focal_point_\(game_theory\)), or Schelling Point). And so it is easy to coordinate on truthtelling.
 
 
 ## Coordinating on Objective Truth
-
-> We have reached the third degree where we devote our intelligences to anticipating what average opinion expects the average opinion to be. And there are some, I believe, who practice the fourth, fifth and higher degrees.
-> 
-> --  Keynes, General Theory of Employment, Interest and Money, 1936
 
 
 But it is not so easy to coordinate on an answer to subjective questions, such as "is the president doing a good job" or "do you like anchovies", where there is not one true answer. If participants can't get together to coordinate in advance, a subjective coordination game is a [Keyensian Beauty Contest](https://en.wikipedia.org/wiki/Keynesian_beauty_contest), where rather than voting based on their honest opinion, everyone tries to guess what everyone expects everyone else to do. It is still possible for people to coordinate on **some** piece of common knowledge -- for example popular opinion -- but conformity is not the same as honesty.

@@ -88,7 +88,10 @@ Today, the marketplace of ideas is held in public forums on the Internet, but th
 
 If the platforms were designed differently, they could fulfill the original promise of the Internet: to democratize knowledge. To provide society with a tool for collectively discovering information, making sense of that information, and realizing humanity's potential for collective intelligence.
 
-Read about our ideas for improving conversations on the internet at [social-protocols.org](https://social-protocols.org/).
+## 
+
+On [social-protocols.org](https://social-protocols.org/), we post about our work on [deliberative consensus protocols](/deliberative-consensus-protocols) and other social protocols for improving conversations on the internet. Currently, we are developing the [global brain algorithm](/global-brain), which we are integrating into a prototype of a new [social network](social-network/). The Global Brain algorithm analyzes the upvotes and downvotes in a threaded conversation, depending on *who has seen what other comments before they voted*, in order to identify the comments that are most influential and to determine the informed opinion of users who have seen all the most influential comments. 
+
 
 [^1]: https://www.nature.com/articles/s41599-020-00550-7
 
