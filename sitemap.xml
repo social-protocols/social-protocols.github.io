@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://social-protocols.org/deliberative-consensus-protocols/</loc>
+    <lastmod>2024-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/post/</loc>
+    <lastmod>2024-04-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://social-protocols.org/</loc>
+    <lastmod>2024-04-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://social-protocols.org/resources/</loc>
     <lastmod>2024-01-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -9,12 +18,6 @@
     <lastmod>2023-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://social-protocols.org/human-alignment-technology/</loc>
-    <lastmod>2023-06-02T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/post/</loc>
-    <lastmod>2023-06-02T00:00:00+02:00</lastmod>
-  </url><url>
-    <loc>https://social-protocols.org/</loc>
     <lastmod>2023-06-02T00:00:00+02:00</lastmod>
   </url><url>
     <loc>https://social-protocols.org/about/</loc>

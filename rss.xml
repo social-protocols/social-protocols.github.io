@@ -6,7 +6,16 @@
     <description>Recent content on Social Protocols</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0200</lastBuildDate><atom:link href="https://social-protocols.org/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://social-protocols.org/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deliberative Consensus Protocols</title>
+      <link>https://social-protocols.org/deliberative-consensus-protocols/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://social-protocols.org/deliberative-consensus-protocols/</guid>
+      <description>Introduction: Scalable Group Decision-Making A deliberative consensus protocol is a process that online groups can use to make decisions. It&amp;rsquo;s designed to produce good decisions that are fair and manifest the collective intelligence of the group.</description>
+    </item>
+    
     <item>
       <title>Resources</title>
       <link>https://social-protocols.org/resources/</link>
