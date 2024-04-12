@@ -17,7 +17,7 @@ A **deliberative consensus protocol** is a process that online groups can use to
 
 This is not easy, especially on the Internet, where bad-faith actors can easily create bots and sock-puppets to try to manipulate the results. And even if everyone acts in good faith, collective intelligence does not always scale well. Large groups often fail to come to consensus on even basic facts, let alone optimal actions.
 
-But in this essay I argue that intelligent group decision-making can scale with the right **process**.
+But in this essay I argue that **intelligent group decision-making can scale with the right process**.
 
 <!--
 But the fact that large groups often don't make good decisions doesn't mean they *can't*. Often, the key might simply be the **process**.
@@ -32,13 +32,13 @@ A deliberative consensus protocol is like a blockchain consensus protocol in tha
 
 A deliberative consensus protocol is like a blockchain consensus protocol, which induces users to give **honest** answers to questions of sufficiently uncontroversial facts (such as the state of the blockchain). But unlike a blockchain consensus protocol, which only works when there is no honest disagreement about the correct answer, a deliberative consensus protocol does not punish disagreement. Instead, it rewards **honest opinions**. It then uses a **deliberative process** to discover the most **informed and unbiased opinion** of the group.
 
-Although it is *like* a blockchain consensus protocol, a deliberative consensus protocol does *not* require a blockchain. It can be used anywhere an online group needs to make decisions: governance of open-source projects and DAOs, direct democracy, open fact-checking and peer review, moderating online forums, or improving social-media ranking algorithms to combat misinformation and promote more intelligent public discourse. 
+Although it is *like* a blockchain consensus protocol, a deliberative consensus protocol does *not* require a blockchain. It can be used anywhere an online group needs to make decisions: governance of open-source projects and DAOs, direct democracy, open fact-checking and peer review, moderating online forums, or improving social-media ranking algorithms to combat misinformation.
 
 <!--
 Instead of using cryptocurrency as a reward system, a deliberative consensus protocol can reward users with **attention**. This produces a game-theoretic equilibrium where the users with the most influence on the platform are those who consistently vote according to their honest opinions given the information that has been shared with them by other users. 
 -->
 
-This protocol helps groups not only make intelligent decisions, but to hold deep, honest, and intelligent conversations.
+But a deliberative consensus protocol can facilitate not just more intelligent decisions, but also more intelligent **conversations**, by promoting a more healthy conversation dynamic that incentivizes **informed honesty**, rather than **dishonest conformity**.
 
 ## Fair Decisions
 
