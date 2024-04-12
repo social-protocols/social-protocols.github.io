@@ -17,7 +17,11 @@ A **deliberative consensus protocol** is a process that online groups can use to
 
 This is not easy, especially on the Internet, where bad-faith actors can easily create bots and sock-puppets to try to manipulate the results. And even if everyone acts in good faith, collective intelligence does not always scale well. Large groups often fail to come to consensus on even basic facts, let alone optimal actions.
 
-However, there are solutions to all these problems! Large groups can produce collectively-intelligent decisions with the right process.
+But in this essay I argue that intelligent group decision-making can scale with the right **process**.
+
+<!--
+But the fact that large groups often don't make good decisions doesn't mean they *can't*. Often, the key might simply be the **process**.
+-->
 
 <!--
 A deliberative consensus protocol is like a blockchain consensus protocol, which uses game theory to produce consensus on questions of fact even in the face of bad-faith, manipulative behavior. But unlike a blockchain protocol, which online works for uncontroversial facts for which there is no honest disagreement, a deliberative consensus protocol works even when there is disagreement, using a **deliberative process** to discover the **honest and informed consensus**, and an unbiased machine learning algorithm. Finally, it **debiases** the results using an unsupervised machine-learning algorithm similar to the one used by X's Community Notes.
@@ -30,7 +34,9 @@ A deliberative consensus protocol is like a blockchain consensus protocol, which
 
 Although it is *like* a blockchain consensus protocol, a deliberative consensus protocol does *not* require a blockchain. It can be used anywhere an online group needs to make decisions: governance of open-source projects and DAOs, direct democracy, open fact-checking and peer review, moderating online forums, or improving social-media ranking algorithms to combat misinformation and promote more intelligent public discourse. 
 
-Instead of using cryptocurrency as a reward system, a deliberative consensus protocol can use **attention** as the reward currency. This produces a game-theoretic equilibrium where users with the most influence on the platform are those who consistently vote according to their honest opinions given the information that has been shared with them by other users. 
+<!--
+Instead of using cryptocurrency as a reward system, a deliberative consensus protocol can reward users with **attention**. This produces a game-theoretic equilibrium where the users with the most influence on the platform are those who consistently vote according to their honest opinions given the information that has been shared with them by other users. 
+-->
 
 This protocol helps groups not only make intelligent decisions, but to hold deep, honest, and intelligent conversations.
 
@@ -46,19 +52,19 @@ So I would propose that a *fair* trail would be one that discovers the 1) **hone
 
 This is what a deliberative consensus protocol is designed to do. It uses a deliberative process to discover what an **unbiased** (e.g. representative) sample of the group would **honestly** believe after they have considered all the most **informative** -- or convincing -- comments made by other users.
 
-To accomplish this, the protocol uses three different technologies, that correct in turn for **dishonesty**, **ignorance**, and **bias**.
+To accomplish this, the protocol uses three different technologies, that correct in turn for 1) **dishonesty**, 2) **ignorance**, and 3) **bias**.
 
-## Correcting for Dishonesty using Game Theory
+## 1) Correcting for Dishonesty using Game Theory
 
-First, to address the problem of **dishonesty** and coordinated manipulation, a deliberative consensus protocol can use game-theoretical mechanisms such as the [**Bayesian truth serum**](https://nel.mit.edu/bayesian-truth-serum/). BTS is an extraordinary mechanism that rewards users for giving honest answers *even if users believe that most people disagree with them*.
+First, to address the problem of **dishonesty** and coordinated manipulation, a deliberative consensus protocol can use game-theoretical mechanisms such as the [**Bayesian truth serum**](https://nel.mit.edu/bayesian-truth-serum/). BTS is an extraordinary mechanism (developed at MIT) that rewards users for giving honest answers *even if users believe that most people disagree with them*.
 
 To make these game-theoretical mechanisms work, there must be some sort of *reward*. If a deliberative consensus protocol is not a blockchain protocol, and the reward is not cryptocurrency, then what is the reward?
 
 In the deliberative consensus protocol, the reward currency can be **attention**. As I argue in [The Law Of Attention](/the-law-of-attention), if nobody pays any attention to your posts in an online platform, you will stop posting. If your votes have no effect on other posts, you will stop voting.
 
-So using a reputation system where reputation translates to the ability to influence the attention of other users, we can use an increase or decrease in reputation as the reward currency. This allows a deliberative consensus protocol to fully employ the tools of game theory and mechanism design.
+So using a reputation system where reputation translates to the ability to influence the attention of other users, we can use an increase or decrease in reputation as the reward currency. This allows a deliberative consensus protocol to fully employ the tools of game theory and mechanism design, and engineer a protocol that creates an equilibrium where everyone answers honestly, because they expect other users to do the same.
 
-## Correcting for Ignorance using Deliberation
+## 2) Correcting for Ignorance using Deliberation
 
 Second, to address the problem of **ignorance**, a deliberative consensus protocol can use an algorithm such as the [**Global brain algorithm**](https://social-protocols.org/global-brain/) to curate conversations that discover the most convincing arguments on each side of a question, in order to determine the opinion of users who have considered all of these arguments. 
 
@@ -66,10 +72,9 @@ The global brain algorithm works by analyzing a threaded conversation tree and c
 
 The integration of a truthtelling protocol such as the Bayesian Truth Serum with a deliberative protocol such as the Global Brain Algorithm can produce an equilibrium at **informed honesty**, where users maximize their influence on the platform by voting according to their *honest opinion given the information that has been shown to them*.
 
-This is the opposite of the effect of many social media algorithms, which create an equilibrium on **dishonest conformity**: where users intentionally ignore reason and nuance in favor of posts that are rewarded because they are easily recognized as conforming to the biases and dogmas of the group.
+This is the opposite of the effect of many social media algorithms, which create an equilibrium on **dishonest conformity**: where people are rewarded for posts that are easily recognized as conforming to the biases and dogmas of the group, even if that requires ignoring nuance and reason.
 
-
-## Correcting for Bias using Machine Learning
+## 3) Correcting for Bias using Machine Learning
 
 However, even if all members of a group are honest and informed of the most convincing information and arguments posted by other users, the result will still depend on who you ask, because people have different core values, belief systems, and preferences. And because participation in online discussions is necessarily optional, votes will often be a biased sample of the opinions of the group.
 
@@ -78,7 +83,6 @@ To address this problem of **self-selection bias**, an unsupervised machine-lear
 
 ## Summary
 
-A deliberative consensus protocol does not solve all the problems of group decision-making. The dilemmas addressed by social choice theory still exist when there are conflicting goals and preferences. But a deliberative consensus protocol can enhanced online group decision-making processes by more effectively distributing information and producing a fair decision that represents the collective intelligence of the group.
+A deliberative consensus protocol does not solve all the problems of group decision-making. For example, the dilemmas in designing fair democratic voting mechanisms addressed by social choice theory still exist when there are conflicting goals and preferences. But a deliberative consensus protocol can enhanced online group decision-making processes by more effectively distributing information and producing a fair decision that represents the collective intelligence of the group.
 
-But the greatest potential of these protocols may simply be the improvement in discourse. In a sense, the most important decision for any group to make is [*how to allocate their attention*](/what-deserves-our-attention). In any online discussion platform, the global brain algorithm can be used to focus attention on the most informative conversation threads and on comments that stand up to scrutiny. This can help to filter misinformation, curb abusive behavior (that people cannot honestly endorse), and promote more deep and intelligent conversations.
-
+But the greatest potential of these protocols may simply be the improvement in discourse. In a sense, the most important decision for any group to make is [*how to allocate their attention*](/what-deserves-our-attention). In any online discussion platform, the global brain algorithm can be used to focus attention on the most informative conversation threads and on comments that stand up to scrutiny, thereby promoting deep, honest, informed, and intelligent conversations.
