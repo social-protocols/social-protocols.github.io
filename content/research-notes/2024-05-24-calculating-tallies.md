@@ -161,4 +161,34 @@ users voted on a post and were never informed of the note, and the other
 fiver voted on the post only after being informed (they were never
 uninformed).
 
+## Computing Tallies using Triggers
+
+Calculating informed/uninformed tallies is tricky because it requires either keeping track of state for each user/post/note combination. If the user changes or clears their vote on a post, we need to upvote tallies considering whether that user has considered the note. Likewise when a user changes or clears their vote on a note.
+
+This can all be done with SQL views but these are complicated, slow, and hard to understand. Instead we use triggers, which are also complicated and hard to understand but at least much faster.
+
+## Solution:
+
+### VoteHistory and InformedVote
+
+We start with the voteHistory table, which includes every vote. The vote history includes all changes to votes and cleared votes.
+
+The informedVote table keeps track of the latest vote for a user on a post given they have considered some note. This is updated using a trigger on inserts/updates to voteHistory.
+
+### InformedTally
+
+We then aggregate the votes in informedTally based on a triggers after inserts/updates to informedVote
+
+
+## Open Questions 
+
+### Adjusting for Selection Bias in Votes on Note
+
+When we calculate $`P(upvote post|voted on note)`$, we introduce a voter bias. Users do decide what notes to vote on. Probably, a user who downvotes a post is more likely to vote on a note that opposes the post. However, we can adjust for this. So for example if a post has an upvoteProbability of say 90%, but of users who voted on the note, only 40% upvoted the post (60% downvoted the post), we know there is a bias (users who downvoted the post are more likely to vote on the note) and can adjust for it using a standard adjustment formula.
+
+
+### Further TODOS
+
+- See notes on 2024-02-06-informed-probability.md for further thoughts here. The approach proposed there requires a global estimate for P(C|not T) and P(C|T). We can estimate these if we know the slope R(C,U) for a few posts. This requires calculating P(U|not C) for some posts based on upvotes before the not was created. This would require adding a new event type to the uninformed tallies table for "note created". An entry is added to this table at the moment a note is created, containing the value of the user's vote on the post at that time.
+
 
