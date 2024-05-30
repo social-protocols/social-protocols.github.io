@@ -4,15 +4,12 @@ date:  2023-05-01
 hide:  true
 ---
 
-## The Social Network of the Future (2023)
+## Jabble (2023)
 
-We are in the process of creating a social network based on what we've learned
+We are in the process of creating a social media platform based on what we've learned
 from our experiments during the past years:
-[The Social Network of the Future](https://social-protocols.org/social-network/)
-([Github](https://github.com/social-protocols/social-network)) The core of our
-concepts is the
-[Global Brain Algorithm](https://social-protocols.org/global-brain), which
-converts a social network into a distributed brain, resulting in a whole that is
+([Jabble](https://github.com/social-protocols/social-network)) based on our [Global Brain Algorithm](https://social-protocols.org/global-brain), which
+converts a social media platform into a distributed brain, resulting in a whole that is
 more intelligent than the individual human parts.
 
 ## Quality News (2021)
@@ -33,4 +30,4 @@ calculation can be a key component in the design of social protocols. See the
 [**Propolis**](https://github.com/social-protocols/propolis), inspired by
 [Polis](https://pol.is), is an attempt to create a scaling collective
 intelligence system based on asking and answering yes-no questions.
-Propolis was archived because it was superseded by **The Social Network of the Future**.
+Propolis was archived because it was superseded by **Jabble**.
