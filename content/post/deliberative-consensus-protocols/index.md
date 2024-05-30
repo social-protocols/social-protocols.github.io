@@ -15,9 +15,9 @@ author: Jonathan Warden
 
 A **deliberative consensus protocol** is a process that online groups can use to make decisions. It's designed to produce *good* decisions that are fair and manifest the collective intelligence of the group. And it's designed to work at scale.
 
-This is not easy, especially on the Internet, where bad-faith actors can easily create bots and sock-puppets to try to manipulate the results. And even if everyone acts in good faith, collective intelligence does not always scale well. Large groups often fail to come to consensus on even basic facts, let alone optimal actions.
+This is not easy in large groups, where bad-faith actors may try to manipulate the results. And even if everyone acts in good faith, collective intelligence does not always scale well. Large groups often fail to come to consensus on even basic facts, let alone optimal actions.
 
-But in this essay I argue that **intelligent group decision-making can scale with the right process**.
+But **intelligent group decision-making can scale with the right process**.
 
 <!--
 But the fact that large groups often don't make good decisions doesn't mean they *can't*. Often, the key might simply be the **process**.
@@ -38,7 +38,7 @@ Although it is *like* a blockchain consensus protocol, a deliberative consensus 
 Instead of using cryptocurrency as a reward system, a deliberative consensus protocol can reward users with **attention**. This produces a game-theoretic equilibrium where the users with the most influence on the platform are those who consistently vote according to their honest opinions given the information that has been shared with them by other users. 
 -->
 
-But a deliberative consensus protocol can facilitate not just more intelligent decisions, but also more intelligent **conversations**, by promoting a more healthy conversation dynamic that incentivizes **informed honesty**, rather than **dishonest conformity**.
+But a deliberative consensus protocol can facilitate not just more intelligent decisions, but also more intelligent **conversations**.
 
 ## Fair Decisions
 
@@ -62,11 +62,11 @@ To make these game-theoretical mechanisms work, there must be some sort of *rewa
 
 In the deliberative consensus protocol, the reward currency can be **attention**. As I argue in [The Law Of Attention](/the-law-of-attention), if nobody pays any attention to your posts in an online platform, you will stop posting. If your votes have no effect on other posts, you will stop voting.
 
-So using a reputation system where reputation translates to the ability to influence the attention of other users, we can use an increase or decrease in reputation as the reward currency. This allows a deliberative consensus protocol to fully employ the tools of game theory and mechanism design, and engineer a protocol that creates an equilibrium where everyone answers honestly, because they expect other users to do the same.
+So in an online platform where reputation translates to the ability to influence the attention of other users, we can use an increase or decrease in reputation as the reward currency. This makes it possible to fully employ the tools of game theory and mechanism design to engineer a protocol that creates an equilibrium where everyone answers honestly, because they expect other users to do the same.
 
 ## 2) Correcting for Ignorance using Deliberation
 
-Second, to address the problem of **ignorance**, a deliberative consensus protocol can use an algorithm such as the [**Global brain algorithm**](https://social-protocols.org/global-brain/) to curate conversations that discover the most convincing arguments on each side of a question, in order to determine the opinion of users who have considered all of these arguments. 
+Second, to address the problem of **ignorance**, a deliberative consensus protocol can use an algorithm such as the [**Global Brain Algorithm**](https://social-protocols.org/global-brain/) to curate conversations that discover the most convincing arguments on each side of a question, in order to determine the opinion of users who have considered all of these arguments. 
 
 The global brain algorithm works by analyzing a threaded conversation tree and considering the upvotes and downvotes on each comment, depending on *who has seen what other comments before they voted*. It then filters and ranks comments to influence how much attention each receives, in order to deepen the most informed conversation threads while pruning uninformative threads that do not effect voting behavior. 
 
@@ -85,4 +85,10 @@ To address this problem of **self-selection bias**, an unsupervised machine-lear
 
 A deliberative consensus protocol does not solve all the problems of group decision-making. For example, the dilemmas in designing fair democratic voting mechanisms addressed by social choice theory still exist when there are conflicting goals and preferences. But a deliberative consensus protocol can enhanced online group decision-making processes by more effectively distributing information and producing a fair decision that represents the collective intelligence of the group.
 
-But the greatest potential of these protocols may simply be the improvement in discourse. In a sense, the most important decision for any group to make is [*how to allocate their attention*](/what-deserves-our-attention). In any online discussion platform, the global brain algorithm can be used to focus attention on the most informative conversation threads and on comments that stand up to scrutiny, thereby promoting deep, honest, informed, and intelligent conversations.
+But the greatest potential of these protocols may simply be the improvement in discourse. In a sense, the most important decision for any group to make is [*how to allocate their attention*](/what-deserves-our-attention). In any online discussion platform, a deliberative consensus protocol can be used to focus attention on the most informative conversation threads and on comments that stand up to scrutiny, thereby promoting deep, honest, informed, and intelligent conversations.
+
+We are currently working on a concrete implementation of a deliberative consensus protocol in [Jabble](https://github.com/social-protocols/jabble?tab=readme-ov-file#jabble-better-online-conversations).
+
+
+
+
