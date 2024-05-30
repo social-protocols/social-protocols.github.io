@@ -15,7 +15,7 @@ permalinks:
 summaryLength: 30
 menu:
   main:
-    - name: Home
+    - name: Articles
       url: /
       weight: 1
     - name: Projects
