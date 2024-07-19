@@ -138,21 +138,21 @@ Assuming in good faith, that both sides to most arguments have something valuabl
 
 To find the posts that are **most likely to change users' minds**, we could apply the following *imbalance* formula:
 
-$D_{KL}(p_u || p) - D_{KL}(p_d || p)$
+$\text{imbalance} = D_{KL}(p_u || p) - D_{KL}(p_d || p)$
 
 where
 
 $$
-p_u = P(upvoted B | upvoted A)
-p_d = P(upvoted B | downvoted A)
-p = P(upvoted B | voted on A)
+p_u = P(\text{upvoted B} | \text{upvoted A}) \
+p_d = P(\text{upvoted B} | \text{downvoted A}) \
+p = P(\text{upvoted B} | \text{voted on A})
 $$
 
 What the two KL divergences in the formula mean:
 
-D_{KL}(p_u || p)): "How much does the upvote probability of B differ between users that upvoted A vs. all users that voted on A?"
+$D_{KL}(p_u || p))$: "How much does the upvote probability of B differ between users that upvoted A vs. all users that voted on A?"
 
-D_{KL}(p_d || p): "How much does the upvote probability of B differ between users that downvoted A vs. all users that voted on A?"
+$D_{KL}(p_d || p)$: "How much does the upvote probability of B differ between users that downvoted A vs. all users that voted on A?"
 
 This is what the imbalance score looks like graphically for upvote probabilities of two posts A and B:
 
