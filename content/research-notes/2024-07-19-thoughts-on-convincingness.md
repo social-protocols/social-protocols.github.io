@@ -143,8 +143,8 @@ $\text{imbalance} = D_{KL}(p_u || p) - D_{KL}(p_d || p)$
 where
 
 $$
-p_u = P(\text{upvoted B} | \text{upvoted A}) \
-p_d = P(\text{upvoted B} | \text{downvoted A}) \
+p_u = P(\text{upvoted B} | \text{upvoted A}) \\
+p_d = P(\text{upvoted B} | \text{downvoted A}) \\
 p = P(\text{upvoted B} | \text{voted on A})
 $$
 
