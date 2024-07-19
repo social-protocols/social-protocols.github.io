@@ -1,8 +1,8 @@
 # Measuring Convincingness
 
 A lot of the Global Brain algorithm revolves around the concept of convincingness.
-We approached the concept of convincingness as *how convincing a comment is with regard to the post it replies to*, measuring it as how likely are users to change their vote on the target post given that they considered the comment.
-There are some core assumptions behind this rationale that I'd like to examine more closely.
+We approached the concept of convincingness as *how convincing a comment is with regard to the post it replies to*, measuring it as how likely users are to change their vote on the target post, given that they considered the comment.
+There are some core assumptions behind this rationale that I'd like to revisit and examine more closely.
 
 ## Reexamining Some Assumptions
 
@@ -11,11 +11,11 @@ There are some core assumptions behind this rationale that I'd like to examine m
 Users usually tend to do the actions which have the least friction and take the least effort (scrolling through a feed, liking something with one click, clicking on the next recommended video on YouTube or even have autoplay enabled, etc.).
 **Re**-considering a vote takes considerable effort in comparison.
 They need to revisit the post, re-evaluate their decision to up-/downvote the post, make a new decision, perhaps even read through the comments a bit again.
-
 If we assume that people never change their vote, the votes just represent a sampling of users' initial mental models.
 
 **In that case, does a high effect on the target post still semantically express convincingness?**
 
+---
 
 ### 2) Information a user hasn't considered on the platform is new information to the user altogether
 
@@ -30,14 +30,15 @@ There is a high volume of redundancy in most comment sections and users often ju
 In many cases, it's quite likely that a comment contains no new information for the user.
 Perhaps, they've seen the information seconds ago in another comment.
 
-As far as I can tell, what we can measure are the "maybe informed" probability.
-So the question is whether this "maybe" is closer to uninformed or to randomness.
+As far as I can tell, what we *can* measure is the "maybe informed" probability.
+So the question is whether this "maybe" is closer to the actual uninformed probably or closer to a random guess.
 Assuming the worst case, that our approach to determining the uninformed is not significantly better than a random guess:
 
 **What would the relative entropy of the uninformed (= maybe informed) and informed probability express?**
 
+---
 
-### 3) Comments further down the tree are in a semantic relationship with the target post (like "supports/detracts")
+### 3) Comments further down the tree are in a semantic relationship with the target post (e.g., "supports/detracts")
 
 Here is a sample comment thread that I made up, but I think is reasonably authentic:
 
@@ -48,7 +49,7 @@ Here is a sample comment thread that I made up, but I think is reasonably authen
 - E: Meh that trailer looked like shit... hope i'm wrong though
 - F: trailers never really capture the movie's vibe, just look at the trailer for perfect days from last year
 
-I think so far we made the too lenient assumption that users would submit to a structured debate.
+I think so far we made the too lenient assumption that users would somewhat conform to a structured debate style.
 What we overlooked is that unstructured online arguments can go in any direction.
 A discussion about a new EU policy can lead to a discussion about why anime sucks two comments down the tree.
 I believe the higher the separation between nodes in the tree is, the weaker the semantic connection.
@@ -61,6 +62,7 @@ Looking at the original post A and the leaf node F in the above example:
 **Is it still reasonable to apply our causal model to these comments?**  
 **What would the probability of upvoting A given that the user considered B express?**
 
+---
 
 ### 4a) A post is a statement or claim about some belief or beliefs that a user holds.
 
@@ -70,26 +72,28 @@ The weakest point in this assumption that we've built part of our understanding 
 This is rarely the case.
 Especially if you don't limit the number of characters a post can contain, many posts will be about many things, make several claims, express several points.
 
-The reason this could be a problem in our thinking is that we often implicitly assume that there is a "correct" way to vote on a post based on whether it's claim is true or false.
+The reason this could be a problem is that we often implicitly assume that there is a "correct" way to vote on a post based on whether its claim is true or false.
 But a post can also be partly true or false or contain only a statement about values, not facts, in which case there is no correct true or false value.
 
 I think rather than a claim or statement, a post is more of an expression of a value belief system.
 It can contain any number of claims and statements (which can be true or false, or partly true/false).
 
 In that case, what is the relationship between the **vote** on the post and the **underlying belief**?
-I would argue that it is at most in part a representation of the beliefs surrounding the claims made in the post.
-It's rather an expression of whether a voter's strongest belief about the post aligns with the content of the post.
+I would argue that it is **at most partly** a representation of the beliefs surrounding the claims made in the post.
+Rather, I believe a vote is an expression of whether a voter's strongest belief about the post aligns with the content of the post.
 This means that if a post is made in support of, say, universal healthcare, and supports that case with 10 facts, only 9 of which are true, a user might still upvote that post, even if they know that the false claim among the claims is false.
-But if 9 out of 10 supporting claims are false, a voter's belief in a fair debate without manipulation might take precedence and that belief is not aligned with the content of the post.
+But if 9 out of 10 supporting claims are false, a voter's belief in a fair debate without manipulation might take precedence and that belief is not aligned with the content of the post because it's dishonest.
 On the other hand, a voter could also believe that universal healthcare is so important that pushing for it politically justifies any means, including misinformation.
 
-
+---
 
 ## New Thoughts on Convincingness
 
+I'd like to propose some weaker assumptions that give us a more solid foundation.
+
 What can we *assume* about a post A in isolation?
 
-1) The author of the post has a **bias**, some lense through which they see the world. I mean bias in a non-judgmental way here. If a post's author is a fisherman and the post is about fishing, their bias might be above average expertise on fishing.
+1) The author of the post has a **bias**, some lense through which they see the world. I mean bias in a non-judgmental way here. If a post's author is a fisherman and the post is about fishing, their bias might be above-average expertise on fishing.
 2) The content of the post is an **expression of the author's bias**. For example, if the author has core beliefs aligned with a left-wing political ideology and post A is political, the left-wing attitude is likely expressed in the post.
 
 So what does a **vote** on a post mean?
@@ -106,7 +110,7 @@ Of course, there may be different motivations for upvoting or downvoting a post.
 Consider again a post making the case for universal healthcare.
 It makes five claims to support that case, one of which is false.
 A user's reason to up- or downvote the post could be their support or opposition to universal healthcare.
-They might also support universal healthcare, but rather than making the case for it dishonestly, theiy opt for downvoting the post because their belief in the importance of honest debate is stronger than their belief that the ends justify the means.
+They might also support universal healthcare, but rather than making the case for it dishonestly, they opt for downvoting the post because their belief in the importance of honest debate is stronger than their belief that the ends justify the means.
 Or maybe they oppose universal healthcare, but the four claims made in support of it are so convincing that they accept them as valid arguments that should be considered.
 
 But overall, we get an observation that gives us a variable to roughly split users into supporters and detractors of the post in question.
@@ -132,7 +136,7 @@ More likely, there are indeed *some* posts that align so strongly with one side,
 But there are also others that cover more of a gray area.
 Assuming in good faith, that both sides to most arguments have something valuable to contribute to the debate, these gray areas might have the highest potential for people to change their minds about certain things and open up to arguments from the other side.
 
-
+---
 
 ## Measuring Imbalance to Find Potential for Mind Change
 
@@ -146,11 +150,12 @@ where
 - $p_d = P(\text{upvoted B} | \text{downvoted A})$
 - $p = P(\text{upvoted B} | \text{voted on A})$
 
-What the two KL divergences in the formula mean:
+with
 
-$D_{KL}(p_u || p))$: "How much does the upvote probability of B differ between users that upvoted A vs. all users that voted on A?"
+- $D_{KL}(p_u || p))$: "How much does the upvote probability of B differ between users that upvoted A vs. all users that voted on A?"
+- $D_{KL}(p_d || p)$: "How much does the upvote probability of B differ between users that downvoted A vs. all users that voted on A?"
 
-$D_{KL}(p_d || p)$: "How much does the upvote probability of B differ between users that downvoted A vs. all users that voted on A?"
+---
 
 This is what the imbalance score looks like graphically for upvote probabilities of two posts A and B:
 
