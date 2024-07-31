@@ -62,6 +62,14 @@ $$
 $$
 
 
+## Relation to Existing Scoring Formulas
+
+I don't think such a formula could be used as a substitute for our informed probability measure or the effect measure based on informed/uninformed probability. It does not give us a way to score the post itself (just a way to score comments). And it would give the same score to two posts with a high common-ground factor, even if one is convincing and the other is not. 
+
+For example, consider the example of the video of an earthquake that turns out to be inauthentic. Suppose a comment with additional interesting information about the earthquake gets a high upvote probability for both groups (both those who upvoted and those who downvoted the video). But it does not effect people's votes on the video. 
+
+Suppose another comment explaining that the video was inauthentic also gets a high upvote probability for both groups. So both comments would have a high "imbalance" score, even though only one is actually providing new information that changes people's voting behavior.
+
 
 
 
