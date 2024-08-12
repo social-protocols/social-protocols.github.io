@@ -1,14 +1,14 @@
 <nav class="nav">
-  <a href="{{ "/" | relURL }}" class="nav-title">
-    {{ .Site.Title }}
-  </span>
-  <a href="{{ "/" | relURL }}" class="nav-logo">
+  <a href="{{ "/" | relURL }}" class="nav-logo" style="margin-right: 10px;">
     {{ if .Site.Params.logo }}
     <img src="{{ print "images/" .Site.Params.logo.url | relURL }}"
          width="{{ .Site.Params.logo.width }}"
          height="{{ .Site.Params.logo.height }}"
          alt="{{ .Site.Params.logo.alt }}">
     {{ end }}
+  </a>
+  <a href="{{ "/" | relURL }}" class="nav-title">
+    {{ .Site.Title }}
   </a>
 
   <ul class="nav-links">

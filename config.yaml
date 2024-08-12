@@ -11,25 +11,22 @@ ignoreFiles:
   - \.knit\.md$
   - \.utf8\.md$
 permalinks:
-  post: /:slug/
+  post: "/:slug/"
 summaryLength: 30
 menu:
   main:
-    - name: Home
-      url: /
-      weight: 1
     - name: Articles
-      url: /articles/
-      weight: 2
+      url: /articles
+      weight: 1
     - name: Projects
-      url: /projects/
-      weight: 3
+      url: /projects
+      weight: 2
     - name: Resources
       url: /resources/
-      weight: 4
+      weight: 3
     - name: About
       url: /about/
-      weight: 5
+      weight: 4
   footer:
     - name: GitHub
       url: https://github.com/social-protocols
@@ -37,6 +34,8 @@ menu:
       url: https://twitter.com/socialprotocols
     - name: Mastodon
       url: https://mas.to/@SocialProtocols
+    - name: Zulip
+      url: https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/
     - name: Substack
       url: https://socialprotocols.substack.com
     - name: Medium
@@ -56,11 +55,11 @@ params:
     <script data-goatcounter="https://socialprotocols.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
   # Uncommenet this later to add a logo
-  # logo:
-  #   alt: Logo
-  #   height: 50
-  #   url: logo.png
-  #   width: 50
+  logo:
+    alt: Logo
+    height: 50
+    url: "logo.svg"
+    width: 50
 
 outputFormats:
   RSS:
