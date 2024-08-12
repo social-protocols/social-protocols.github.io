@@ -1,0 +1,35 @@
+{{- if $.Params.image -}}
+
+
+
+{{ $image := .Resources.GetMatch .Params.image }}
+{{ $image := $image.Resize "600x" }}
+
+{{ $siteURL := urls.Parse .Site.BaseURL  }}
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content='{{ printf "%s://%s%s" $siteURL.Scheme $siteURL.Host $image.RelPermalink }}'/>
+<meta name="twitter:image:alt" content="Featured image of post {{ $.Title }}{{if $.Params.image_alt}}: {{$.Params.image_alt}}{{end}}"/>
+
+
+{{ else -}}
+{{- $image := $.Resources.ByType "image" -}}
+{{- $featured := $image.GetMatch "*feature*" -}}
+{{- if not $featured }}{{ $featured = $image.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+{{- with $featured -}}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ $featured.Permalink }}"/>
+{{- else -}}
+{{- with $.Site.Params.image -}}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="{{ . | absURL }}"/>
+{{ else -}}
+<meta name="twitter:card" content="summary"/>
+{{- end -}}
+{{- end -}}
+{{- end }}
+<meta name="twitter:title" content="{{ .Title }}"/>
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
+{{ with .Site.Social.twitter -}}
+<meta name="twitter:site" content="@{{ . }}"/>
+{{ end -}}
