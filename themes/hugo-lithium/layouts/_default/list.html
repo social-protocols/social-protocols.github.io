@@ -13,7 +13,7 @@
   </article>
   {{ end }}
   <div class="archive">
-    {{ $pages := .Pages.ByDate }}
+    {{ $pages := .Pages }}
     {{ if .IsHome }}
     {{ $pages = .Site.RegularPages }}
     {{ end }}

@@ -1,0 +1,65 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Social Protocols'
+theme = 'hugo-lithium'
+summaryLength = 30
+
+[permalinks]
+    articles = "/:slug/"
+
+[[menu.main]]
+  name = "Articles"
+  url = "/articles/"
+  weight = 1
+[[menu.main]]
+  name = "Resources"
+  url = "/resources"
+  weight = 2
+# [[menu.main]]
+#   name = "About"
+#   url = "/about/"
+#   weight = 3
+
+[[menu.footer]]
+  name = "GitHub"
+  url = "https://github.com/social-protocols"
+[[menu.footer]]
+  name = "Twitter"
+  url = "https://twitter.com/socialprotocols"
+[[menu.footer]]
+  name = "Mastodon"
+  url = "https://mas.to/@SocialProtocols"
+[[menu.footer]]
+  name = "Zulip"
+  url = "https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/"
+[[menu.footer]]
+  name = "Substack"
+  url = "https://socialprotocols.substack.com"
+[[menu.footer]]
+  name = "Medium"
+  url = "https://medium.com/@socialprotocols"
+
+[params]
+  custom_js = "<script data-goatcounter='https://socialprotocols.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script>"
+  [params.logo]
+    url = "logo.svg"
+    width = 50
+    height = 50
+    alt = "Logo"
+
+# -- from old config
+# params:
+#   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
+#   MathJaxVersion: 2.7.5
+#   description: A website built through Hugo and blogdown.
+#   highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
+#   highlightjsLang:
+#     - r
+#     - yaml
+#   highlightjsTheme: github
+#   highlightjsVersion: 9.12.0
+
+[outputFormats]
+  [RSS]
+    mediatype = "application/rss"
+    baseName = "rss"
