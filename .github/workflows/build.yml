@@ -16,35 +16,19 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      # inspired by
-      # https://github.com/rstudio/ai-blog/blob/c07dff9c18859ba682ee112ed45c7c3115c86e71/.github/workflows/main.yml
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.131.0'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
 
       - uses: actions/checkout@v3
         with:
           submodules: recursive 
-
-      - uses: r-lib/actions/setup-r@v2
-
-      - uses: r-lib/actions/setup-pandoc@v2
-
-      - name: Cache R Packages
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ hashFiles('.github/R-version') }}-${{ hashFiles('.github/pkg-versions.Rds') }}-${{ hashFiles('.github/pkg-deps.Rds') }}
-          restore-keys: ${{ hashFiles('.github/R-version') }}-
-
-      - name: Install blogdown
-        run: install.packages("blogdown")
-        shell: Rscript {0}
-
-      - name: Install hugo
-        run: blogdown::install_hugo(extended = TRUE, version = "0.111.3")
-        shell: Rscript {0}
-
-      - name: Blogdown build
-        run: blogdown::build_site(build_rmd = "newfile")
-        shell: Rscript {0}
 
       - name: Deploy to Github Pages
         if: github.ref == 'refs/heads/main'
