@@ -66,7 +66,6 @@ img {
   display: block;
   max-height: 40px;
   width: auto;
-  border-radius: 50%;
 }
 
 .nav-links {
@@ -83,7 +82,7 @@ img {
 
 .nav-title {
   margin: 0;
-  font-size: 1em;
+  font-size: 14px;
   float: left;
   text-decoration: none;
   color: #000;
@@ -307,7 +306,7 @@ a.archive-item-summary:visited {
 
   .nav-title {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 18px;
     float: left;
     text-decoration: none;
     color: #000;
