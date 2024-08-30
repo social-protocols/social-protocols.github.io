@@ -11,6 +11,10 @@ You can support our work on [Open Collective](https://opencollective.com/social-
 
 ## Active Projects
 
+### Jabble
+
+A collaborative fact-checking Platform: <https://jabble.xyz>
+
 ### Global Brain Algorithm
 
 We are creating a [comment ranking algorithm](https://github.com/social-protocols/GlobalBrain.jl) to fight misinformation.
@@ -23,4 +27,3 @@ the **upvoteRate** metric. The **upvoteRate** is designed to better reflect the
 intent of the community as revealed by their upvote behavior. We believe this
 calculation can be a key component in the design of social protocols. See the
 [readme on GitHub](https://github.com/social-protocols/quality-news#readme) for details.
-
