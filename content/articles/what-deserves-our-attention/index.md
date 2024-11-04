@@ -14,7 +14,7 @@ Every online community has rules that determine how the attention of the communi
 
 But this is a terrible rule. It creates perverse incentives for people to share content that people will reflexively upvote based on first impressions. It encourages shallow conversation on lowbrow topics. 
 
-Engagement-based ranking, use by many social networks, is even worse. It concentrates attention on controversy, outrage, and out-group animosity. Three decades of Internet toxicity and countless academic studies unequivocally condemn these algorithms. <!--(TODO: references)-->
+Engagement-based ranking, used by many social networks, is even worse. It concentrates attention on controversy, outrage, and out-group animosity. Three decades of Internet toxicity and countless academic studies unequivocally condemn these algorithms. <!--(TODO: references)-->
 
 So how should content be ranked? What content deserves our collective attention, and how should this be determined? 
 
