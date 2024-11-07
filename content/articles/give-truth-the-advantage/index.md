@@ -35,7 +35,9 @@ author: Jonathan Warden
 
 Everyone knows that the infamous social media algorithms promote the spread of false and misleading information on the Internet. But could they be engineered to do the opposite? 
 
-We can't prevent people from lying. But we can't on the one hand blame the algorithms for the spread of misinformation, and on the other hand blame everything on human nature. We know that the algorithms somehow change the nature of online discourse for the worse. So if they can be accidentally engineered to promote lies, couldn't they be intentionally engineered to promote truth?
+Obviously, we can't prevent people on the Internet from lying, or from just being wrong. But human fallibility is not the only thing to blame for the epidemic of online misinformation. The algorithms somehow create the conditions for lies to spread faster online than they do in real life.
+
+So if these algorithms can be accidentally engineered to promote lies, couldn't they be intentionally engineered to promote truth?
 
 ## Moderation is Not the Answer
 
