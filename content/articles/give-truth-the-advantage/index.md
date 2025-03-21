@@ -64,7 +64,7 @@ As I argue in [The Law Of Attention](/the-law-of-attention), all online communit
 
 When social media algorithms optimize for engagement, they reward engaging content with attention. Unfortunately, outrageous lies and other controversial content is often the most engaging[^1]. Some people learn how to play the game by sparking conflict and evoking fear and outrage. Others stop posting.
 
-So the algorithms don't just direct attention, they actually influence the behavior that dominates in an online platform. And if social platforms allocated attention based on different metrics, they would create different feedback loops that caused different behaviors to dominate.
+So the algorithms don't just direct attention, they actually influence behavior. And if social platforms allocated attention based on different metrics, they would create different feedback loops that promoted different behaviors.
 
 But what other types of feedback loops can be created? What kind of behaviors can be promoted?
 
