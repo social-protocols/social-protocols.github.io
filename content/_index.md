@@ -6,8 +6,10 @@ layout: single
 
 *The goal of Social Protocols is to enhance collective intelligence. We are working on open algorithms and protocols that benefit large scale human interaction.*
 
-Join our [Zulip Chat](https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/) and don't hesitate to ask any questions or present your ideas.
-You can support our work on [Open Collective](https://opencollective.com/social-protocols).
+- Join our [Zulip Chat](https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/) and don't hesitate to ask any questions or present your ideas.
+- You can support our work on [Open Collective](https://opencollective.com/social-protocols).
+- Read [our essays](/articles).
+
 
 ## Active Projects
 
