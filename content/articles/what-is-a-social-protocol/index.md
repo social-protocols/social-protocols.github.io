@@ -21,7 +21,7 @@ Understanding these protocols can help us explain some of the phenomenon we see 
 
 Consider a social media "echo chamber", centered around a popular user on 𝕏 or Bluesky. Whenever the user posts something, he starts a conversation among his followers.
 
-This user and his followers have strong opinions. When somebody replies to his posts in a way that challenges his worldview, the followers will dog-pile the offender, overwhelming them with critical or even abusive responses. If they don't withdraw from the conversation, they get blocked, while the most obsequious defenders of the orthodoxy might get retweeted and attract new followers.
+This user and his followers have strong opinions. When somebody replies to his posts in a way that challenges his worldview, the followers dog-pile the offender, overwhelming them with critical or even abusive responses. If they don't withdraw from the conversation, they get blocked, while the most obsequious defenders of the orthodoxy might get retweeted and attract new followers.
 
 A very simplified view of this situation is that a *social protocol* has emerged that a group of like-minded people use for enforcing the worldview of that echo chamber.
 
@@ -29,7 +29,7 @@ A very simplified view of this situation is that a *social protocol* has emerged
 
 Another example of a social protocol is the news aggregator. Hacker News uses upvotes to determine which stories rank highest on the front page, along with moderator-enforced rules for keeping stories mostly on-topic. Since stories at the top of front page receive the most attention, the result is a protocol for focusing the community's attention and conversation on certain topics. 
 
-Th Hacker News community also has its own informal rules about the kinds of stories and comments that tend to get upvoted. But the upvote-only system doesn't make it so easy for the community to strictly enforce a single narrow worldview. 
+Th Hacker News community also has its own informal rules about the kinds of stories and comments that tend to get upvoted. 
 
 ## Email is a Social Protocol
 
@@ -41,7 +41,7 @@ Indeed any online communication platform has a corresponding social protocol.
 
 The social protocol can be seen as a combination of **formal** rules enforced by the platform's software and moderation policies, and **informal** rules enforced by the users. 
 
-The formal rules may not prevent users from disagreeing with the orthodoxy of an echo chamber, or posting stories that are not popular with the Hacker News crowd, or using email instead of messenger apps for frequent short messages. But they do make it possible for these informal rules to arise and be  enforced by users. 
+The formal rules can't enforce a political ideology or email etiquette, but they do make it possible for informal rules to arise and be enforced by users. 
 
 And most importantly, the formal rules influence what *kinds* of informal rules tend arise, and thus the kinds of content that tends to be encouraged. Some rules encourage echo chambers and misinformation, others encourage SPAM and personal abuse.
 
