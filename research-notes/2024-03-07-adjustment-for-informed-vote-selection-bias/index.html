@@ -14,4 +14,15 @@ $$</p><p>Or more verbosely.</p><p>$$
 &amp;P(\text{upvote post}|do(\text{vote on note})) \
 &= P(\text{upvote post}|\text{originally upvoted post, vote on note}) × P(\text{originally upvoted post}) \
 &+ P(\text{upvote post}|\text{originally downvoted post, vote on note}) × P(\text{originally downvoted post}) \<br>\end{aligned}
-$$</p><p>So to implement this, we need two informed tallies: one for people who originally upvoted, and one for people who originally downvoted.</p></div></article></main><footer class=footer><ul class=footer-links><li><a href type=application/rss+xml target=_blank>RSS</a></li><li><a href=https://github.com/social-protocols>GitHub</a></li><li><a href=https://mas.to/@SocialProtocols>Mastodon</a></li><li><a href=https://medium.com/@socialprotocols>Medium</a></li><li><a href=https://socialprotocols.substack.com>Substack</a></li><li><a href=https://twitter.com/socialprotocols>Twitter</a></li><li><a href=https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/>Zulip</a></li></ul></footer></div><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js//highlight.min.js></script><script>hljs.configure({languages:[]}),hljs.initHighlightingOnLoad()</script><script src=/js/math-code.js></script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
+$$</p><p>So to implement this, we need two informed tallies: one for people who originally upvoted, and one for people who originally downvoted.</p></div></article></main><footer class=footer><ul class=footer-links><li><a href type=application/rss+xml target=_blank>RSS</a></li><li><a href=https://github.com/social-protocols>GitHub</a></li><li><a href=https://mas.to/@SocialProtocols>Mastodon</a></li><li><a href=https://medium.com/@socialprotocols>Medium</a></li><li><a href=https://socialprotocols.substack.com>Substack</a></li><li><a href=https://twitter.com/socialprotocols>Twitter</a></li><li><a href=https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/>Zulip</a></li></ul></footer></div><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js//highlight.min.js></script><script>hljs.configure({languages:[]}),hljs.initHighlightingOnLoad()</script><script type=text/x-mathjax-config>
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] },
+    TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"] },
+    messageStyle: "none"
+  });
+</script><script src=/js/math-code.js></script><script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
