@@ -1,63 +1,77 @@
 <!doctype html><html lang=en-us><head><meta name=twitter:card content="summary"><meta name=twitter:title content><meta name=twitter:description content="Derivation of the &ldquo;Support Formula&rdquo; The Problem Suppose we have an estimate of the effect of note B on post A, and the effect of subnote C on note B. Should we be able to predict the effect of subnote C on post A."><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.131.0"><title>- Social Protocols</title>
 <meta property="og:title" content=" - Social Protocols"><link rel=stylesheet href=/css/fonts.css media=all><link rel=stylesheet href=/css/main.css media=all><script data-goatcounter=https://socialprotocols.goatcounter.com/count async src=//gc.zgo.at/count.js></script></head><body><div class=wrapper><header class=header><nav class=nav><a href=/ class=nav-logo style=margin-right:10px><img src=/images/logo.svg width=50 height=50 alt=Logo>
-</a><a href=/ class=nav-title>Social Protocols</a><ul class=nav-links><li><a href=/articles>Articles</a></li><li><a href=/#projects>Projects</a></li><li><a href=/research-notes>Research Notes</a></li><li><a href=/resources>Resources</a></li></ul></nav></header><main class=content role=main><article class=article><h1 class=article-title></h1><div class=article-content><h1 id=derivation-of-the-support-formula>Derivation of the &ldquo;Support Formula&rdquo;</h1><h2 id=the-problem>The Problem</h2><p>Suppose we have an estimate of the effect of note B on post A, and the effect of subnote C on note B. Should we be able to predict the effect of subnote C on post A.</p><p>To estimate the informed probability for A, we want to know the effect of all information &ndash; both the note and the subnote. Since considering the subnote implies considering the note, what we are really interested in is $P(A \vert considered~C)$.</p><p>We can estimate this the same way we estimate $P(A \vert considered~B)$, by looking at the informed and uninformed tallies of $B$ or $C$ with respect to A.</p><p>However, there are a couple of reasons we would like to estimate $P(A \vert considered~C)$ without looking at the tallies for A and C.</p><ol><li><p>One is that B might be a reused post, and we would like to automatically apply the arguments for/against B to discussion about A, even for users that are not involved in the discussion about A.</p></li><li><p>The other is that we can perhaps simplify the algorithm and the number of tallies we need to keep track of.</p></li></ol><p>So to summarize the problem, we want to calculate $P(A \vert considered~C)$ given the tallies for (A,B) and the tallies for (B,C).</p><h2 id=scenario-1>Scenario 1</h2><p>I&rsquo;ll start by laying out a scenario that I&rsquo;ll use to talk through my reasoning.</p><p>Suppose 46% of people believe A, but considering B increases that to 90%</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    &amp;P(A \vert not~cB) = 46\% \\
-    &amp;P(A \vert cB) = 90\%
+</a><a href=/ class=nav-title>Social Protocols</a><ul class=nav-links><li><a href=/articles>Articles</a></li><li><a href=/#projects>Projects</a></li><li><a href=/research-notes>Research Notes</a></li><li><a href=/resources>Resources</a></li></ul></nav></header><main class=content role=main><article class=article><h1 class=article-title></h1><div class=article-content><h1 id=derivation-of-the-support-formula>Derivation of the &ldquo;Support Formula&rdquo;</h1><h2 id=the-problem>The Problem</h2><p>Suppose we have an estimate of the effect of note B on post A, and the effect of subnote C on note B. Should we be able to predict the effect of subnote C on post A.</p><p>To estimate the informed probability for A, we want to know the effect of all information &ndash; both the note and the subnote. Since considering the subnote implies considering the note, what we are really interested in is $P(A \vert considered\ C)$.</p><p>We can estimate this the same way we estimate $P(A \vert considered\ B)$, by looking at the informed and uninformed tallies of $B$ or $C$ with respect to A.</p><p>However, there are a couple of reasons we would like to estimate $P(A \vert considered\ C)$ without looking at the tallies for A and C.</p><ol><li><p>One is that B might be a reused post, and we would like to automatically apply the arguments for/against B to discussion about A, even for users that are not involved in the discussion about A.</p></li><li><p>The other is that we can perhaps simplify the algorithm and the number of tallies we need to keep track of.</p></li></ol><p>So to summarize the problem, we want to calculate $P(A \vert considered\ C)$ given the tallies for (A,B) and the tallies for (B,C).</p><h2 id=scenario-1>Scenario 1</h2><p>I&rsquo;ll start by laying out a scenario that I&rsquo;ll use to talk through my reasoning.</p><p>Suppose 46% of people believe A, but considering B increases that to 90%</p><p>$$
+\begin{aligned}
+&amp;P(A \vert not\ cB) = 46% \newline
+&amp;P(A \vert cB) = 90%
 \end{aligned}
-</code></pre><p>Suppose 99% of people believe B, but considering C reduces that to 50%</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    &amp;P(B \vert not~cC) = 99\% \\
-    &amp;P(B \vert cC) = 50\%
+$$</p><p>Suppose 99% of people believe B, but considering C reduces that to 50%</p><p>$$
+\begin{aligned}
+&amp;P(B \vert not\ cC) = 99% \newline
+&amp;P(B \vert cC) = 50%
 \end{aligned}
-</code></pre><h2 id=define>Define</h2><p>Let&rsquo;s define the effect of B on A as:</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    E(A,cB) &amp;= P(A \vert cB) - P(A \vert not~cB) \\
-            &amp;= 90\% - 46\%  \\
-            &amp;= 44%
+$$</p><h2 id=define>Define</h2><p>Let&rsquo;s define the effect of B on A as:</p><p>$$
+\begin{aligned}
+E(A,cB) &= P(A \vert cB) - P(A \vert not\ cB) \newline
+&= 90% - 46% \newline
+&= 44%
 \end{aligned}
-</code></pre><p>So we can write:</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    P(A | cB) = P(A \vert not~cB) + E(A,cB)
+$$</p><p>So we can write:</p><p>$$
+\begin{aligned}
+P(A | cB) = P(A \vert not\ cB) + E(A,cB)
 \end{aligned}
-</code></pre><p>Then let&rsquo;s define the support of C wrt B as</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    S(B,cC) &amp;= \frac{P(B \vert cC)}{P(B \vert not~cC)} \\
-            &amp;= \frac{50\%}{99\%} \\
-            &amp;≈.505  
+$$</p><p>Then let&rsquo;s define the support of C wrt B as</p><p>$$
+\begin{aligned}
+S(B,cC) &= \frac{P(B \vert cC)}{P(B \vert not\ cC)} \newline
+&= \frac{50%}{99%} \newline
+&≈.505<br>\end{aligned}
+$$</p><h2 id=initial-proposed-formula>Initial Proposed Formula</h2><p>My initial proposed formula was for estimating the effect of considering C on A was:</p><p>$$
+\begin{aligned}
+P(A \vert cC) ≈ P(A \vert not\ cB) + S(B,cC) \times E(A,cB)
 \end{aligned}
-</code></pre><h2 id=initial-proposed-formula>Initial Proposed Formula</h2><p>My initial proposed formula was for estimating the effect of considering C on A was:</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    P(A \vert cC) ≈ P(A \vert not~cB) + S(B,cC) × E(A,cB)
+$$</p><h2 id=intuition-for-initial-formula>Intuition for Initial Formula</h2><p>My reasoning is as follows. In the above scenario, considering B makes increases the probability of upvoting A by 44 percentage points. Presumably, this increase comes from people that agreed with and upvoted B.</p><p>Now, if only 55% of those people upvoted B after considered C, the effect would be reduced to</p><p>$$
+\begin{aligned}
+50.5% \times .44 = .22
 \end{aligned}
-</code></pre><h2 id=intuition-for-initial-formula>Intuition for Initial Formula</h2><p>My reasoning is as follows. In the above scenario, considering B makes increases the probability of upvoting A by 44 percentage points. Presumably, this increase comes from people that agreed with and upvoted B.</p><p>Now, if only 55% of those people upvoted B after considered C, the effect would be reduced to</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    50.5\% × .44 = .22 
+$$</p><p>And so B and C together, instead of increasing the probability of upvoting A by 44 percentage points to $90%$, only raises it by 22 percentage points to $68.22%$.</p><h2 id=problem-with-proposed-formula>Problem with Proposed Formula</h2><p><a href=2024-02-05--top-note-algorithm.md>Johannes discovered</a> that this formula practically results in probabilities outside the range of 0 to 100, because:</p><p>$$
+\begin{aligned}
+\text{support} \in (0, \infty)
 \end{aligned}
-</code></pre><p>And so B and C together, instead of increasing the probability of upvoting A by 44 percentage points to $90%<code>$, only raises it by 22 percentage points to $</code>68.22%`$.</p><h2 id=problem-with-proposed-formula>Problem with Proposed Formula</h2><p><a href=2024-02-05--top-note-algorithm.md>Johannes discovered</a> that this formula practically results in probabilities outside the range of 0 to 100, because:</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-	\text{support} \in (0, \infty)
+$$</p><h3 id=scenario-2>Scenario 2</h3><p>This problem can be illustrated with a variation of the above scenario. We still have</p><p>$$
+\begin{aligned}
+&amp;P(A \vert not\ cB) = 46% \newline
+&amp;P(A | cB) = 90%
 \end{aligned}
-</code></pre><h3 id=scenario-2>Scenario 2</h3><p>This problem can be illustrated with a variation of the above scenario. We still have</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    &amp;P(A \vert not~cB) = 46\% \\
-    &amp;P(A | cB) = 90\%
+$$</p><p>But now let&rsquo;s say that considering C increases the upvote probability of B from 0.01 to .99</p><p>$$
+\begin{aligned}
+&amp;P(B|not\ cC) = 0.01 \newline
+&amp;P(B|cC) = .99
 \end{aligned}
-</code></pre><p>But now let&rsquo;s say that considering C increases the upvote probability of B from 0.01 to .99</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    &amp;P(B|not~cC) = 0.01 \\
-    &amp;P(B|cC) = .99
+$$</p><p>Support is now</p><p>$$
+\begin{aligned}
+S(B, cC) = .99/.1 = 99
 \end{aligned}
-</code></pre><p>Support is now</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    S(B, cC) = .99/.1 = 99
+$$</p><p>So a user who considers C is 99 times more likely to upvote A.</p><p>$$
+\begin{aligned}
+P(A \vert cC) \newline
+&= P(A \vert not\ cB) + E(A,cB) \times S(B,cC) \newline
+&= 46% + (90% - 46%) \times 99 \newline
+&= .46 + (.90 - .46) \times 99 \newline
+&= 4400% \newline
 \end{aligned}
-</code></pre><p>So a user who considers C is 99 times more likely to upvote A.</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    P(A \vert cC) \\
-    &amp;= P(A \vert not~cB) + E(A,cB) × S(B,cC) \\
-    &amp;=  46\% + (90\% - 46\%) × 99 \\
-    &amp;= .46 + (.90 - .46) × 99 \\
-    &amp;= 4400\% \\
+$$</p><p>This doesn&rsquo;t make sense.</p><h2 id=analysis-of-problem>Analysis of Problem</h2><p>The problem is that users are behaving outside of our assumptions. Presumably, when post B changes users votes on A, this is what happens:</p><ul><li>users see and vote on post B</li><li>they downvote B if they think B is 1) not true 1) not informative or 2) and relevant<ul><li>probably, they won&rsquo;t upvote things they think are not true an relevant</li><li>they may upvote things that are not informative to them (that they already knew) if they think they are relevant to others.</li></ul></li><li>they upvote B if they accept B as true, informative, and relevant (all three):<ul><li>the fact that B is <em>informative</em> implies that it may causes them to change their belief about some underyling claim Z (e.g the claim being made in the post)</li><li>the fact that B is <em>relevant</em> implies that Z is relevant to their belief in Y</li></ul></li></ul><p>The reason we conjure some underyling claim $Z$ is that users belief in $Z$, $P(Z)$, is not the same as $P(B)$. To upvote $B$, users need not only accept $Z$ as true, but also as relevant and informative. This means that the probability of upvoting B is some fraction of the probability of believing $Z$. Namely</p><p>$$
+\begin{aligned}
+P(B) = r \times P(Z)
 \end{aligned}
-</code></pre><p>This doesn&rsquo;t make sense.</p><h2 id=analysis-of-problem>Analysis of Problem</h2><p>The problem is that users are behaving outside of our assumptions. Presumably, when post B changes users votes on A, this is what happens:</p><ul><li>users see and vote on post B</li><li>they downvote B if they think B is 1) not true 1) not informative or 2) and relevant<ul><li>probably, they won&rsquo;t upvote things they think are not true an relevant</li><li>they may upvote things that are not informative to them (that they already knew) if they think they are relevant to others.</li></ul></li><li>they upvote B if they accept B as true, informative, and relevant (all three):<ul><li>the fact that B is <em>informative</em> implies that it may causes them to change their belief about some underyling claim Z (e.g the claim being made in the post)</li><li>the fact that B is <em>relevant</em> implies that Z is relevant to their belief in Y</li></ul></li></ul><p>The reason we conjure some underyling claim $Z$ is that users belief in $Z$, $P(Z)$, is not the same as $P(B)$. To upvote $B$, users need not only accept $Z$ as true, but also as relevant and informative. This means that the probability of upvoting B is some fraction of the probability of believing $Z$. Namely</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    P(B) = r × P(Z)
+$$</p><p>Where $r$ is between 0 and 1.</p><p>So if users change their belief in $Z$ (e.g. by considering note $C$), they may increase their probability of upvoting $B$, but not by as much as they increase their belief in $Z$.</p><p>So if $P(B)$ is only 1%, then $P(Z)$ is only $r\times1%$. So post $B$ increased $Z$ by at most 1 percentage point. It seems hard to believe that such a small increase in $Z$ would have a large increase in $A$.</p><p>And in fact, our intuitions here are validated by math, and the rules of Bayesian belief updating. Given any two propositions such as $Z$ and $A$, the probability of one is a linear function of the other probability of the other. Per something called Jeffrey&rsquo;s Rule, a Bayesian reasoner with beliefs $P(A)$ acquires information that has no other effect than to increase their belief in $Z$ from $P(Z)$ to $P&rsquo;(Z)$ their posterior $P&rsquo;(A)$ will be:</p><p>$$
+\begin{aligned}
+P&rsquo;(A) = P(A \vert not\ Z) + R(A,Z)\times P&rsquo;(A)
 \end{aligned}
-</code></pre><p>Where $r$ is between 0 and 1.</p><p>So if users change their belief in $Z$ (e.g. by considering note $C$), they may increase their probability of upvoting $B$, but not by as much as they increase their belief in $Z$.</p><p>So if $P(B)$ is only 1%, then $P(Z)$ is only $r×1%$. So post $B$ increased $Z$ by at most 1 percentage point. It seems hard to believe that such a small increase in $Z$ would have a large increase in $A$.</p><p>And in fact, our intuitions here are validated by math, and the rules of Bayesian belief updating. Given any two propositions such as $Z$ and $A$, the probability of one is a linear function of the other probability of the other. Per something called Jeffrey&rsquo;s Rule, a Bayesian reasoner with beliefs $P(A)$ acquires information that has no other effect than to increase their belief in $Z$ from $P(Z)$ to $P&rsquo;(Z)$ their posterior $P&rsquo;(A)$ will be:</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    P&#39;(A) = P(A \vert not~Z) + R(A,Z)×P&#39;(A)
+$$</p><p>Where</p><p>$$
+\begin{aligned}
+R(A,Z) = P(A|Z) - P(A|not\ Z)
 \end{aligned}
-</code></pre><p>Where</p><pre tabindex=0><code class=language-math data-lang=math>\begin{aligned}
-    R(A,Z) = P(A|Z) - P(A|not~Z)
-\end{aligned}
-</code></pre><p>I call the quantity $R(A,Z)$ the relevance of $Z$ to $A$, and discuss this in more depth in my articles on <a href=https://jonathanwarden.com/bayesian-argumentation/>Bayesian Argumentation</a></p><p>It is easy to see that $R(A,Z)$ will be between 0 and 1. This means that considering post $B$ causes $P(Z)$ moves from $z0$ to $z1$, then $P(A)$ will move to $R(A,Z)*(z1 - z0)$. So if $B$ changes $Z$ by less than 1%, $A$ will change by less than 1%.</p><p>In our second scenario, $B$ increased $Z$ by 44 percentage points. So if our assumptions about user behavior is correct, this scenario is not realistic, and which means that we fortunately may be unlikely to see it in our data.</p><p>But unfortunately, we probably will sometimes see scenarios resulting in impossible probabilities. First, because our assumptions may be wrong. And second, because randomness. Our estimates of the various probabilities that go into our support formula is based on vote tallies, which are random samples from the &ldquo;true&rdquo; probability distributions, and so errors in these estimates can cause them to fall outside the limits of our assumptions.</p><p>So what do we do about this? Well my first thought is that a we could use Bayesian methods here and estimate the various probabilities using MCMC or something.</p><p>But for now we could just assume that our estimates will usually fall within a reasonable range, and if the estimate is 100% we could just cut it off at 100%.</p></div></article></main><footer class=footer><ul class=footer-links><li><a href type=application/rss+xml target=_blank>RSS</a></li><li><a href=https://github.com/social-protocols>GitHub</a></li><li><a href=https://mas.to/@SocialProtocols>Mastodon</a></li><li><a href=https://medium.com/@socialprotocols>Medium</a></li><li><a href=https://socialprotocols.substack.com>Substack</a></li><li><a href=https://twitter.com/socialprotocols>Twitter</a></li><li><a href=https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/>Zulip</a></li></ul></footer></div><script src=//cdnjs.cloudflare.com/ajax/libs/highlight.js//highlight.min.js></script><script>hljs.configure({languages:[]}),hljs.initHighlightingOnLoad()</script><script type=text/x-mathjax-config>
+$$</p><p>I call the quantity $R(A,Z)$ the relevance of $Z$ to $A$, and discuss this in more depth in my articles on <a href=https://jonathanwarden.com/bayesian-argumentation/>Bayesian Argumentation</a></p><p>It is easy to see that $R(A,Z)$ will be between 0 and 1. This means that considering post $B$ causes $P(Z)$ moves from $z0$ to $z1$, then $P(A)$ will move to $R(A,Z)*(z1 - z0)$. So if $B$ changes $Z$ by less than 1%, $A$ will change by less than 1%.</p><p>In our second scenario, $B$ increased $Z$ by 44 percentage points. So if our assumptions about user behavior is correct, this scenario is not realistic, and which means that we fortunately may be unlikely to see it in our data.</p><p>But unfortunately, we probably will sometimes see scenarios resulting in impossible probabilities. First, because our assumptions may be wrong. And second, because randomness. Our estimates of the various probabilities that go into our support formula is based on vote tallies, which are random samples from the &ldquo;true&rdquo; probability distributions, and so errors in these estimates can cause them to fall outside the limits of our assumptions.</p><p>So what do we do about this? Well my first thought is that a we could use Bayesian methods here and estimate the various probabilities using MCMC or something.</p><p>But for now we could just assume that our estimates will usually fall within a reasonable range, and if the estimate is 100% we could just cut it off at 100%.</p></div></article></main><footer class=footer><ul class=footer-links><li><a href type=application/rss+xml target=_blank>RSS</a></li><li><a href=https://github.com/social-protocols>GitHub</a></li><li><a href=https://mas.to/@SocialProtocols>Mastodon</a></li><li><a href=https://medium.com/@socialprotocols>Medium</a></li><li><a href=https://socialprotocols.substack.com>Substack</a></li><li><a href=https://twitter.com/socialprotocols>Twitter</a></li><li><a href=https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/>Zulip</a></li></ul></footer></div><script type=text/x-mathjax-config>
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [['$','$'], ['\\(','\\)']],
