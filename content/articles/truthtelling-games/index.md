@@ -32,7 +32,7 @@ In this article, I will use [game theory](https://en.wikipedia.org/wiki/Game_the
 
 A striking example of where this has actually been done is blockchain. If you directly own cryptocurrency, the balance of your cryptocurrency wallet is stored in a ledger maintained by a group of anonymous people on the Internet. These people are not necessarily by nature very honest, and yet they always tell the truth about your wallet balance. Game theory can explain why they don't just take all your cryptocurrency for themselves.
 
-Recent advances in game theory have gone even further, and have shown how to induce people to [truthfully reveal **subjective** information](https://deliberati.io/information-elicitation-mechanisms): that is, to reveal things that **only they know**, such as their favorite color, who they are going to vote for, etc.
+Recent advances in game theory have gone even further, and have shown how to induce people to [truthfully reveal **subjective** information](https://jonathanwarden.com/information-elicitation-mechanisms): that is, to reveal things that **only they know**, such as their favorite color, who they are going to vote for, etc.
 
 In [The Law of Attention](/the-law-of-attention), I argue that game theory can actually be applied to the design of social media algorithms. This is tremendously significant, because game-theorists have proved that it is possible to get random people on the internet to tell the truth.  
 
@@ -111,7 +111,7 @@ But game-theorists showed us that you can design auctions so that rational peopl
 
 ## Information Elicitation Mechanisms
 
-Incentive-compatible auctions are impressive, but game-theorists have gone even further. Information Elicitation Without Verification (IEWV) mechanisms are **incentive-compatible surveys** where you pay participants for their answers to questions, and everybody's expected payout is maximized if they tell the truth --- **even for the personal, subjective, unverifiable questions**, such as *what is your favorite flavor of ice cream?* or *have you ever smoked weed?* In [Information Elicitation Without Verification](/information-elicitation-mechanisms), I provide a non-mathematical explanation for how these methods work.
+Incentive-compatible auctions are impressive, but game-theorists have gone even further. Information Elicitation Without Verification (IEWV) mechanisms are **incentive-compatible surveys** where you pay participants for their answers to questions, and everybody's expected payout is maximized if they tell the truth --- **even for the personal, subjective, unverifiable questions**, such as *what is your favorite flavor of ice cream?* or *have you ever smoked weed?* In [Information Elicitation Without Verification](https://jonathanwarden.com/information-elicitation-mechanisms), I provide a non-mathematical explanation for how these methods work.
 
 Many of these survey games are also coordination games: truthtelling is the winning strategy only if everybody else tells the truth. These games sometimes have other possible equilibria, for example participants can coordinate on lying in certain ways, such as always reporting "blue". But coordinating on truthtelling often requires no more than knowing that at least one participant is scrupulously honest. 
 
