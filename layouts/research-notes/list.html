@@ -11,22 +11,20 @@
             <!-- Header Row -->
             <thead style="background-color: #f3f4f6;">
                 <tr style="border: 1px solid #e5e7eb;">
-                    <th style="padding: 0.5rem 1rem; text-align: left; border: 1px solid #e5e7eb; width: 70%;">File</th>
-                    <th style="padding: 0.5rem 1rem; text-align: right; border: 1px solid #e5e7eb; width: 30%;">Modified</th>
+                    <th style="padding: 0.5rem 1rem; text-align: left; border: 1px solid #e5e7eb;">File</th>
                 </tr>
             </thead>
             
             <!-- Content Rows -->
             <tbody>
-                {{ range sort .Pages ".GitInfo.AuthorDate" "desc" }}
+                {{ $pages := .Pages }}
+                {{ $sorted := sort $pages "File.BaseFileName" "desc" }}
+                {{ range $sorted }}
                 <tr style="border: 1px solid #e5e7eb;">
                     <td style="padding: 0.75rem 1rem; border: 1px solid #e5e7eb;">
                         <a href="{{ .RelPermalink }}" style="color: #2563eb; text-decoration: none;">
                             {{ .File.BaseFileName }}
                         </a>
-                    </td>
-                    <td style="padding: 0.75rem 1rem; text-align: right; border: 1px solid #e5e7eb; width: 20%; color: #6b7280;">
-                        {{ .GitInfo.AuthorDate.Format "January 2, 2006" }}
                     </td>
                 </tr>
                 {{ end }}

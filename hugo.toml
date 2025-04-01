@@ -3,7 +3,6 @@ languageCode = 'en-us'
 title = 'Social Protocols'
 theme = 'hugo-lithium'
 summaryLength = 30
-enableGitInfo = true
 
 [permalinks]
     articles = "/:slug/"
