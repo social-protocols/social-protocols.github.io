@@ -1,0 +1,93 @@
+{{ $articles := where .Site.RegularPages "Section" "articles" }}
+{{ $articles = where $articles "Type" "in" "articles" }}
+{{ $articles = $articles.ByDate.Reverse }}
+
+<div class="archive">
+{{ range $articles }}
+  {{ if not .Params.Hide }}
+  <article class="archive-item">
+    <div class="archive-item-header">
+      <div class="archive-item-title-row">
+        <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
+        <span class="archive-item-date">
+          {{ .Date.Format "2006-01-02" }}
+        </span>
+      </div>
+      {{ if .Params.Author }}
+      <div class="archive-item-author">
+        by {{ .Params.Author }}
+      </div>
+      {{ end }}
+    </div>
+    <a class="archive-item-summary" href="{{ .RelPermalink }}">
+      {{ .Summary }}
+      <div class="read-more">Read More...</div>
+    </a>
+  </article>
+  {{ end }}
+{{ end }}
+</div>
+
+<style>
+.content .archive {
+  margin-top: 2rem;
+}
+
+.content .archive-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.content .archive-item:last-child {
+  border-bottom: none;
+}
+
+.content .archive-item-header {
+  margin-bottom: 0.5rem;
+}
+
+.content .archive-item-title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+/* Base styles for links that also override theme styles */
+.content .archive .archive-item-link,
+.content .archive .archive-item-summary {
+  text-decoration: none;
+  color: #333;
+  border-bottom: none;
+  box-shadow: none;
+  background: none;
+  transition: none;
+}
+
+.content .archive .archive-item-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.content .archive .archive-item-link:hover,
+.content .archive .archive-item-summary:hover {
+  text-decoration: none;
+  color: #333;
+  border-bottom: none;
+  box-shadow: none;
+  background: none;
+}
+
+.content .archive-item-date,
+.content .archive-item-author {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.content .read-more {
+  color: #0366d6;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+</style> 
