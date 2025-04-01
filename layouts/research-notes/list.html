@@ -18,7 +18,7 @@
             
             <!-- Content Rows -->
             <tbody>
-                {{ range .Pages }}
+                {{ range sort .Pages ".GitInfo.AuthorDate" "desc" }}
                 <tr style="border: 1px solid #e5e7eb;">
                     <td style="padding: 0.75rem 1rem; border: 1px solid #e5e7eb;">
                         <a href="{{ .RelPermalink }}" style="color: #2563eb; text-decoration: none;">
