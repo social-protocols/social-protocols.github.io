@@ -61,7 +61,7 @@ Some of these variables we can measure. Specifically, a1 and a2 (probability of 
 
 Now, the relationships between all these variables is linear. Specifically, any increase in one variable causes a proportional change to all downstream variables. I discuss this linear relationship in my [previous note](2024-03-01-support-formula.md) and my post on [Bayesian Argumentation](https://jonathanwarden.com/bayesian-argumentation/).
 
-So when Y moves from y0 to y1, increasing by $`y1-y0`$, A will increase by the same amount times some constant $q$. So $`(a1-a0) = q*(y1-y0)`$. Likewise, when Z increases by $`z2 - z1`$, B will increase by $`(b1-b0)=r*(z2-z1)$`, and Y will increase by $`(y2-y1) =λr*(z2-z1)`$.
+So when Y moves from y0 to y1, increasing by $y1-y0$, A will increase by the same amount times some constant $q$. So $(a1-a0) = q*(y1-y0)$. Likewise, when Z increases by $z2 - z1$, B will increase by $(b1-b0)=r*(z2-z1)$, and Y will increase by $(y2-y1) =λr*(z2-z1)$.
 
 So we have:
 
@@ -98,7 +98,7 @@ $$
 
 Now a2 is the quantity we are looking for: the probability that the users upvote A given they have considered C.
 
-But this is not the support formula we derived in the [previous note](2024-03-01-support-formula.md)! It's similar: it's the same if we assume $`b0=0`$. Unfortunately, although we can measure a1, a2, b1, and b2, we can't measure b0! 
+But this is not the support formula we derived in the [previous note](2024-03-01-support-formula.md)! It's similar: it's the same if we assume $b0=0$. Unfortunately, although we can measure a1, a2, b1, and b2, we can't measure b0! 
 
 For that matter, what is b0? It is the probability of a user upvoting B before they considered B. But how can a user upvote something before they considered it? So it would be east to say that b0 is zero.
 
@@ -143,7 +143,7 @@ But what about people who upvoted A *before* considering B. What did they believ
 
 If we assume that z=0 -- nobody believed Z before considering B, whether or not they upvoted A, it follows that b=0 (because of the assumption that users only upvote things that they think are true, informative, and relevant). In this case, we arrive at the support formula from the [previous note](2024-03-01-support-formula.md).
 
-But say we we assume most users who upvoted A (before considering B) also believed Z a priori. So the ones that changed their votes are the ones that didn't already know Z. This implies that Z is relevant to A: $`P(A \vert Z=1)`$ is close to 100%, and $`P(A \vert Z=0)`$ is close to 0%. 
+But say we we assume most users who upvoted A (before considering B) also believed Z a priori. So the ones that changed their votes are the ones that didn't already know Z. This implies that Z is relevant to A: $P(A \vert Z=1)$ is close to 100%, and $P(A \vert Z=0)$ is close to 0%. 
 
 Therefore if C convinces most people to reject Z, they would also reject A. That is, both groups of people would reject A after rejecting Z: both the people who upvoted A after considering B because they thought Z was true, and those who already thought Z was true.
 

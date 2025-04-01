@@ -184,7 +184,7 @@ We then aggregate the votes in informedTally based on a triggers after inserts/u
 
 ### Adjusting for Selection Bias in Votes on Note
 
-When we calculate $`P(upvote post|voted on note)`$, we introduce a voter bias. Users do decide what notes to vote on. Probably, a user who downvotes a post is more likely to vote on a note that opposes the post. However, we can adjust for this. So for example if a post has an upvoteProbability of say 90%, but of users who voted on the note, only 40% upvoted the post (60% downvoted the post), we know there is a bias (users who downvoted the post are more likely to vote on the note) and can adjust for it using a standard adjustment formula.
+When we calculate $P(upvote post|voted on note)$, we introduce a voter bias. Users do decide what notes to vote on. Probably, a user who downvotes a post is more likely to vote on a note that opposes the post. However, we can adjust for this. So for example if a post has an upvoteProbability of say 90%, but of users who voted on the note, only 40% upvoted the post (60% downvoted the post), we know there is a bias (users who downvoted the post are more likely to vote on the note) and can adjust for it using a standard adjustment formula.
 
 
 ### Further TODOS

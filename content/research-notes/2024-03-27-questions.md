@@ -34,6 +34,6 @@ We can possibly use it to make the conversations scale better. For example, supp
 
 This allows us to **measure relevance**, assuming we define relevance in the Bayesian sense as described in my essay on [Bayesian Argumentation](https://jonathanwarden.com/bayesian-argumentation/).
 
-Having a measure of both relevance and agreement gives us a full Bayesian model of users' joint beliefs about the post and the claim in the question. In this particular example, it's easy to extrapolate the $`P(upvote A|disagree B) ≈ 0%`$, and $`P(upvote A|agree B) ≈ 100%`$. If new information changes the informed probability $`P(B)`$, we can use this (using Jeffrey's rule) to update the informed probability of $`P(A)`$. 
+Having a measure of both relevance and agreement gives us a full Bayesian model of users' joint beliefs about the post and the claim in the question. In this particular example, it's easy to extrapolate the P(upvote A|disagree B) ≈ 0%$, and P(upvote A|agree B) ≈ 100%$. If new information changes the informed probability P(B)$, we can use this (using Jeffrey's rule) to update the informed probability of P(A)$. 
 
 This completely decouples the conversation about B from the conversation about A. We don't need *anyone* who was in the discussion about B to also vote on A!

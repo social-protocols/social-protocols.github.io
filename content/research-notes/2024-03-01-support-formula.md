@@ -91,7 +91,7 @@ Now, if only 55% of those people upvoted B after considered C, the effect would 
 \end{aligned}
 ```
 
-And so B and C together, instead of increasing the probability of upvoting A by 44 percentage points to $90\%`$, only raises it by 22 percentage points to $`68.22\%`$.
+And so B and C together, instead of increasing the probability of upvoting A by 44 percentage points to $90\%$, only raises it by 22 percentage points to $68.22\%$.
 
 ## Problem with Proposed Formula
 

@@ -22,17 +22,17 @@ Consider this example argument:
 
 And suppose the upvote probabilities are:
 
-- $`P(A |vert~B)`$ = 0.5
-- $`P(A \vert B)`$ = .90
-- $`P(A \vert B,C)`$ = .01
-- $`P(B |vert not~C)`$ = .99
-- $`P(B \vert C)`$ = .5
+- $P(A |vert~B)$ = 0.5
+- $P(A \vert B)$ = .90
+- $P(A \vert B,C)$ = .01
+- $P(B |vert not~C)$ = .99
+- $P(B \vert C)$ = .5
 
 So B increases upvotes on A by .40 percentage points, from .5 to .90. And C decreases upvotes on B from .99 to .5 -- roughly cutting them in half. The support formula says that the effect of B on A should now also be cut in half, from +.40 percentage points to +.20 percentage points. So B would increase votes on A by only .20 points, from .50 to .70.
 
 ### Exact Formula
 
-The initial support formula was the following (in [More Formal Derivation of Support Formula](https://github.com/social-protocols/internal-wiki/blob/main/pages/research-notes/2024-03-05-support-formula-derivation.md) I derive a slightly more correct formula). Based on this formula, we estimate $`P(A \vert B,C)`$ as follows
+The initial support formula was the following (in [More Formal Derivation of Support Formula](https://github.com/social-protocols/internal-wiki/blob/main/pages/research-notes/2024-03-05-support-formula-derivation.md) I derive a slightly more correct formula). Based on this formula, we estimate $P(A \vert B,C)$ as follows
 
 
 
@@ -71,7 +71,7 @@ Second, I hope we can use a transitive formula for [questions](https://github.co
 
 Now, just by isolating B as an independent question, we can make use of transitive effects. Upvotes and downvotes on B now presumably reflect agreement with the claim made in B, and not its relevance to C, or how funny or useful it is. If somebody (irrelevantly) replies to B with C *He is in the hospital in a coma*, then hopefully people will downvote C (being in a coma doesn't change how he did on the test) and C won't change people's votes on B.
 
-On the other hand, if somebody posts a reply, D *No he did terribly. You were thinking of another candidate*, that might reduce votes on B from say .99 to .01. And in that case, the effect of B on A should be effectively erased. And so a transitive formula could be used in this case to give an estimate of $`P(A \vert B,D)`$ should be .5 + 0 = .5.
+On the other hand, if somebody posts a reply, D *No he did terribly. You were thinking of another candidate*, that might reduce votes on B from say .99 to .01. And in that case, the effect of B on A should be effectively erased. And so a transitive formula could be used in this case to give an estimate of $P(A \vert B,D)$ should be .5 + 0 = .5.
 
 This all depends on user voting behavior, and whether we can make a user experience that effectively carves out the debate on B into a conditionally independent sub-argument, encouraging people to upvote and downvote based solely on their belief in B and not on its relevance to A.
 

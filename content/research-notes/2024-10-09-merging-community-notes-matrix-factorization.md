@@ -70,11 +70,11 @@ Now in the Global Brain model, there is not just one piece of information. There
 
 ## Single Threads
 
-First, consider a tree with one thread. Suppose $`\overrightarrow{vᵢ}`$ is a vector that represents whether or not each user has considered the item in each thread. 
+First, consider a tree with one thread. Suppose $\overrightarrow{vᵢ}$ is a vector that represents whether or not each user has considered the item in each thread. 
 
-For example, suppose we have a post A, with a comment B, and a reply to B, C. So the comment thread is B->C. Then $`\overrightarrow{vᵢ}`$ is a vector indicating which comments in the thread the user has considered. So for example, $`\overrightarrow{vᵢ}`$ might be (1,1) if the user has considered both comments.
+For example, suppose we have a post A, with a comment B, and a reply to B, C. So the comment thread is B->C. Then $\overrightarrow{vᵢ}$ is a vector indicating which comments in the thread the user has considered. So for example, $\overrightarrow{vᵢ}$ might be (1,1) if the user has considered both comments.
 
-So we just update our model to user vectors $`\overrightarrow{vᵢ}`$ and $`\overrightarrow{zⱼ}`$`.
+So we just update our model to user vectors $\overrightarrow{vᵢ}$ and $\overrightarrow{zⱼ}$$.
 
 $$
   ŷᵢⱼ = μᵢ + μⱼ + wᵢxⱼ + \overrightarrow{vᵢ}\overrightarrow{zⱼ}
@@ -86,7 +86,7 @@ $$
   scoreⱼ = μⱼ + \overrightarrow{zⱼ}\overrightarrow{1}
 $$
 
-Where \overrightarrow{1} is just a vector of 1s. So this is the estimated vote of a neutral user informed of each item in the thread.
+Where $\overrightarrow{1}$ is just a vector of 1s. So this is the estimated vote of a neutral user informed of each item in the thread.
 
 ## Multiple Threads
 
@@ -112,11 +112,11 @@ In this way, its possible to score arbitrarily large trees.
 
 Now, this algorithm would end up factorizing a large matrix to fit the data many times: once for every single thread in the conversation tree. Matrix factorization can be slow, so this could be a problem. However, we can probably greatly reduce the amount of computation by running the model incrementally: fitting a smaller model with fewer factors, then fixing the parameters that have been found, adding another factor, and doing an incremental fit, which would be very fast.
 
-For example, to score branch B1, we fit the data on a model with just thread B1 (ignoring children C1 and C2). This will give us a one-element vector $`\overrightarrow{zⱼ}`$ = $`(Z_{B1})`$ telling us how much B1 by itself affects votes on A. 
+For example, to score branch B1, we fit the data on a model with just thread B1 (ignoring children C1 and C2). This will give us a one-element vector $\overrightarrow{zⱼ}$ = $(Z_{B1})$ telling us how much B1 by itself affects votes on A. 
 
-If we then fit the data again for the thread B1->C1, we will get a two-element vector $`\overrightarrow{zⱼ}`$ = $`(Z_{B1}, Z_{C1})`$. Now I believe $`Z_{B1}`$ will necessarily have to be the exact same value in both cases. That is because of the constraint that a user considers C1 or C2 only if they have considered B1, which constrains the possible values of $`\overrightarrow{vᵢ}`$ to (0,0), (1,0), and (1,1). And so $`Z_{C1}`$ is the incremental effect of C1.
+If we then fit the data again for the thread B1->C1, we will get a two-element vector $\overrightarrow{zⱼ}$ = $(Z_{B1}, Z_{C1})$. Now I believe $Z_{B1}$ will necessarily have to be the exact same value in both cases. That is because of the constraint that a user considers C1 or C2 only if they have considered B1, which constrains the possible values of $\overrightarrow{vᵢ}$ to (0,0), (1,0), and (1,1). And so $Z_{C1}$ is the incremental effect of C1.
 
-This means that we can find $`Z_{C1}`$ by fitting the data incrementally. After obtaining $`Z_{B1}`$, we can fix its value, and run the model again to discover $`Z_{C1}`$. We can then run it again to discover $`Z_{C2}`$.
+This means that we can find $Z_{C1}$ by fitting the data incrementally. After obtaining $Z_{B1}$, we can fix its value, and run the model again to discover $Z_{C1}$. We can then run it again to discover $Z_{C2}$.
 
 In fact, the other factors in the model, μᵢ, μⱼ, wᵢ, xⱼ, can also all be temporarily fixed. That is, first we run the regular community notes algorithm to estimate all the user and item biases. Then we fix these values, and run an incremental factorization to discover the informedness factors of the comments.
 
