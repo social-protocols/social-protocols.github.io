@@ -9,30 +9,30 @@ It seems to me that "imbalance" as you are defining it boils down to statistical
 Let's simplify things by assuming that that we always have equally sized groups
 
 $$
-	p_a = P(upvote A) = 0.5
+	p_a = P(\text{upvote A}) = 0.5
 $$
 
 Since we are only interested in people who voted on A, let's slightly simplify our notation:
 
-	- $p   = P(upvote B)$
-	- $p_d = P(upvote B \vert downvote A)$
-	- $p_u = P(upvote B \vert upvote A)$
-	- $p_a = P(upvote A)$
+- $p = P(\text{upvote B})$
+- $p_d = P(\text{upvote B} \vert \text{downvote A})$
+- $p_u = P(\text{upvote B} \vert \text{upvote A})$
+- $p_a = P(\text{upvote A})$
 
 We can now write p as a function of $p_d$ and $p_u$:
 
 By the law of total probability:
 
 $$
-	P(upvote B) = P(upvote B \vert upvote A) \times P(upvote A) + P(upvote B \vert downvote A) ×P(downvote A)
+	P(\text{upvote B}) = P(\text{upvote B} \vert \text{upvote A}) \times P(\text{upvote A}) + P(\text{upvote B} \vert \text{downvote A}) \times P(\text{downvote A})
 $$
 
 Which we can rewrite as:
 
 $$
 \begin{aligned}
-	p &= p_u × p_a + p_d × (1 - p_a) \\
-	  &= p_d + (p_u - p_d) \times p_a \\
+	p &= p_u \times p_a + p_d \times (1 - p_a) \newline
+	  &= p_d + (p_u - p_d) \times p_a \newline
 	  &= p_d + (p_u - p_d) \times 0.5 
 \end{aligned}
 $$
@@ -41,7 +41,7 @@ $$
 
 Since $p$ is a function of $p_u$ and $p_d$, the "imbalance" formula is really just a measure of the difference between $p_u$ and $p_d$. Imbalance should be 0 when $p_u = p_d$, and should be maximized when $p_u$ and $p_d$ are very different (e.g. when $p_u$ = 0 and $p_d$ = 1 or vice versa). A simpler score, perhaps just $abs(p_u - p_d)$, would also have the properties we want.
 
-But we could also just measure the statistical correlation of A and B. If $P(upvote B) = P(upvote B \vert upvote A) = P(upvote B \vert not upvote A)$ then by definition "upvote B" and "upvote A" are statistically independent. 
+But we could also just measure the statistical correlation of A and B. If $P(\text{upvote B}) = P(\text{upvote B} \vert \text{upvote A}) = P(\text{upvote B} \vert \text{not upvote A})$ then by definition "upvote B" and "upvote A" are statistically independent. 
 
 The information-theoretic measure of statistical correlation is mutual information. In fact, I think if we really dug in, we'd find your formula is closely related to the mutual information formula. 
 

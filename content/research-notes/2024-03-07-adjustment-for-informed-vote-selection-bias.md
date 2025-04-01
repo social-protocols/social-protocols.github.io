@@ -31,16 +31,16 @@ We could remove this bias if everyone who voted on the post also voted on the no
 Another solution is to use the (backdoor) adjustment formula discussed in Judea Pearl's books. The above causal graph justifies using the below formula to "simulate an intervention", the intervention being making somebody vote on the note. This formula tells us that, even though not everybody who voted on the post also voted on the note, if they *did*, this is how they would have voted.
 
 $$
-	P(Y|do(x)) = ∑_z P(Y \vert x,z)P(z)
+P(Y|do(x)) = \sum_z P(Y \vert x,z)P(z)
 $$
 
 Or more verbosely.
 
 $$
 \begin{aligned}
-	&P(\text{upvote post}|do(\text{vote on note})) \\
-	&= P(\text{upvote post}|\text{originally upvoted post, vote on note}) × P(\text{originally upvoted post})  \\ 
-	&+ P(\text{upvote post}|\text{originally downvoted post, vote on note}) × P(\text{originally downvoted post}) \\  
+&P(\text{upvote post}|do(\text{vote on note})) \newline
+&= P(\text{upvote post}|\text{originally upvoted post, vote on note}) \times P(\text{originally upvoted post})  \newline
+&+ P(\text{upvote post}|\text{originally downvoted post, vote on note}) \times P(\text{originally downvoted post}) \newline
 \end{aligned}
 $$
 

@@ -67,13 +67,13 @@ So we have:
 
 $$
 \begin{aligned}
-    b1 - b0 &= r(z1 - z0)  \\
-    y2 - y1 &= rλ(z1 - z0) \\
-    a2 - a1 &= q(y2 - y1)  \\
-            &= qrλ(z1 - z0) \\
-            &= qλ(b1 - b0) \\
-            &= qλ(b1 - b0) \\
-         qλ &= \frac{a2 - a1}{b1 - b0}
+    b1 - b0 &= r(z1 - z0)  \newline
+    y2 - y1 &= r\lambda(z1 - z0) \newline
+    a2 - a1 &= q(y2 - y1)  \newline
+            &= qr\lambda(z1 - z0) \newline
+            &= q\lambda(b1 - b0) \newline
+            &= q\lambda(b1 - b0) \newline
+         q\lambda &= \frac{a2 - a1}{b1 - b0}
 \end{aligned}
 $$
 
@@ -81,7 +81,7 @@ $$
 Similarly we can show:
 
 $$
-    qλ = \frac{a3 - a1}{b2 - b0}
+    q\lambda = \frac{a3 - a1}{b2 - b0}
 $$
 
 So 
@@ -108,10 +108,10 @@ I think that assuming B=0 is a *conservative* estimate, in that it assumes the s
 
 $$
 \begin{aligned}
-  a3  &= a1 + (a2 - a1)×\frac{b2 - b0}{b1 - b0} \\
-      &= a1 + (a2 - a1)×\frac{b2}{b1} \\
-      &= a1 + (a2 - a1)×\frac{.01}{.99} \\
-      & ≈ a1
+  a3  &= a1 + (a2 - a1)\times\frac{b2 - b0}{b1 - b0} \newline
+      &= a1 + (a2 - a1)\times\frac{b2}{b1} \newline
+      &= a1 + (a2 - a1)\times\frac{.01}{.99} \newline
+      & \approx a1
 \end{aligned}
 $$
 
@@ -119,9 +119,9 @@ However, let's say that b0=.5. Now instead of erasing the effect of B, C *revers
 
 $$
 \begin{aligned}
-  a3  &= a1 + (a2 - a1)×\frac{b2 - b0}{b1 - b0} \\
-      &= a1 + (a2 - a1)×\frac{.01 - .5}{.99 - .5} \\
-      &≈ a1 + (a2 - a1)×-1 \\
+  a3  &= a1 + (a2 - a1)\times\frac{b2 - b0}{b1 - b0} \newline
+      &= a1 + (a2 - a1)\times\frac{.01 - .5}{.99 - .5} \newline
+      &\approx a1 + (a2 - a1)\times-1 \newline
 \end{aligned}
 $$
 
@@ -129,13 +129,12 @@ Plugging in the number from the first example in the first scenario from the pre
 
 $$
 \begin{aligned}
-  a3  &= a1 + (a2 - a1)×\frac{b2}{b1} \\
-      &= .46 + (.9 - .46)×\frac{.01 - .50}{.99 - .50} \\
-      &= .46 + (.9 - .46)×-1 \\
-      &= 22%
+  a3  &= a1 + (a2 - a1)\times\frac{b2}{b1} \newline
+      &= .46 + (.9 - .46)\times\frac{.01 - .50}{.99 - .50} \newline
+      &= .46 + (.9 - .46)\times-1 \newline
+      &= 22\%
 \end{aligned}
 $$
-
 
 Intuitively, this makes sense to me. According to our causal graph, when W (seeing post B) causes a user to change their mind about A, it must also change their mind about Z, since W only effects A through Z. So users that changed their votes users most have believed, a priori, that Z was false, and then changed their belief given the content of B, and thus changed their vote on A.
 

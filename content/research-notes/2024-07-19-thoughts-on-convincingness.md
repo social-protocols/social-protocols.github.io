@@ -142,7 +142,9 @@ Assuming in good faith, that both sides to most arguments have something valuabl
 
 To find the posts that are **most likely to change users' minds**, we could apply the following *imbalance* formula:
 
-$\text{imbalance} = D_{KL}(p_u || p) - D_{KL}(p_d || p)$
+$$
+\text{imbalance} = D_{KL}(p_u || p) - D_{KL}(p_d || p)
+$$
 
 where
 

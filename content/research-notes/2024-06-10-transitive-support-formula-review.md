@@ -22,10 +22,10 @@ Consider this example argument:
 
 And suppose the upvote probabilities are:
 
-- $P(A |vert~B)$ = 0.5
+- $P(A \vert B)$ = 0.5
 - $P(A \vert B)$ = .90
 - $P(A \vert B,C)$ = .01
-- $P(B |vert not~C)$ = .99
+- $P(B \vert not\ C)$ = .99
 - $P(B \vert C)$ = .5
 
 So B increases upvotes on A by .40 percentage points, from .5 to .90. And C decreases upvotes on B from .99 to .5 -- roughly cutting them in half. The support formula says that the effect of B on A should now also be cut in half, from +.40 percentage points to +.20 percentage points. So B would increase votes on A by only .20 points, from .50 to .70.
@@ -34,15 +34,13 @@ So B increases upvotes on A by .40 percentage points, from .5 to .90. And C decr
 
 The initial support formula was the following (in [More Formal Derivation of Support Formula](https://github.com/social-protocols/internal-wiki/blob/main/pages/research-notes/2024-03-05-support-formula-derivation.md) I derive a slightly more correct formula). Based on this formula, we estimate $P(A \vert B,C)$ as follows
 
-
-
-``` math
+$$
 \begin{aligned}
-    E(A,B) &= P(A \vert B) - P(A \vert not~B) .90-.50 = .40 \\
-    S(B,C) &= \frac{P(B \vert C)}{P(B \vert not~C)} = \frac{.5}{.99} ≈ .50 \\
-    P(A \vert B,C) &≈ P(A \vert not~B) + S(B,C) × E(A,B) = 0.5 + 0.4 × 0.5 = 0.7
+    E(A,B) &= P(A \vert B) - P(A \vert \text{not B}) .90-.50 = .40 \newline
+    S(B,C) &= \frac{P(B \vert C)}{P(B \vert \text{not C})} = \frac{.5}{.99} \approx .50 \newline
+    P(A \vert B,C) &\approx P(A \vert \text{not B}) + S(B,C) \times E(A,B) = 0.5 + 0.4 \times 0.5 = 0.7
 \end{aligned}
-```
+$$
 
 
 ## Analysis
