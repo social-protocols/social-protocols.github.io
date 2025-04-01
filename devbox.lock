@@ -1,6 +1,9 @@
 {
   "lockfile_version": "1",
   "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/3eeaa42ef4c19447b48d1c676fe59077dfd0846e?lastModified=1743441817&narHash=sha256-%2BOE03P3u0FRwhS%2BAh6EYiwxdS1rcIYlXheuXGM3wP3Q%3D"
+    },
     "hugo@latest": {
       "last_modified": "2024-08-04T00:20:25Z",
       "resolved": "github:NixOS/nixpkgs/f3834de3782b82bfc666abf664f946d0e7d1f116#hugo",

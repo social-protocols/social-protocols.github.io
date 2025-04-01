@@ -8,9 +8,99 @@ canonical_url: https://social-protocols.org/what-is-a-social-protocol/
 author: Jonathan Warden
 ---
 
-The rules that determine [what gets attention](/what-deserves-our-attention) in social platforms are often referred to as "algorithms". But algorithms are only part of the story. Conversations in social networks are best explained as **social protocols** that participants use to decide how to allocate their collective attention.
 
-Like parliamentary procedure or the rules of a courtroom, social protocols shape the conversation: they determine what topics are discussed and which voices are heard. They influence perceptions about what ideas are popular, what people are influential, and what information spreads.
+## Introduction
+
+The rules that determine [what gets attention](/what-deserves-our-attention) in social platforms are often referred to as "algorithms". But algorithms are only part of the story. Another way of understanding social platforms is as **social protocols** that a community uses to decide where to allocate its collective attention.
+
+Like parliamentary procedure or the rules of a courtroom, social protocols shape the conversation: they determine what topics are discussed and which voices are heard, and what ideas and information spreads.
+
+Understanding these protocols can help us explain some of the phenomenon we see in social networks, such as filter bubbles, polarization, and misinformation. And it can indicate ways that social protocols could be engineered to promote healthier outcomes.
+
+## Echo Chambers are Social Protocols
+
+Consider a social media "echo chamber", centered around a popular user on 𝕏 or Bluesky. Whenever the user posts something, he starts a conversation among his followers.
+
+This user and his followers have strong opinions. When somebody replies to his posts in a way that challenges his worldview, the followers will dog-pile the offender, overwhelming them with critical or even abusive responses. If they don't withdraw from the conversation, they get blocked, while the most obsequious defenders of the orthodoxy might get retweeted and attract new followers.
+
+A very simplified view of this situation is that a *social protocol* has emerged that a group of like-minded people use for enforcing the worldview of that echo chamber.
+
+## News Aggregator are Social Protocols
+
+Another example of a social protocol is the news aggregator. Hacker News uses upvotes to determine which stories rank highest on the front page, along with moderator-enforced rules for keeping stories mostly on-topic. Since stories at the top of front page receive the most attention, the result is a protocol for focusing the community's attention and conversation on certain topics. 
+
+Th Hacker News community also has its own informal rules about the kinds of stories and comments that tend to get upvoted. But the upvote-only system doesn't make it so easy for the community to strictly enforce a single narrow worldview. 
+
+## Email is a Social Protocol
+
+Email is yet another social protocol. The basic protocol is simple: you send an email, I periodically check my inbox and read emails when the sender and subject seem relevant. There are also some informal conventions: checking email too infrequently violates protocol, so to speak. So does using email for frequent short messages that would be better sent via SMS or a chat app.
+
+## Formal + Informal Rules
+
+Indeed any online communication platform has a corresponding social protocol.
+
+The social protocol can be seen as a combination of **formal** rules enforced by the platform's software and moderation policies, and **informal** rules enforced by the users. 
+
+The formal rules may not prevent users from disagreeing with the orthodoxy of an echo chamber, or posting stories that are not popular with the Hacker News crowd, or using email instead of messenger apps for frequent short messages. But they do make it possible for these informal rules to arise and be  enforced by users. 
+
+And most importantly, the formal rules influence what *kinds* of informal rules tend arise, and thus the kinds of content that tends to be encouraged. Some rules encourage echo chambers and misinformation, others encourage SPAM and personal abuse.
+
+## Engineering Social Protocols
+
+But is it possible for the rules to encourage more positive outcomes?
+
+Is it possible for a social protocol to encourage more intelligent and informed conversation? Or the sharing of accurate and unbiased news? Or honest product reviews? Can a social protocol be designed to *decrease* polarization?
+
+Social-protocols.org is researching algorithms that use a combination of ideas from game theory, reputation systems, and bias-correction algorithms such as that used by [Community Notes](https://jonathanwarden.com/understanding-community-notes) to [bridge divides](https://www.belfercenter.org/publication/bridging-based-ranking), [give truth the advantage](/give-truth-the-advantage), and increase [human alignment](/human-alignment-technology/).
+
+
+## Conclusion
+
+When we choose to use any online discussion platform we are choosing to participate in the protocol. We agree to contribute a certain amount of our attention to a feed or inbox or front page, and may choose to contribute content or vote or interact in other ways. The algorithm then uses this feedback to determine what content receives the attention of other users. And from the interaction of the algorithms and human behavior, a social protocol emerges: a set of formal rules informal conventions that focuses and shapes the group conversation.
+
+When people voluntarily come together in an online community, they have the opportunity to decide what social protocols govern how the group allocates their attention. Why not deliberately choose social protocols that promote the kinds of outcomes we want for our communities.
+
+
+
+
+<!--
+
+
+
+## Analyzing Incentives
+
+
+
+All algorithms can be "gamed" by people seeking attention. People game email, SMS, and phone calls with SPAM. They game Hacker News with voting rings. The social media game is even more complex, but one of the main "games" is playing ideological enforcer in an an echo chamber, attracting like-minded followers and crowding out dissent.
+
+Analyzing the incentives produced by an algorithm, and the resulting game dynamics, can help us understand why social platforms amplify misinformation,  polarization, and abuse. 
+
+
+## Engineering Outcomes
+
+To what extent can the formal rules of a social protocol be intentionally designed to encourage healthier outcomes?
+
+
+Rather than passively design platfroms based on short-term objectives such as maximizing profit.
+
+polarization
+
+What kind of self-reinforcing
+
+
+
+
+## Example Social Protocol: Hacker News
+
+Other online communities use different social protocols to allocate their collective attention. Hacker news uses upvotes to determine which stories rank highest on the front page. And by convention users focus most of their attention on the front page. So "read the front page and upvote stories you like" is roughly the social protocol the community uses to allocate its collective attention on discussions on topics of mutual interest.
+
+## Other Social Protocols
+
+
+Is this a good social protocol? Is this really the process we want choose for allocating our collective attention?
+
+
+
 
 ## Formal Protocols
 
@@ -38,20 +128,7 @@ Other social protocols include:
 - A *phone call* is a social protocol where expectations continue to evolve about if and when people answer phone calls.
 - 
 
-## Analyzing Incentives
 
-All algorithms can be "gamed" by people seeking attention. People game email, SMS, and phone calls with SPAM. They game Hacker News with voting rings. The social media game is even more complex, but one of the main "games" is playing ideological enforcer in an an echo chamber, attracting like-minded followers and crowding out dissent.
-
-Analyzing the incentives produced by an algorithm, and the resulting game dynamics, can help us understand why social platforms amplify misinformation,  polarization, and abuse. And better understanding of these dynamics, using concepts fro game theory, sociology, and other fields, are pointing the way towards new algorithms that [bridge divides](https://www.belfercenter.org/publication/bridging-based-ranking) and [give truth the advantage](/give-truth-the-advantage).
-
-## Conclusion
-
-When we choose to use any online discussion platform we are choosing to participate in the protocol. We agree to contribute a certain amount of our attention reading posts, and may choose to contribute content or vote. The algorithm then uses this feedback to determine what content receives the attention of other users. And from the interaction of the algorithms and human behavior, a social protocol emerges: a set of formal rules informal conventions that focuses and shapes the group conversation.
-
-When people voluntarily come together in an online community, they have the opportunity to decide what social protocols govern how the group allocates their attention. Why not deliberately choose social protocols that promote the kinds of outcomes we want for our communities.
-
-
-<!--
 
 ----
 
