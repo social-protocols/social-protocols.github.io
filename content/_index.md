@@ -19,6 +19,4 @@ layout: single
 that provides additional data and insights on Hacker News submissions, notably,
 the **upvoteRate** metric. See the [readme on GitHub](https://github.com/social-protocols/quality-news#readme) for details.
 
-## Articles {#articles}
-
 {{< articles >}}

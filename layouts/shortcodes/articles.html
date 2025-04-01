@@ -2,8 +2,9 @@
 {{ $articles = where $articles "Type" "in" "articles" }}
 {{ $articles = $articles.ByDate.Reverse }}
 
+<h2>Recent Articles</h2>
 <div class="archive">
-{{ range $articles }}
+{{ range first 3 $articles }}
   {{ if not .Params.Hide }}
   <article class="archive-item">
     <div class="archive-item-header">
@@ -26,6 +27,10 @@
   </article>
   {{ end }}
 {{ end }}
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+  <a href="/articles" style="color: #2563eb; text-decoration: none; font-weight: bold;">All Articles →</a>
 </div>
 
 <style>

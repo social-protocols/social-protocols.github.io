@@ -9,7 +9,7 @@ summaryLength = 30
 
 [[menu.main]]
   name = "Articles"
-  url = "/#articles"
+  url = "/articles"
   weight = 1
 [[menu.main]]
   name = "Projects"
