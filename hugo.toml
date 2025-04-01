@@ -19,6 +19,10 @@ summaryLength = 30
   name = "Resources"
   url = "/resources"
   weight = 2
+[[menu.main]]
+  name = "Research Notes"
+  url = "/research-notes"
+  weight = 2
 # [[menu.main]]
 #   name = "About"
 #   url = "/about/"
