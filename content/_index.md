@@ -9,6 +9,8 @@ layout: single
 - Join our [Zulip Chat](https://social-protocols.zulipchat.com/join/3awvls77dbmolwlradnfmkig/) and don't hesitate to ask any questions or present your ideas.
 - You can support our work on [Open Collective](https://opencollective.com/social-protocols).
 
+{{< articles >}}
+
 ## Projects {#projects}
 
 **Jabble**: A collaborative fact-checking Platform: <https://jabble.xyz>
@@ -18,5 +20,3 @@ layout: single
 **Quality News**: [**Quality News**](https://news.social-protocols.org/) is a Hacker News client
 that provides additional data and insights on Hacker News submissions, notably,
 the **upvoteRate** metric. See the [readme on GitHub](https://github.com/social-protocols/quality-news#readme) for details.
-
-{{< articles >}}
