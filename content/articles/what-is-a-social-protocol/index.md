@@ -13,23 +13,19 @@ author: Jonathan Warden
 
 The rules that determine [what gets attention](/what-deserves-our-attention) in social platforms are often referred to as "algorithms". But algorithms are only part of the story. Another way of understanding social platforms is as **social protocols** that a community uses to decide where to allocate its collective attention.
 
-Like parliamentary procedure or the rules of a courtroom, social protocols shape the conversation: they determine what topics are discussed and which voices are heard, and what ideas and information spreads.
-
-Understanding these protocols can help us explain some of the phenomenon we see in social networks, such as filter bubbles, polarization, and misinformation. And it can indicate ways that social protocols could be engineered to promote healthier outcomes.
+Like parliamentary procedure or the rules of a courtroom, social protocols shape the conversation: they determine what topics are discussed and which voices are heard. Understanding these protocols can help us explain some of the phenomenon we see in social networks, such as filter bubbles, polarization, and misinformation. And it can indicate ways that social protocols could be engineered to promote healthier outcomes.
 
 ## Echo Chambers are Social Protocols
 
 Consider a social media "echo chamber", centered around a popular user on 𝕏 or Bluesky. Whenever the user posts something, he starts a conversation among his followers.
 
-This user and his followers have strong opinions. When somebody replies to his posts in a way that challenges his worldview, the followers dog-pile the offender, overwhelming them with critical or even abusive responses. If they don't withdraw from the conversation, they get blocked, while the most obsequious defenders of the orthodoxy might get retweeted and attract new followers.
+This user and his followers have strong opinions. When somebody challenges their worldview, the followers overwhelm the offender with critical or even abusive responses. If they don't withdraw from the conversation, they get blocked, while the most obsequious defenders of the orthodoxy might get retweeted and attract new followers.
 
 A very simplified view of this situation is that a *social protocol* has emerged that a group of like-minded people use for enforcing the worldview of that echo chamber.
 
 ## News Aggregator are Social Protocols
 
-Another example of a social protocol is the news aggregator. Hacker News uses upvotes to determine which stories rank highest on the front page, along with moderator-enforced rules for keeping stories mostly on-topic. Since stories at the top of front page receive the most attention, the result is a protocol for focusing the community's attention and conversation on certain topics. 
-
-Th Hacker News community also has its own informal rules about the kinds of stories and comments that tend to get upvoted. 
+Another example of a social protocol is the news aggregator. Hacker News uses upvotes to determine which stories rank highest on the front page, along with moderator-enforced rules for keeping stories mostly on-topic. Since stories at the top of front page receive the most attention, the result is a protocol for focusing the community's attention and conversation on the topics that interest the Hacker News community.
 
 ## Email is a Social Protocol
 
@@ -56,7 +52,7 @@ Social-protocols.org is researching algorithms that use a combination of ideas f
 
 ## Conclusion
 
-When we choose to use any online discussion platform we are choosing to participate in the protocol. We agree to contribute a certain amount of our attention to a feed or inbox or front page, and may choose to contribute content or vote or interact in other ways. The algorithm then uses this feedback to determine what content receives the attention of other users. And from the interaction of the algorithms and human behavior, a social protocol emerges: a set of formal rules informal conventions that focuses and shapes the group conversation.
+When we choose to use any online discussion platform we are choosing to participate in the protocol. We agree to contribute a certain amount of our attention to a feed or inbox or front page, and may choose to contribute content or vote or interact in other ways. The algorithm then uses this feedback to determine what content receives the attention of other users. And from the interaction of the algorithms and human behavior, a social protocol emerges: a set of formal rules and informal conventions that focuses and shapes the group conversation.
 
 When people voluntarily come together in an online community, they have the opportunity to decide what social protocols govern how the group allocates their attention. Why not deliberately choose social protocols that promote the kinds of outcomes we want for our communities.
 
