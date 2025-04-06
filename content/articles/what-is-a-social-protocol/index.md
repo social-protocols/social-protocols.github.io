@@ -3,6 +3,7 @@ layout: single
 title:  "What Is a Social Protocol?"
 toc: false 
 date: 2024-12-10 00:00:00 +0200
+weight: 3
 # image: what-deserves-our-attention.png
 canonical_url: https://social-protocols.org/what-is-a-social-protocol/
 author: Jonathan Warden
