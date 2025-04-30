@@ -21,7 +21,7 @@ Consider a social media "echo chamber" centered around a popular user on 𝕏 or
 
 This user and their followers hold strong opinions. When someone challenges their worldview, the followers overwhelm the critic with harsh or even abusive responses. If the critic doesn't withdraw, they're blocked, while those who most aggressively defend the orthodoxy might be retweeted and rewarded with new followers.
 
-This simplified example illustrates how a particular set of informal rules—a *social protocol*—-can emerge organically within a like-minded community to enforce its worldview, driven and enabled by platform rules.
+This simplified example illustrates how a particular set of rules—a *social protocol*—-can emerge organically within a like-minded community to enforce its worldview, driven and enabled by platform rules.
 
 ## News Aggregators as Social Protocols
 
@@ -29,7 +29,7 @@ Another example of a social protocol is the news aggregator. Hacker News, for in
 
 ## Email as a Social Protocol
 
-Email is also a social protocol, mixing formal rules (like inbox delivery and spam filters) with informal etiquette. The basic formal rule is simple: you send an email, and I periodically check my inbox, reading emails based on sender and subject relevance. Informal conventions add nuance: checking email too infrequently or using email for frequent, short interactions (better suited to SMS or chat) violates these unspoken norms.
+Email is also a social protocol, mixing formal rules (like inbox delivery and spam filters) with informal etiquette. The basic protocol is simple: you send an email, and I periodically check my inbox, reading emails based on sender and subject relevance. Additional informal conventions add nuance: checking email too infrequently or using email for frequent, short interactions (better suited to SMS or chat) violates these unspoken norms.
 
 ## Formal vs. Informal Rules
 
@@ -49,11 +49,9 @@ Social-protocols.org is exploring algorithms that blend ideas from game theory, 
 
 ## Conclusion
 
-When we choose to engage with an online discussion platform, we participate in its underlying social protocol. We agree to allocate a portion of our attention to a feed, inbox, or front page, possibly contributing content, votes, or interactions. Platform algorithms use our feedback to determine which content reaches other users. Thus, the interplay between formal algorithms and informal human behavior forms a social protocol: a dynamic set of explicit rules and implicit conventions shaping collective conversations.
+When we choose to engage with an online discussion platform, we participate in its underlying social protocol. We agree to allocate a portion of our attention to a feed, inbox, or front page, possibly contributing content, votes, or interactions. Platform algorithms use our feedback to determine which content reaches other users. The interplay between formal algorithms and informal human behavior forms a social protocol: a dynamic set of explicit rules and implicit conventions shaping collective conversations.
 
 As individuals voluntarily join online communities, they collectively have the opportunity to actively choose or influence the social protocols that govern attention allocation. By deliberately selecting and designing these protocols, communities can better achieve the outcomes they truly desire.
-
-
 
 <!--
 
