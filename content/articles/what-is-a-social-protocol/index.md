@@ -17,15 +17,13 @@ Like parliamentary procedure or courtroom rules, social protocols shape conversa
 
 ## Echo Chambers as Social Protocols
 
-Consider a social media "echo chamber" centered around a popular user on 𝕏 or Bluesky. When this influential user posts, they initiate a conversation among their followers.
+A typical social media "echo chamber" is often centered around a popular user on 𝕏 or Bluesky. The user and their followers hold strong opinions. When someone challenges those opinions, the followers overwhelm the critic with harsh or even abusive responses. If the critic doesn't withdraw, they're blocked, while those who most aggressively defend the orthodoxy might be retweeted and rewarded with new followers.
 
-This user and their followers hold strong opinions. When someone challenges their worldview, the followers overwhelm the critic with harsh or even abusive responses. If the critic doesn't withdraw, they're blocked, while those who most aggressively defend the orthodoxy might be retweeted and rewarded with new followers.
-
-This simplified example illustrates how a particular set of rules—a *social protocol*—-can emerge organically within a like-minded community to enforce its worldview, driven and enabled by platform rules.
+This creates a self-reinforcing cycle that produces a *social protocol* -- a set of informal rules that governs speech within a community, driven and enabled by platform rules.
 
 ## News Aggregators as Social Protocols
 
-Another example of a social protocol is the news aggregator. Hacker News, for instance, uses formal rules-—upvotes and moderator enforcement—-to determine which stories appear at the top of the front page. Because top-ranked stories naturally receive the most attention, this combination of formal rules and informal community preferences focuses collective attention on specific topics, reinforcing certain interests and norms within the Hacker News community.
+Another example of a social protocol is the news aggregator. Hacker News, for instance, uses formal rules—upvotes and moderator enforcement—to determine which stories appear at the top of the front page. Because top-ranked stories naturally receive the most attention, this combination of formal rules and informal community preferences focuses collective attention on specific topics, reinforcing certain interests and norms within the Hacker News community.
 
 ## Email as a Social Protocol
 
@@ -33,7 +31,7 @@ Email is also a social protocol, mixing formal rules (like inbox delivery and sp
 
 ## Formal vs. Informal Rules
 
-Indeed, any online communication platform embodies a social protocol composed of two distinct but interconnected components:
+Any online communication platform embodies a social protocol composed of two distinct but interconnected components:
 
 - **Formal rules**, enforced explicitly by software and moderation policies.
 - **Informal rules**, enforced implicitly through user behavior and social expectations.
