@@ -1,7 +1,7 @@
 ---
 title: About Social Protocols
 date: 2023-05-01
-hide: true
+hide: false
 ---
 
 

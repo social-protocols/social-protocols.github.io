@@ -6,7 +6,7 @@ toc: true
 weight: 3
 toc_sticky: true
 image: deliberative-consensus-protocol.png
-canonical_url: https://social-protocols.org/deliberative-consensus-protocols
+canonical_url: https://social-protocols.org/deliberative-consensus-protocols/
 author: Jonathan Warden
 
 ---
