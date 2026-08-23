@@ -23,10 +23,10 @@ summaryLength = 30
   name = "Research Notes"
   url = "/research-notes"
   weight = 2
-# [[menu.main]]
-#   name = "About"
-#   url = "/about/"
-#   weight = 3
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 3
 
 [[menu.footer]]
   name = "GitHub"
