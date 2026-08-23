@@ -20,3 +20,7 @@ layout: single
 **Quality News**: [**Quality News**](https://news.social-protocols.org/) is a Hacker News client
 that provides additional data and insights on Hacker News submissions, notably,
 the **upvoteRate** metric. See the [readme on GitHub](https://github.com/social-protocols/quality-news#readme) for details.
+
+**Blue Notes**: A community notes implementation exploring bridging-based ranking algorithms.
+
+**Context Bot**: An AI-powered tool for providing context and fact-checking in online discussions.
