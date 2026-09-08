@@ -20,7 +20,7 @@ Unfortunately, practitioners have sometimes been too enthusiastic, using QF to f
 
 Probably the most well-known problem with QF is collusion and fraud (e.g. Sybil attacks). QF is optimal only if we assume that each contributor is a real person acting independently. But when a group uses fake accounts or coordinates their contributions, the authors warn, "there is no limit (other than the budget) to how much [a group] can steal".
 
-But absence of coordination is just one of many assumptions that must hold for QF to have its desirable theoretical properties.
+But absence of coordination is just one of many assumptions that must hold for QF to have its desirable theoretical properties. Here is a complete list.
 
 **List of Assumptions Underlying QF:**
 
@@ -46,7 +46,7 @@ This article was revised in response to thoughtful feedback from a [Hacker News 
 > 
 > —Buterin, Hitzig & Weyl[^2]
 
-Obviously, we don’t live in a world with an equitable distribution of basic resources. 
+Obviously, we don’t live in a world with an equitable distribution of basic resources. But Quadratic Funding assumes that we do.
 
 Under the assumption of wealth equality, larger contributions imply greater marginal utility. But in the real world, larger contributions often just imply greater wealth.
 
@@ -94,7 +94,7 @@ The deficit is the difference between the amount that is funded for all projects
 
 The optimality of QF assumes the subsidy that pays for the deficit is "free" to the contributors. But in reality the subsidy is usually paid for by contributors indirectly -- through increased taxes or the opportunity cost of that subsidy money not being spent on something else.
 
-In the wealth equality section we show how wealthy contributors can disproportionately benefit from QF subsidies. So if it is the average citizen that is paying taxes to fund subsidies that disproportionately go to the wealthy, QF becomes a mechanism for transferring wealth from poor to rich. 
+In the wealth equality section we showed how wealthy contributors can disproportionately benefit from QF subsidies. So if it is the average citizen that is paying taxes to fund subsidies that disproportionately go to the wealthy, QF becomes a mechanism for transferring wealth from poor to rich. 
 
 ## Selfish Contributors
 
@@ -134,7 +134,8 @@ So there has been a net **decrease** of social welfare.
 
 This two scenario look similar to the previous scenario with the art museum: same contribution amounts, same total funding amounts. And in both cases, each contributor sees €6,000,000 of "utility" for the €9,000,000 of funding. But in the selfish scenario, total utility is 3 times higher, because the utility is experienced independently by each art patron, whereas the utility of saved lives is experienced only once by each of the cancer patients -- the three charities don't experience that utility.
 
-Of course if these organizations were trying to maximize social welfare, it would be better for them to stop contributing once the project reached the socially optimal funding level. But then the purpose of using QF mechanism is to achieve the socially optimal funding level\! So for people just trying to maximize social welfare, participating in QF funding rounds as a contributor may not make sense.
+Of course if these organizations were trying to maximize social welfare, they would stop contributing to the organization once the total project funding reached the socially optimal level. Contributing to a QF funding round would only make sense as a way to direct QF subsidies to projects that are underfunded.
+
 
 ## Equilibrium Discovery
 
