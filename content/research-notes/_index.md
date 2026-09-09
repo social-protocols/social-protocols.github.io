@@ -1,11 +1,11 @@
 ---
 title: "Research Notes"
 layout: "research-notes/list"
-_build:
-  list: never
+sitemap:
+  disable: true
 cascade:
-  _build:
-    list: never
+  sitemap:
+    disable: true
   robots: "noindex,follow"
 robots: "noindex,follow"
 ---
