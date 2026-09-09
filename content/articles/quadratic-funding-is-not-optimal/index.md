@@ -213,7 +213,7 @@ Unless at least some of these assumptions hold, I suspect that there are probabl
     Gitcoin. "Gitcoin 2.0 Whitepaper." *Gitcoin.co*, February 2024. https://www.gitcoin.co/whitepaper/read
 
 [^2]:
-    Vitalik Buterin, Zoë Hitzig & E. Glen Weyl. "Cardinal Voting and Quadratic Voting." *SSRN*, 2017.
+    Vitalik Buterin, Zoë Hitzig & E. Glen Weyl. "Liberal Radicalism: A Flexible Design For Philanthropic Matching Funds." *SSRN*, December 2018. Available at SSRN: https://ssrn.com/abstract=3243656 or http://dx.doi.org/10.2139/ssrn.3243656
 
 [^3]:
     Miller, Joel and Weyl, Eric Glen and Erichsen, Leon, Beyond Collusion Resistance: Leveraging Social Information for Plural Funding and Voting (December 24, 2022). Available at SSRN: https://ssrn.com/abstract=4311507 or http://dx.doi.org/10.2139/ssrn.4311507
