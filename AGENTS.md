@@ -1,8 +1,12 @@
-# AGENTS.md (Deliberati shipping)
+# AGENTS.md
 
-Canonical copy: `/home/box/deliberati/ops/AGENTS.md`. Cursor cloud agents **only** read `AGENTS.md` in **this** repo. There is no account-wide master. Keep the in-repo file in sync with that ops file.
+Instructions for any coding agent (human-assisted or autonomous) working in this repository.
 
-This file is for humans and Cursor cloud agents working in this repository.
+Keep this file **agent-general**. Tool-specific setup (Cursor Cloud `environment.json`, session-start hooks, IDE-only notes) belongs under `.cursor/`, not here.
+
+## Trunk
+
+The integration branch this repo fast-forwards onto is `main`. Everywhere this file says **trunk**, that means `main`. Per-repo exceptions belong in the install notes / `.cursor/trunk`, not in this line.
 
 ## Merge
 
@@ -18,11 +22,11 @@ The squash SHA differs from the PR head. Treat the **code** as identical. Do not
 
 ## CI and deploy
 
-Test on the PR (the code that becomes `main`). After squash+FF, **deploy immediately**. Do **not** re-run format/compile/test on push to `main` (that is how a post-merge red happens after deploy already shipped). `main` workflows may deploy.
+Test on the PR (the code that becomes `main`). After squash+FF, **deploy immediately**. Do **not** re-run format/compile/test on push to `main` (that is how a post-merge red happens after deploy already shipped). `main` workflows may deploy. Those deploy workflows need `concurrency: group: deploy-production` and `cancel-in-progress: true` so two pushes cannot race and land the older SHA last.
 
 Branch protection must **require** those PR checks so untested code cannot merge.
 
-When CI fails on a PR, notify or resume the Cursor cloud agent that owns that branch. Do not poll. Do not merge to “fix” CI.
+When CI fails on a PR, notify or resume the agent that owns that branch. Do not poll. Do not merge to “fix” CI.
 
 ## GitHub settings (human, once per repo)
 
@@ -35,25 +39,19 @@ Settings → General → Pull Requests:
 Settings → Branches → rule on `main`:
 
 - Require linear history: **on**
-- Require the PR checks (e.g. Test & Quality Check, Type Check) before merge
+- Require the PR checks before merge
 
-Bots do not flip admin settings from the Grok computer.
-
-## Cursor cloud agents
-
-Launch with model **Grok 4.6** (`grok-4.6`). Fallback **Claude Sonnet 4.6** (`claude-sonnet-4-6`) if Grok 4.6 is unavailable. Not Opus unless Jonathan says so for that run.
-
-Start new work from current `main` on a new VM. Rebase onto `origin/main` before opening or updating a PR. Reply to the existing cloud agent for the same PR; do not launch a second one on the same branch.
+Bots do not flip admin settings from the shared ops computer.
 
 ## Git hooks
 
-If this repo has `.githooks`, env install must set `core.hooksPath=.githooks`. Do **not** `git commit` or `git push --no-verify` unless Jonathan says so. CI is the backstop, not the only gate.
+If this repo has `.githooks`, environment setup must set `core.hooksPath=.githooks`. Do **not** `git commit` or `git push --no-verify` unless Jonathan says so. CI is the backstop, not the only gate.
 
 ## Incomplete work
 
 The Bot that owns this repo owns open PRs, CI, merge conflicts, and drafts. Check at the weekday 8:56 America/Denver run and whenever a signal arrives. Act without waiting to be nudged. Stay silent if nothing is new.
 
-When `main` moves: rebase remaining **non-parked** `cursor/*` PRs. Skip PRs Jonathan has parked (do not nag, do not rebase).
+When `main` moves: rebase remaining **non-parked** feature/`cursor/*` PRs. Skip PRs Jonathan has parked (do not nag, do not rebase).
 
 ## Do not
 
