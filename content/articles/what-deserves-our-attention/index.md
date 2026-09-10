@@ -11,7 +11,7 @@ author: Jonathan Warden
 weight: 2 
 ---
 
-Every online community has rules that determine how the attention of the community is directed. For example in an online forum, the most up-voted posts may be shown on at the top of the page. This rule concentrates attention on popular content. 
+Every online community has rules that determine how the attention of the community is directed. For example in some online forums, the most up-voted posts are shown at the top of the page. This rule concentrates attention on popular content. 
 
 But this is a terrible rule. It creates perverse incentives for people to share content that people will reflexively upvote based on first impressions. It encourages shallow conversation on lowbrow topics. 
 
@@ -19,10 +19,10 @@ Engagement-based ranking, used by many social networks, is even worse. It concen
 
 So how should content be ranked? What content deserves our collective attention, and how should this be determined? 
 
-This is an important question. This is perhaps the most important question for society to answer today. Attention translates to influence. What people pay attention to influences what they believe. What they buy. How they vote. What they fight for. That's why autocrats try to control the media. It's why companies pay billions in advertising.
+In my opinion, this is one of the most important question for society to answer today. Attention translates to influence. What people pay attention to influences what they believe. What they buy. How they vote. What they fight for. That's why autocrats try to control the media. It's why companies pay billions in advertising.
 
 But our collective attention should not just be a commodity to be exploited. It should be used for the common good. The collective attention of a society turned towards some common object is what allows the formation of common knowledge, a shared basis of facts, a shared reality. Our collective participation in public discourse produces the shared values and narrative that enables collective action toward common goals.
 
-Social networks and online forums, as the public square where public discourse takes place, are public goods that should be independent of the whims of politics. They should be governed by transparent, democratic protocols that direct society's collective attention towards production of common knowledge, narratives, values, and culture. They should direct our attention towards constructive, civilized public discourse and a collective, cooperative pursuit of truth. Towards the realization of our collective will, and manifestation of our collective intelligence.
+As the public square where public discourse takes place, social networks and online forums are public goods that should be independent of the whims of politics. They should be governed by transparent, democratic protocols that direct society's collective attention towards production of common knowledge, narratives, values, and culture. They should direct our attention towards constructive, civilized public discourse and a collective, cooperative pursuit of truth. Towards the realization of our collective will, and manifestation of our collective intelligence.
 
 On [social-protocols.org](https://social-protocols.org/), we post about our work on [deliberative consensus protocols](/deliberative-consensus-protocols) and other social protocols for improving conversations on the internet. Currently, we are developing the [global brain algorithm](/global-brain), which we are integrating into a prototype of a new [social network](social-network/). The Global Brain algorithm analyzes the upvotes and downvotes in a threaded conversation, depending on *who has seen what other comments before they voted*, in order to identify the comments that are most influential and to determine the informed opinion of users who have seen all the most influential comments. 
