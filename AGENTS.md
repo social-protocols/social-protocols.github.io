@@ -25,7 +25,7 @@ Adapted from Felix Dietze, "Mental Models for LLMs" (https://felx.me/posts/menta
 
 Instructions for any coding agent (human-assisted or autonomous) working in this repository.
 
-Keep this file **agent-general**. Tool-specific setup (Cursor Cloud `environment.json`, session-start hooks, IDE-only notes) belongs under `.cursor/`, not here.
+Keep this file **agent-general**. Tool-specific setup (Cursor Cloud `environment.json`, session-start hooks, IDE-only notes) belongs under `.cursor/`, not here. Cursor-only notes live in `.cursor/AGENTS.md`.
 
 ## Trunk
 
