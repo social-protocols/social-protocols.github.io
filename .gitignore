@@ -9,3 +9,11 @@ resources/_gen
 # Renviron
 .Renviron
 public
+
+# Devbox / direnv
+/.devbox/
+/.direnv/
+/.env
+/.env.*
+!/.env.example
+

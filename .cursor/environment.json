@@ -1,0 +1,10 @@
+{
+  "name": "social-protocols.org",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "user": "ubuntu",
+  "install": "if [ -d .githooks ]; then git config core.hooksPath .githooks; fi",
+  "start": ".cursor/session-start.sh"
+}
