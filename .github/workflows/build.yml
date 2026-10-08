@@ -6,12 +6,13 @@ on:
   workflow_dispatch:
   pull_request:
 
-# Production deploys (push to main, workflow_dispatch) share deploy-production
-# and queue (cancel-in-progress: false) so an in-progress deploy is not cancelled.
-# PR CI uses a per-PR group so it cannot cancel a main deploy.
+# Main runs share deploy-production, and a newer main run cancels an older
+# one so the latest main wins. Every other ref, PRs and manual runs on
+# other branches included, gets its own ci-<ref> group and can't touch a
+# main deploy.
 concurrency:
-  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'deploy-production' }}
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+  group: ${{ github.ref == 'refs/heads/main' && 'deploy-production' || format('ci-{0}', github.ref) }}
+  cancel-in-progress: true
 
 jobs:
   build:
