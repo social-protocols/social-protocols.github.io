@@ -6,15 +6,16 @@ on:
   workflow_dispatch:
   pull_request:
 
-# Single lock so main deploys serialize; an older deploy cannot overwrite a newer one.
-# PR CI shares this lock with production (acceptable).
+# Production deploys (push to main, workflow_dispatch) share deploy-production
+# and queue (cancel-in-progress: false) so an in-progress deploy is not cancelled.
+# PR CI uses a per-PR group so it cannot cancel a main deploy.
 concurrency:
-  group: deploy-production
-  cancel-in-progress: true
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'deploy-production' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
         with:
@@ -26,8 +27,11 @@ jobs:
           hugo-version: '0.131.0'
           extended: true
 
+      - name: Install just
+        run: sudo apt-get update && sudo apt-get install -y just
+
       - name: Build
-        run: hugo --minify
+        run: just check
 
       - name: Deploy to Github Pages
         if: github.ref == 'refs/heads/main'
