@@ -6,15 +6,17 @@ on:
   workflow_dispatch:
   pull_request:
 
-# automatically cancel previous runs on the same PR
-# https://stackoverflow.com/questions/66335225/how-to-cancel-previous-runs-in-the-pr-when-you-push-new-commitsupdate-the-curre/67939898#67939898
+# Main runs share deploy-production, and a newer main run cancels an older
+# one so the latest main wins. Every other ref, PRs and manual runs on
+# other branches included, gets its own ci-<ref> group and can't touch a
+# main deploy.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  group: ${{ github.ref == 'refs/heads/main' && 'deploy-production' || format('ci-{0}', github.ref) }}
   cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
         with:
@@ -26,8 +28,11 @@ jobs:
           hugo-version: '0.131.0'
           extended: true
 
+      - name: Install just
+        run: sudo apt-get update && sudo apt-get install -y just
+
       - name: Build
-        run: hugo --minify
+        run: just check
 
       - name: Deploy to Github Pages
         if: github.ref == 'refs/heads/main'
