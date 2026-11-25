@@ -1,0 +1,22 @@
+/* Publish dates: readable, still secondary to the title. */
+.article-date {
+  color: #888;
+  font-size: 0.95em;
+}
+
+.article-updated {
+  color: #aaa;
+  font-size: 0.85em;
+  margin-left: 1em;
+}
+
+.archive-item-date {
+  white-space: nowrap;
+}
+
+@media (min-width: 600px) {
+  /* Long-form dates like "November 8, 2020" need more room than ISO dates. */
+  .archive-item-link {
+    max-width: calc(100% - 200px);
+  }
+}
