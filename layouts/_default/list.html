@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+<main class="content" role="main">
+
+  {{ if .Content }}
+  <article class="article">
+    {{ if .Title }}
+    <h1 class="article-title">{{ .Title }}</h1>
+    {{ end }}
+    <div class="article-content">
+      {{ .Content }}
+    </div>
+  </article>
+  {{ end }}
+  <div class="archive">
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}
+    {{ $pages = .Site.RegularPages }}
+    {{ end }}
+    {{ range $pages }}
+    {{ if not .Params.Hide }}
+    <article class="archive-item">
+      <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
+      {{ if and (eq .Section "articles") (not .Date.IsZero) }}
+      {{ partial "readable-date.html" (dict "date" .Date "class" "archive-item-date") }}
+      {{ end }}
+      {{ if .Params.Author }}
+      <div class="archive-item-author">
+        by {{ .Params.Author }}
+      </div>
+      {{ end }}
+      <a class="archive-item-summary" href="{{ .RelPermalink }}">
+        {{ .Summary }}
+        <div class="read-more">Read More...</div>
+      </a>
+    </article>
+    {{ end }}
+    {{ end }}
+  </div>
+
+</main>
+
+{{ partial "footer.html" . }}
