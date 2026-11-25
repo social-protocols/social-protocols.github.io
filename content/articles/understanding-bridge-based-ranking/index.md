@@ -42,9 +42,7 @@ The community notes algorithm on the other hand let's us break down the vote cou
  
 The chart below illustrates how this works. This charts shows a subset of notes from the Community Notes public data set, run through [my own implementation of the algorithm](https://github.com/social-protocols/bridge-based-ranking). The horizontal axis shows the note's "polarity" -- e.g. +1 for right-wing and  -1 for left wing -- and the vertical axis shows its "helpfulness" (which I have labeled "common ground factor" in my chart). The note's final score is its vertical component, or its projection on the helpfulness/common ground axis. The colors of the dots indicate their actual status in Community Notes.
  
-<img src='https://raw.githubusercontent.com/social-protocols/bridge-based-ranking/main/plots/community-notes-large-items-1d.png' 
-                 alt='Community Notes Polarity Plot (Notes)' 
-                 style='display: block; margin-left: auto; margin-right: auto; max-height: 500px' />
+![Community Notes Polarity Plot (Notes)](community-notes-large-items-1d.png)
 
 
 Notice how there is a large spread along not just the the vertical axis, but also the horizontal axis. If want we want to know how helpful a note is, the horizontal axis is just noise. But there is a lot of information along the vertical axis. The vertical component tells us *something* about the post that users are trying to express through their votes. Separating this component from the horizontal component lets us extract this information, in a sense separating signal from noise.
@@ -59,9 +57,7 @@ People are politically biased, but they have other tendencies, such as the tende
 
 When the Community Notes algorithm dissects users voting behavior and factors out the polarity component, it finds that **most users are at least somewhat "biased" towards helpfulness**! You can see this in the plot of a sample of Community Notes users below. 
 
-<img src='https://raw.githubusercontent.com/social-protocols/bridge-based-ranking/main/plots/community-notes-large-users-2d.png'
-                 alt='Community Notes Polarity Plot (Users)'
-                 style='display: block; margin-left: auto; margin-right: auto; max-height: 500px' />
+![Community Notes Polarity Plot (Users)](community-notes-large-users-2d.png)
 
 
 There are more users with a positive common-ground factor than a negative one. There is clump of users in the upper-right quadrant because community notes users are overall right-leaning. But notice also that the helpfulness factor for these users is mostly above zero. They are also mostly biased towards helpfulness. These users are more likely to upvote posts that support a right-wing worldview, **and** also more likely to upvote posts that are helpful.
