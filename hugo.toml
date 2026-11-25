@@ -49,6 +49,11 @@ summaryLength = 30
 
 [params]
   custom_js = "<script data-goatcounter='https://socialprotocols.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script>"
+  customCSS = ["css/custom.css"]
+  # Same shape as jonathanwarden.com; lithium has no showDate switch.
+  [params.dateFormat]
+    published = "January 2, 2006"
+    lastUpdated = "January 2, 2006"
   [params.logo]
     url = "logo.svg"
     width = 50

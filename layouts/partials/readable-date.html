@@ -1,0 +1,8 @@
+{{- /* Shared publish-date renderer. Format comes from site config, matching
+       jonathanwarden.com's params.dateFormat.published. Pass a dict with
+       "date" and optional "class". */ -}}
+{{- $date := .date -}}
+{{- $format := site.Params.dateFormat.published | default "January 2, 2006" -}}
+{{- if and $date (not $date.IsZero) -}}
+<time class="{{ .class | default "article-date" }}" datetime="{{ $date.Format "2006-01-02" }}">{{ $date | time.Format $format }}</time>
+{{- end -}}
