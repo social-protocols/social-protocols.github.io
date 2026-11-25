@@ -72,9 +72,7 @@ The chart below shows the results of this algorithm using a synthetic dataset. I
 
 I then created upvote/downvote Matrix with votes drawn randomly with probabilities defined by these profiles. I then factorized the resulting matrix using two latent factors. The results of the initial Matrix factorization are shown in the first row of charts below.
 
-<img src='https://raw.githubusercontent.com/social-protocols/bridge-based-ranking/main/plots/synthetic-data-polarity-plot-with-basis-change.png'
-                 alt='Synthetic Data Polarity Plot with Basis Change'
-                 style='display: block; margin-left: auto; margin-right: auto; max-height: 900px' />
+![Synthetic Data Polarity Plot with Basis Change](synthetic-data-polarity-plot-with-basis-change.png)
 
 As you can see, the matrix factorization clearly has discovered the two dimensions that best explain the variation in users' votes: left-right polarity and helpfulness. But it chose, in a sense, an arbitrary set of axes.
 
@@ -90,9 +88,7 @@ The algorithm is almost identical to principal component analysis, except instea
 
 Here is a subset of the Community Notes data run through the same algorithm. As you can see, after initially running matrix factorization we don't know which way is "up". But after discovering the high-entropy and low-entropy vectors and doing a change of basis, the vertical does indeed correspond to "common ground", as you see from the fact that the posts that Community Notes has rated as helpful (the green dots) mostly have a positive value for the common ground factor, and the red dots mostly have a negative value.
 
-<img src='https://raw.githubusercontent.com/social-protocols/bridge-based-ranking/main/plots/community-notes-large-with-basis-2d.png'
-                 alt='Community Notes Polarity Plot with Basis Change'
-                 style='display: block; margin-left: auto; margin-right: auto; max-height: 900px' />
+![Community Notes Polarity Plot with Basis Change](community-notes-large-with-basis-2d.png)
 
 
 
@@ -112,9 +108,7 @@ The blue arrow points in the direction of "common ground".
                  style='display: block; margin-left: auto; margin-right: auto; max-height: 900px' />
  -->
 
-<img src='https://raw.githubusercontent.com/social-protocols/bridge-based-ranking/main/plots/3d-animation.gif'
-                 alt='3D Community Notes Polarity Plot'
-                 style='display: block; margin-left: auto; margin-right: auto; max-height: 900px' />
+![3D Community Notes Polarity Plot](3d-animation.gif)
 
 
 
@@ -134,9 +128,7 @@ Theoretically the 1D model (using intercepts), and the 2D and 3D should produce 
 
 **1D vs 2D and 3D Models**
 
-<img src='https://raw.githubusercontent.com/social-protocols/bridge-based-ranking/main/plots/1d vs 2d and 3d.png'
-                 alt='3D Community Notes Polarity Plot'
-                 style='display: block; margin-left: auto; margin-right: auto; max-height: 900px' />
+![3D Community Notes Polarity Plot](1d-vs-2d-and-3d.png)
 
 ### What's the Point?
 
